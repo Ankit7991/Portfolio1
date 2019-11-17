@@ -11,6 +11,29 @@
   outline: none;
 }
 
+
+/* background colors */
+$background-color: white;
+$bg-color-intro: transparent;
+// $bg-color-intro: linear-gradient(-45deg,#000000, #494949);
+
+/* text colors */
+$text-color-1: black;
+$text-color-intro: white;
+
+/* border colors */
+$border-color-1: black;
+$button-border-1: white;
+
+
+/* mixins */
+//center
+@mixin center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 $font1: 'Open Sans Condensed', sans-serif;
 $font2: 'Quicksand', sans-serif;
 $font3: 'PT Sans Narrow', sans-serif;
@@ -43,27 +66,6 @@ body{
 
 //other 
 
-
-/* background colors */
-$background-color: white;
-$bg-color-intro: transparent;
-// $bg-color-intro: linear-gradient(-45deg,#000000, #494949);
-
-/* text colors */
-$text-color-1: black;
-$text-color-intro: white;
-
-/* border colors */
-$border-color-1: black;
-$button-border-1: white;
-
-/* mixins */
-//center
-@mixin center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .container{
   // overflow: hidden;

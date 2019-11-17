@@ -16,6 +16,10 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+/* background colors */
+/* text colors */
+/* border colors */
+/* mixins */
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(#012d4b), to(#0a5485));
   background: linear-gradient(#012d4b, #0a5485);
@@ -48,10 +52,6 @@ body:after {
   }
 }
 
-/* background colors */
-/* text colors */
-/* border colors */
-/* mixins */
 .container section {
   width: 100vw;
   max-width: 100%;
