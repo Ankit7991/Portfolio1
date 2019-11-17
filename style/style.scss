@@ -15,6 +15,7 @@
 /* background colors */
 $background-color: white;
 $bg-color-intro: transparent;
+
 // $bg-color-intro: linear-gradient(-45deg,#000000, #494949);
 
 /* text colors */
@@ -44,7 +45,7 @@ $font7: 'Cinzel', serif;
 
 
 body{
-  background: linear-gradient(#012d4b, #0a5485);
+  background: linear-gradient(#0a5e58, #4ecdc4);
   position: relative;
   &:after{
     content: "";
@@ -53,7 +54,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(#0a5485, #012d4b);
+    background: linear-gradient(#4ecdc4, #0a5e58);
     animation: bodyBgTop 5s infinite;
     opacity: 1;
     @keyframes bodyBgTop {
@@ -271,6 +272,22 @@ main{
     // border: 1px solid red;
     // padding-top: 4em;
     height: 700px; 
+    .card{
+      border: 1px solid black;
+      width: 250px;
+      height: 350px;
+      @include center();
+      flex-flow: column;
+      // justify-content: space-evenly;
+      text-align: center;
+      .card-icon{
+        width: 100px;
+        height: 100px;
+        background: black;
+        border-radius: 100%;
+        position: relative;
+      }
+    }
   }
 }
 .sticky-nav-wrapper{

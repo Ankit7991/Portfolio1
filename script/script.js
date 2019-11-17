@@ -47,7 +47,7 @@
   var nav = document.querySelector('#nav');
   window.onscroll = function(){
     var height = navWrapper.getBoundingClientRect().top;
-    if(height <= -50){
+    if(height <= -100){
       nav.className = 'sticky';
       navWrapper.classList.add('sticky-nav-wrapper');
     }else{
