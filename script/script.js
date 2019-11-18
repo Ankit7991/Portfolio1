@@ -1,26 +1,29 @@
 'use strict'; 
 
 //check if element is in viewport [CLOSURE- JUST EXPERIMENTING]
-function inViewport(parentId, elementId){
+function inViewport(parentId, elementId, animation = false){
 
   var parent = document.querySelector(`#${parentId}`);
   var element = document.querySelector(`#${elementId}`);
 
   //what classname you want to change
   //padClass necessery if padding true
-  return function(activateDistance, ifClassName, elseClassName, padding = false, padClass){
+  if(!animation){
 
-    window.onscroll = function(){
-      var height = parent.getBoundingClientRect().top;
-      if(height <= activateDistance){
-        element.className = `${ifClassName}`;
-        if(padding){
-          parent.classList.add(`${padClass}`);
-        }
-      }else{
-        element.className = `${elseClassName}`;
-        if(padding){
-          parent.classList.remove(`${padClass}`)
+    return function(activateDistance, ifClassName, elseClassName, padding = false, padClass){
+      
+      window.onscroll = function(){
+        var height = parent.getBoundingClientRect().top;
+        if(height <= activateDistance){
+          element.className = `${ifClassName}`;
+          if(padding){
+            parent.classList.add(`${padClass}`);
+          }
+        }else{
+          element.className = `${elseClassName}`;
+          if(padding){
+            parent.classList.remove(`${padClass}`)
+          }
         }
       }
     }
@@ -114,3 +117,25 @@ function inViewport(parentId, elementId){
 
 })();
 
+(function languages(){
+
+  function setAnimation(element, updateTo){
+    var element = document.querySelector(`.${element}`);
+    element.classList.add(updateTo);
+  }
+
+  var parent = document.querySelector('.bar-wrapper');
+  // var element = document.querySelector('.html-bar-value');
+  window.onscroll = function(){
+    let windowHeight = window.innerHeight;
+    let parentDistance = parent.getBoundingClientRect().top;
+    if(parentDistance <= (windowHeight/1.3)){
+      // element.classList.add('html-bar-value-animate');
+      setAnimation('html-bar-value', 'html-bar-value-animate');
+      setAnimation('css-bar-value', 'css-bar-value-animate');
+      setAnimation('js-bar-value', 'js-bar-value-animate');
+      setAnimation('php-bar-value', 'php-bar-value-animate');
+      setAnimation('bootstrap-bar-value', 'bootstrap-bar-value-animate');
+    }
+  }
+})();

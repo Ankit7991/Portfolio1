@@ -408,6 +408,7 @@ main {
       flex-flow: column;
       .bar-wrapper{
         width: 90%;
+        // border: 1px solid black;
 
         .bar-main{
           margin: 20px 0 10px 0;
@@ -443,15 +444,15 @@ main {
               width: 0%;
               background: #4ecdc5;
             }
-            .html-bar-value{
-              animation: seventyFive 1.4s 0s forwards ease-out;
-              @keyframes seventyFive{
+            .html-bar-value-animate{
+              animation: sevenFive 1.4s 0s forwards ease-out;
+              @keyframes sevenFive{
                 100%{
                   width: 75%;
                 }
               }
             }
-            .css-bar-value{
+            .css-bar-value-animate{
               animation: seventy 1.4s 0.5s forwards ease-out;
               @keyframes seventy{
                 100%{
@@ -459,7 +460,7 @@ main {
                 }
               }
             }
-            .js-bar-value{
+            .js-bar-value-animate{
               animation: fivefive 1.4s 1s forwards ease-out;
               @keyframes fivefive{
                 100%{
@@ -467,7 +468,7 @@ main {
                 }
               }
             }
-            .php-bar-value{
+            .php-bar-value-animate{
               animation: twoFive 1.4s 1.5s forwards ease-out;
               @keyframes twoFive{
                 100%{
@@ -475,7 +476,7 @@ main {
                 }
               }
             }
-            .bootstrap-bar-value{
+            .bootstrap-bar-value-animate{
               animation: fourfive 1.4s 2s forwards ease-out;
               @keyframes fourfive{
                 100%{

@@ -528,24 +528,24 @@ main section.about .languages .bar-wrapper .bar-main .bar-value .bar-value-meter
   background: #4ecdc5;
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .html-bar-value {
-  -webkit-animation: seventyFive 1.4s 0s forwards ease-out;
-          animation: seventyFive 1.4s 0s forwards ease-out;
+main section.about .languages .bar-wrapper .bar-main .bar-value .html-bar-value-animate {
+  -webkit-animation: sevenFive 1.4s 0s forwards ease-out;
+          animation: sevenFive 1.4s 0s forwards ease-out;
 }
 
-@-webkit-keyframes seventyFive {
+@-webkit-keyframes sevenFive {
   100% {
     width: 75%;
   }
 }
 
-@keyframes seventyFive {
+@keyframes sevenFive {
   100% {
     width: 75%;
   }
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .css-bar-value {
+main section.about .languages .bar-wrapper .bar-main .bar-value .css-bar-value-animate {
   -webkit-animation: seventy 1.4s 0.5s forwards ease-out;
           animation: seventy 1.4s 0.5s forwards ease-out;
 }
@@ -562,7 +562,7 @@ main section.about .languages .bar-wrapper .bar-main .bar-value .css-bar-value {
   }
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .js-bar-value {
+main section.about .languages .bar-wrapper .bar-main .bar-value .js-bar-value-animate {
   -webkit-animation: fivefive 1.4s 1s forwards ease-out;
           animation: fivefive 1.4s 1s forwards ease-out;
 }
@@ -579,7 +579,7 @@ main section.about .languages .bar-wrapper .bar-main .bar-value .js-bar-value {
   }
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .php-bar-value {
+main section.about .languages .bar-wrapper .bar-main .bar-value .php-bar-value-animate {
   -webkit-animation: twoFive 1.4s 1.5s forwards ease-out;
           animation: twoFive 1.4s 1.5s forwards ease-out;
 }
@@ -596,7 +596,7 @@ main section.about .languages .bar-wrapper .bar-main .bar-value .php-bar-value {
   }
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .bootstrap-bar-value {
+main section.about .languages .bar-wrapper .bar-main .bar-value .bootstrap-bar-value-animate {
   -webkit-animation: fourfive 1.4s 2s forwards ease-out;
           animation: fourfive 1.4s 2s forwards ease-out;
 }
