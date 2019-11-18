@@ -1,34 +1,34 @@
 'use strict'; 
 
 //check if element is in viewport [CLOSURE- JUST EXPERIMENTING]
-function inViewport(parentId, elementId, animation = false){
+// function inViewport(parentId, elementId, animation = false){
 
-  var parent = document.querySelector(`#${parentId}`);
-  var element = document.querySelector(`#${elementId}`);
+//   var parent = document.querySelector(`#${parentId}`);
+//   var element = document.querySelector(`#${elementId}`);
 
-  //what classname you want to change
-  //padClass necessery if padding true
-  if(!animation){
+//   //what classname you want to change
+//   //padClass necessery if padding true
+//   if(!animation){
 
-    return function(activateDistance, ifClassName, elseClassName, padding = false, padClass){
+//     return function(activateDistance, ifClassName, elseClassName, padding = false, padClass){
       
-      window.onscroll = function(){
-        var height = parent.getBoundingClientRect().top;
-        if(height <= activateDistance){
-          element.className = `${ifClassName}`;
-          if(padding){
-            parent.classList.add(`${padClass}`);
-          }
-        }else{
-          element.className = `${elseClassName}`;
-          if(padding){
-            parent.classList.remove(`${padClass}`)
-          }
-        }
-      }
-    }
-  }
-}
+//       window.onscroll = function(){
+//         var height = parent.getBoundingClientRect().top;
+//         if(height <= activateDistance){
+//           element.className = `${ifClassName}`;
+//           if(padding){
+//             parent.classList.add(`${padClass}`);
+//           }
+//         }else{
+//           element.className = `${elseClassName}`;
+//           if(padding){
+//             parent.classList.remove(`${padClass}`)
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 
 //auto type container
@@ -73,26 +73,27 @@ function inViewport(parentId, elementId, animation = false){
 })();
 
 //sticky nav
-(function stickyNav(){
+// (function stickyNav(){
   
-  //viewport closure
-  var stickyNav = inViewport('main', 'nav');
-  stickyNav(-100, 'sticky', 'nonsticky', true, 'sticky-nav-wrapper');
-  //upper code is same as below commented code
-
-  // var navWrapper = document.querySelector('#main');
-  // var nav = document.querySelector('#nav');
-  // window.onscroll = function(){
-  //   var height = navWrapper.getBoundingClientRect().top;
-  //   if(height <= -100){
-  //     nav.className = 'sticky';
-  //     navWrapper.classList.add('sticky-nav-wrapper');
-  //   }else{
-  //     nav.className = 'nonSticky';
-  //     navWrapper.classList.remove('sticky-nav-wrapper');
-  //   }
-  // }
-})();
+//   //viewport closure
+//   // var stickyNav = inViewport('main', 'nav');
+//   // stickyNav(-100, 'sticky', 'nonsticky', true, 'sticky-nav-wrapper');
+//   //upper code is same as below commented code
+  
+//   // var navWrapper = document.querySelector('#main');
+//   // var nav = document.querySelector('#nav');
+//   // window.onscroll = function(){
+//   //   var height = navWrapper.getBoundingClientRect().top;
+//   //   if(height <= -100){
+//   //     nav.className = 'sticky';
+//   //     navWrapper.classList.add('sticky-nav-wrapper');
+//   //   }else{
+//   //     nav.className = 'nonSticky';
+//   //     navWrapper.classList.remove('sticky-nav-wrapper');
+//   //   }
+//   // }
+//   // 
+// })();
 
 //active nav button
 (function activNavButton(){
@@ -105,7 +106,6 @@ function inViewport(parentId, elementId, animation = false){
         //reset every other elements
         for(let i = 0; i < links.length; i++){
           links[i].classList.remove('active');
-          console.log('doing');
         }
         //change only this element
         this.classList.toggle('active');
@@ -117,25 +117,57 @@ function inViewport(parentId, elementId, animation = false){
 
 })();
 
-(function languages(){
-
+(function onscrollAll(){
+  
+  var navWrapper = document.querySelector('#main');
+  var nav = document.querySelector('#nav');
+  
   function setAnimation(element, updateTo){
     var element = document.querySelector(`.${element}`);
     element.classList.add(updateTo);
   }
 
   var parent = document.querySelector('.bar-wrapper');
-  // var element = document.querySelector('.html-bar-value');
   window.onscroll = function(){
+
+    //languages animation
     let windowHeight = window.innerHeight;
     let parentDistance = parent.getBoundingClientRect().top;
     if(parentDistance <= (windowHeight/1.3)){
-      // element.classList.add('html-bar-value-animate');
       setAnimation('html-bar-value', 'html-bar-value-animate');
       setAnimation('css-bar-value', 'css-bar-value-animate');
       setAnimation('js-bar-value', 'js-bar-value-animate');
       setAnimation('php-bar-value', 'php-bar-value-animate');
       setAnimation('bootstrap-bar-value', 'bootstrap-bar-value-animate');
     }
+
+    //sticky nav
+    var height = navWrapper.getBoundingClientRect().top;
+    if(height <= -100){
+      nav.className = 'sticky';
+      navWrapper.classList.add('sticky-nav-wrapper');
+    }else{
+      nav.className = 'nonSticky';
+      navWrapper.classList.remove('sticky-nav-wrapper');
+    }
   }
+})();
+
+
+(function linkScroll(){
+
+  //using jquery 
+  function scroll(nowId, toId, duration = 500){
+    $(`${nowId}`).click(function(){
+      $(document).ready(function(){
+        $('html, body').animate({
+          scrollTop: $(`${toId}`).offset().top
+        }, duration)
+      })
+    })
+  }
+
+  scroll('#home', '#HOME', 1000);
+  scroll('#about', '#ABOUT', 1000);
+
 })();

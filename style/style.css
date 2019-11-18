@@ -19,6 +19,10 @@
   background: #ffffff27;
 }
 
+* a {
+  cursor: pointer;
+}
+
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(#1a857e), to(#4ecdc4));
   background: linear-gradient(#1a857e, #4ecdc4);
