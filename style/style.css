@@ -21,8 +21,8 @@
 /* border colors */
 /* mixins */
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0a5e58), to(#4ecdc4));
-  background: linear-gradient(#0a5e58, #4ecdc4);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1a857e), to(#4ecdc4));
+  background: linear-gradient(#1a857e, #4ecdc4);
   position: relative;
 }
 
@@ -33,8 +33,8 @@ body:after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4ecdc4), to(#0a5e58));
-  background: linear-gradient(#4ecdc4, #0a5e58);
+  background: -webkit-gradient(linear, left top, left bottom, from(#4ecdc4), to(#1a857e));
+  background: linear-gradient(#4ecdc4, #1a857e);
   -webkit-animation: bodyBgTop 5s infinite;
           animation: bodyBgTop 5s infinite;
   opacity: 1;
@@ -247,7 +247,8 @@ main .sticky {
   }
 }
 
-main nav, main .nonSticky {
+main nav,
+main .nonSticky {
   margin-bottom: 20px;
   border-bottom: 2px solid #db7070;
   background: #0000003f;
@@ -256,21 +257,24 @@ main nav, main .nonSticky {
   letter-spacing: 2px;
 }
 
-main nav ul, main .nonSticky ul {
+main nav ul,
+main .nonSticky ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
 }
 
-main nav ul li, main .nonSticky ul li {
+main nav ul li,
+main .nonSticky ul li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: center;
 }
 
-main nav ul li a, main .nonSticky ul li a {
+main nav ul li a,
+main .nonSticky ul li a {
   display: block;
   padding: 13px;
   text-decoration: none;
@@ -282,44 +286,47 @@ main nav ul li a, main .nonSticky ul li a {
   transition: 0.4s;
 }
 
-main nav ul li:nth-child(1) a:hover, main .nonSticky ul li:nth-child(1) a:hover {
+main nav ul li:nth-child(1) a:hover,
+main .nonSticky ul li:nth-child(1) a:hover {
   border-bottom: 4px solid #db7070;
 }
 
-main nav ul li:nth-child(1) a.active, main .nonSticky ul li:nth-child(1) a.active {
+main nav ul li:nth-child(1) a.active,
+main .nonSticky ul li:nth-child(1) a.active {
   border-bottom: 4px solid #db7070;
 }
 
-main nav ul li:nth-child(2) a:hover, main .nonSticky ul li:nth-child(2) a:hover {
+main nav ul li:nth-child(2) a:hover,
+main .nonSticky ul li:nth-child(2) a:hover {
   border-bottom: 4px solid #43c943;
 }
 
-main nav ul li:nth-child(2) a.active, main .nonSticky ul li:nth-child(2) a.active {
+main nav ul li:nth-child(2) a.active,
+main .nonSticky ul li:nth-child(2) a.active {
   border-bottom: 4px solid #43c943;
 }
 
-main nav ul li:nth-child(3) a:hover, main .nonSticky ul li:nth-child(3) a:hover {
+main nav ul li:nth-child(3) a:hover,
+main .nonSticky ul li:nth-child(3) a:hover {
   border-bottom: 4px solid #c48e48;
 }
 
-main nav ul li:nth-child(3) a.active, main .nonSticky ul li:nth-child(3) a.active {
+main nav ul li:nth-child(3) a.active,
+main .nonSticky ul li:nth-child(3) a.active {
   border-bottom: 4px solid #c48e48;
 }
 
-main nav ul li:nth-child(4) a:hover, main .nonSticky ul li:nth-child(4) a:hover {
+main nav ul li:nth-child(4) a:hover,
+main .nonSticky ul li:nth-child(4) a:hover {
   border-bottom: 4px solid #e96de3;
 }
 
-main nav ul li:nth-child(4) a.active, main .nonSticky ul li:nth-child(4) a.active {
+main nav ul li:nth-child(4) a.active,
+main .nonSticky ul li:nth-child(4) a.active {
   border-bottom: 4px solid #e96de3;
 }
 
-main section {
-  height: 700px;
-}
-
-main section .card {
-  border: 1px solid black;
+main section.about .card {
   width: 250px;
   height: 350px;
   display: -webkit-box;
@@ -338,12 +345,46 @@ main section .card {
   text-align: center;
 }
 
-main section .card .card-icon {
+main section.about .card div {
+  margin: 5px;
+}
+
+main section.about .card .card-icon {
   width: 100px;
   height: 100px;
-  background: black;
+  background: #00000073;
   border-radius: 100%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.about .card .card-icon .fa {
+  color: white;
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+main section.about .card .card-title {
+  border: 1px solid #00000073;
+  padding: 5px 10px;
+  border-bottom: 0px;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+
+main section.about .card .card-title:after, main section.about .card .card-title:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .sticky-nav-wrapper {
