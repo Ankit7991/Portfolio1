@@ -340,9 +340,16 @@ main {
         @include center();
 
         .fa {
-          color: white;
-          font-size: 50px;
+          color: #ffffffbe;
+          font-size: 40px;
           font-weight: lighter;
+          transition: font-size 0.2s, color 0.4s;
+        }
+        &:hover{
+          .fa{
+            font-size: 50px;
+            color: #ffffff;
+          }
         }
       }
 
@@ -354,6 +361,7 @@ main {
         position: relative;
         color: #00000094;
         border-radius: 10px 10px 0 0;
+        cursor: pointer;
 
         &:after,
         &:before {
@@ -381,6 +389,9 @@ main {
         }
       }
     }
+    .card-about{
+      padding-top: 1em;
+    }
 
     .about-me{
       text-align: center;
@@ -396,7 +407,7 @@ main {
       @include center();
       flex-flow: column;
       .bar-wrapper{
-        width: 80%;
+        width: 90%;
 
         .bar-main{
           margin: 20px 0 10px 0;
@@ -465,10 +476,10 @@ main {
               }
             }
             .bootstrap-bar-value{
-              animation: fivefive 1.4s 2s forwards ease-out;
-              @keyframes fivefive{
+              animation: fourfive 1.4s 2s forwards ease-out;
+              @keyframes fourfive{
                 100%{
-                  width: 55%;
+                  width: 45%;
                 }
               }
             }

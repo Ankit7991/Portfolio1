@@ -1,4 +1,33 @@
 'use strict'; 
+
+//check if element is in viewport [CLOSURE- JUST EXPERIMENTING]
+function inViewport(parentId, elementId){
+
+  var parent = document.querySelector(`#${parentId}`);
+  var element = document.querySelector(`#${elementId}`);
+
+  //what classname you want to change
+  //padClass necessery if padding true
+  return function(activateDistance, ifClassName, elseClassName, padding = false, padClass){
+
+    window.onscroll = function(){
+      var height = parent.getBoundingClientRect().top;
+      if(height <= activateDistance){
+        element.className = `${ifClassName}`;
+        if(padding){
+          parent.classList.add(`${padClass}`);
+        }
+      }else{
+        element.className = `${elseClassName}`;
+        if(padding){
+          parent.classList.remove(`${padClass}`)
+        }
+      }
+    }
+  }
+}
+
+
 //auto type container
 (function autoTypeContainer(){ 
 
@@ -42,19 +71,24 @@
 
 //sticky nav
 (function stickyNav(){
+  
+  //viewport closure
+  var stickyNav = inViewport('main', 'nav');
+  stickyNav(-100, 'sticky', 'nonsticky', true, 'sticky-nav-wrapper');
+  //upper code is same as below commented code
 
-  var navWrapper = document.querySelector('#main');
-  var nav = document.querySelector('#nav');
-  window.onscroll = function(){
-    var height = navWrapper.getBoundingClientRect().top;
-    if(height <= -100){
-      nav.className = 'sticky';
-      navWrapper.classList.add('sticky-nav-wrapper');
-    }else{
-      nav.className = 'nonSticky';
-      navWrapper.classList.remove('sticky-nav-wrapper');
-    }
-  }
+  // var navWrapper = document.querySelector('#main');
+  // var nav = document.querySelector('#nav');
+  // window.onscroll = function(){
+  //   var height = navWrapper.getBoundingClientRect().top;
+  //   if(height <= -100){
+  //     nav.className = 'sticky';
+  //     navWrapper.classList.add('sticky-nav-wrapper');
+  //   }else{
+  //     nav.className = 'nonSticky';
+  //     navWrapper.classList.remove('sticky-nav-wrapper');
+  //   }
+  // }
 })();
 
 //active nav button

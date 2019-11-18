@@ -386,9 +386,16 @@ main section.about .card .card-icon {
 }
 
 main section.about .card .card-icon .fa {
-  color: white;
-  font-size: 50px;
+  color: #ffffffbe;
+  font-size: 40px;
   font-weight: lighter;
+  -webkit-transition: font-size 0.2s, color 0.4s;
+  transition: font-size 0.2s, color 0.4s;
+}
+
+main section.about .card .card-icon:hover .fa {
+  font-size: 50px;
+  color: #ffffff;
 }
 
 main section.about .card .card-title {
@@ -398,6 +405,7 @@ main section.about .card .card-title {
   position: relative;
   color: #00000094;
   border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }
 
 main section.about .card .card-title:after, main section.about .card .card-title:before {
@@ -428,6 +436,10 @@ main section.about .card .card-title:after {
           transform: translate(100%, 0.6em);
 }
 
+main section.about .card-about {
+  padding-top: 1em;
+}
+
 main section.about .about-me {
   text-align: center;
   margin-top: 5em;
@@ -456,7 +468,7 @@ main section.about .languages {
 }
 
 main section.about .languages .bar-wrapper {
-  width: 80%;
+  width: 90%;
 }
 
 main section.about .languages .bar-wrapper .bar-main {
@@ -585,13 +597,19 @@ main section.about .languages .bar-wrapper .bar-main .bar-value .php-bar-value {
 }
 
 main section.about .languages .bar-wrapper .bar-main .bar-value .bootstrap-bar-value {
-  -webkit-animation: fivefive 1.4s 2s forwards ease-out;
-          animation: fivefive 1.4s 2s forwards ease-out;
+  -webkit-animation: fourfive 1.4s 2s forwards ease-out;
+          animation: fourfive 1.4s 2s forwards ease-out;
 }
 
-@keyframes fivefive {
+@-webkit-keyframes fourfive {
   100% {
-    width: 55%;
+    width: 45%;
+  }
+}
+
+@keyframes fourfive {
+  100% {
+    width: 45%;
   }
 }
 
