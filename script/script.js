@@ -6,9 +6,9 @@
     // `Hello `,'',
     // `Ankit here`,'',
     // `I love (<3)`,'',
-    'HTML -> (****) ','',
-    'CSS -> (***) ','',
-    'AND JS -> (***) ','',
+    'HTML (****) ','',
+    'CSS (***) ','',
+    'AND JS (***) ','',
   ]; 
   var letterCount = 0;
   var index = 0;
