@@ -113,13 +113,100 @@ section.intro-wrapper .intro {
       -ms-flex-flow: column;
           flex-flow: column;
   color: rgba(255, 255, 255, 0.767);
-  font-size: calc(30px + (40 - 38)*(40vw - 400px)/30);
+  font-size: 20px;
   letter-spacing: 2px;
   font-weight: lighter;
 }
 
-section.intro-wrapper .intro h1 strong {
-  color: white;
+section.intro-wrapper .intro .intro-typing-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: 0.2em;
+}
+
+section.intro-wrapper .intro .intro-typing-wrapper span.cursor {
+  height: 130%;
+  position: absolute;
+  background: white;
+  padding: 2px;
+  right: 0;
+  top: 50%;
+  opacity: 1;
+  -webkit-transform: translate(200%, -50%);
+          transform: translate(200%, -50%);
+  -webkit-animation: blink 0.4s infinite;
+          animation: blink 0.4s infinite;
+}
+
+@-webkit-keyframes blink {
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+section.intro-wrapper .intro .intro-typing-wrapper span.cursor-fade {
+  -webkit-animation: cursorFade 5s 0.2s forwards;
+          animation: cursorFade 5s 0.2s forwards;
+  width: 0;
+  border: 1px solid white;
+}
+
+@-webkit-keyframes cursorFade {
+  10% {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  50% {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    background: #ffffff22;
+    width: 50%;
+  }
+  100% {
+    -webkit-transform: translate(3%, -50%);
+            transform: translate(3%, -50%);
+    background: #ffffff22;
+    width: 53%;
+    border: 1px solid #ffffff9c;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+@keyframes cursorFade {
+  10% {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  50% {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    background: #ffffff22;
+    width: 50%;
+  }
+  100% {
+    -webkit-transform: translate(3%, -50%);
+            transform: translate(3%, -50%);
+    background: #ffffff22;
+    width: 53%;
+    border: 1px solid #ffffff9c;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
 }
 
 section.intro-wrapper .intro-video-bg {
@@ -164,37 +251,22 @@ section.intro-wrapper #intro-typing {
   color: white;
 }
 
-section.intro-wrapper #intro-typing:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  height: 100%;
-  border: 1px solid white;
-  border-radius: 100px;
-  background: white;
-  padding: 2px;
-  -webkit-transform: translate(100%, -50%);
-          transform: translate(100%, -50%);
-  -webkit-animation: cursorBlink 0.7s infinite;
-          animation: cursorBlink 0.7s infinite;
-  visibility: visible;
+section.intro-wrapper #viewWork {
+  display: inline-block;
 }
 
-@-webkit-keyframes cursorBlink {
-  50% {
-    background: transparent;
-  }
-}
-
-@keyframes cursorBlink {
-  50% {
-    background: transparent;
-  }
-}
-
-section.intro-wrapper button {
+section.intro-wrapper span.button {
   margin-top: 10vh;
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 3px solid white;
   width: 250px;
   height: 50px;
@@ -209,7 +281,7 @@ section.intro-wrapper button {
   cursor: pointer;
 }
 
-section.intro-wrapper button:after {
+section.intro-wrapper span.button:after {
   content: "xx";
   position: absolute;
   left: 0;
@@ -225,7 +297,7 @@ section.intro-wrapper button:after {
   transition: 0.4s;
 }
 
-section.intro-wrapper button:hover:after {
+section.intro-wrapper span.button:hover:after {
   -webkit-transform: translateY(-80%);
           transform: translateY(-80%);
 }
@@ -292,9 +364,11 @@ main .nonSticky ul li {
   text-align: center;
 }
 
-main nav ul li a,
+main nav ul li span, main nav ul li a,
+main .nonSticky ul li span,
 main .nonSticky ul li a {
   display: block;
+  cursor: pointer;
   padding: 13px;
   text-decoration: none;
   color: white;
@@ -305,43 +379,51 @@ main .nonSticky ul li a {
   transition: 0.4s;
 }
 
-main nav ul li:nth-child(1) a:hover,
-main .nonSticky ul li:nth-child(1) a:hover {
+main nav ul li:nth-child(1) a:hover, main nav ul li:nth-child(1) span:hover,
+main .nonSticky ul li:nth-child(1) a:hover,
+main .nonSticky ul li:nth-child(1) span:hover {
   border-bottom: 4px solid #db7070;
 }
 
-main nav ul li:nth-child(1) a.active,
-main .nonSticky ul li:nth-child(1) a.active {
+main nav ul li:nth-child(1) a.active, main nav ul li:nth-child(1) span.active,
+main .nonSticky ul li:nth-child(1) a.active,
+main .nonSticky ul li:nth-child(1) span.active {
   border-bottom: 4px solid #db7070;
 }
 
-main nav ul li:nth-child(2) a:hover,
-main .nonSticky ul li:nth-child(2) a:hover {
+main nav ul li:nth-child(2) a:hover, main nav ul li:nth-child(2) span:hover,
+main .nonSticky ul li:nth-child(2) a:hover,
+main .nonSticky ul li:nth-child(2) span:hover {
   border-bottom: 4px solid #43c943;
 }
 
-main nav ul li:nth-child(2) a.active,
-main .nonSticky ul li:nth-child(2) a.active {
+main nav ul li:nth-child(2) a.active, main nav ul li:nth-child(2) span.active,
+main .nonSticky ul li:nth-child(2) a.active,
+main .nonSticky ul li:nth-child(2) span.active {
   border-bottom: 4px solid #43c943;
 }
 
-main nav ul li:nth-child(3) a:hover,
-main .nonSticky ul li:nth-child(3) a:hover {
+main nav ul li:nth-child(3) a:hover, main nav ul li:nth-child(3) span:hover,
+main .nonSticky ul li:nth-child(3) a:hover,
+main .nonSticky ul li:nth-child(3) span:hover {
   border-bottom: 4px solid #c48e48;
 }
 
-main nav ul li:nth-child(3) a.active,
-main .nonSticky ul li:nth-child(3) a.active {
+main nav ul li:nth-child(3) a.active, main nav ul li:nth-child(3) span.active,
+main .nonSticky ul li:nth-child(3) a.active,
+main .nonSticky ul li:nth-child(3) span.active {
   border-bottom: 4px solid #c48e48;
 }
 
-main nav ul li:nth-child(4) a:hover,
-main .nonSticky ul li:nth-child(4) a:hover {
+main nav ul li:nth-child(4) a:hover, main nav ul li:nth-child(4) span:hover,
+main .nonSticky ul li:nth-child(4) a:hover,
+main .nonSticky ul li:nth-child(4) span:hover {
   border-bottom: 4px solid #e96de3;
 }
 
-main nav ul li:nth-child(4) a.active,
-main .nonSticky ul li:nth-child(4) a.active {
+main nav ul li:nth-child(4) a.active, main nav ul li:nth-child(4) span.active,
+main .nonSticky ul li:nth-child(4) a.active,
+main .nonSticky ul li:nth-child(4) span.active {
   border-bottom: 4px solid #e96de3;
 }
 
@@ -558,15 +640,16 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-t
 
 main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-title:after {
   content: "";
-  right: 0;
-  top: 0;
-  height: 2em;
-  width: 4em;
-  background: #09615b;
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, #37AEA6), color-stop(50%, #09615b), color-stop(25%, #37AEA6));
+  background: linear-gradient(to right, #37AEA6 25%, #09615b 50%, #37AEA6 25%);
   position: absolute;
+  right: 0;
+  top: 50%;
+  height: 90%;
+  width: 1em;
   z-index: -1;
-  -webkit-transform: translate(40%) rotate(60deg);
-          transform: translate(40%) rotate(60deg);
+  -webkit-transform: translate(0.6em, -50%);
+          transform: translate(0.6em, -50%);
 }
 
 main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value {
@@ -591,7 +674,7 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-v
 
 main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value .bar-value-meter {
   position: absolute;
-  height: 80%;
+  height: 90%;
   width: 0%;
   background: #4ecdc5;
   position: relative;

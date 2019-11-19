@@ -1,0 +1,16 @@
+
+@media only screen and(min-width: 1000px){
+  .about-me-and-languages{
+    display: flex;
+    // border: 1px solid black;
+    margin: 3em 0;
+    .about-me{
+      // border: 1px solid red;
+      flex: 6;
+    }
+    .languages{
+      // border: 1px solid blue;
+      flex: 6;
+    }
+  }
+}

@@ -44,22 +44,39 @@ window.onload = function () {
       // 'AND JS (***) ','',
       'Front end Developer'
     ];
+    var typingComplete = false;
     var output = document.querySelector('#intro-typing');
     var myInterval, typedWord = '';
     var letterIndex = 0,
       wordIndex = 0;
     (function typing() {
       clearInterval(myInterval);
-      let currentWord = words[wordIndex];
-      let currentLetter = currentWord[letterIndex];
-      typedWord += currentLetter;
+      let currWord = words[wordIndex];
+      let currWordLen = currWord.length;
+      let currLetter = currWord[letterIndex];
+      typedWord += currLetter;
       myInterval = setInterval(() => {
         output.innerHTML = typedWord;
-
+        
         letterIndex++;
+        if(letterIndex >= currWordLen){
+          typingComplete = true;
+          clearInterval(myInterval);
+          return;
+        }
+        else {
+          typing();
+        }
         // typing();
-      }, 300);
+      }, 100);
     })();
+    
+    var cursorClass = document.querySelector('.cursor')
+    var cursor = setInterval(() => {
+      if(typingComplete){
+        cursorClass.classList.add('cursor-fade');
+      }
+    }, 1000);
     // var letterCount = 0;
     // var index = 0;
     // var totalWords = about.length ;
@@ -206,3 +223,6 @@ window.onload = function () {
 
   })();
 }
+
+let anchor = document.querySelector('#viewWork');
+anchor.style.color = ''

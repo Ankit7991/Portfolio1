@@ -1,0 +1,19 @@
+@media only screen and (min-width: 1000px) {
+  .about-me-and-languages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 3em 0;
+  }
+  .about-me-and-languages .about-me {
+    -webkit-box-flex: 6;
+        -ms-flex: 6;
+            flex: 6;
+  }
+  .about-me-and-languages .languages {
+    -webkit-box-flex: 6;
+        -ms-flex: 6;
+            flex: 6;
+  }
+}
+/*# sourceMappingURL=media.css.map */
