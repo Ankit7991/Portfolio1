@@ -128,12 +128,16 @@ section.intro-wrapper {
     position: relative;
     font-family: monospace;
     flex-flow: column;
-    color: white;
+    color: rgba(255, 255, 255, 0.767);
     font-size: calc(30px + (40 - 38)*(40vw - 400px)/30);
-    font-family: $font2;
     letter-spacing: 2px;
     font-weight: lighter;
     // font-size: 20px;
+    h1{
+      strong{
+        color: white;
+      }
+    }
   }
 
   .intro-video-bg {
@@ -153,7 +157,7 @@ section.intro-wrapper {
 
     .black-overlay {
       @include hundered();
-      background: #0000007a;
+      background: #000000aa;
       position: absolute;
       top: 0;
       left: 0;
@@ -426,17 +430,19 @@ main {
       h1{
         margin: 1em;
         // border: 1px solid $card-title-bordCol;
+        $card-title-bordCol: #d1d1d1;
         display: inline-block;
-        border: 1px solid black;
+        border: 1px solid $card-title-bordCol;
         border-top: none;
         border-bottom: none;
         padding: 0 1em 0 1em;
         position: relative;
+        color: #000000bb;
 
         &:after, &:before{
           content: "";
           position: absolute;
-          border: 1px solid black;
+          border: 1px solid $card-title-bordCol;
           width: 2em;
           height: 0.6em;
         }
@@ -464,87 +470,211 @@ main {
       flex-flow: column;
       .bar-wrapper{
         width: 90%;
-        // border: 1px solid black;
 
         .bar-main{
-          margin: 20px 0 10px 0;
-          background: #00000044;
-          display: flex;
-          height: 2.4em;
-          align-items: center;
-          .bar-title{
-            flex: 1;
-            height: 100%;
-            @include center();
-            color: white;
-            background: #09615b;
-
-          }
-          .bar-value{
-            flex: 5;
-            text-align: right;
+          
+          .title-value-wrapper{
             position: relative;
-            height: 100%;
-            span{
+            overflow: hidden;
+            margin: 20px 0 10px 0;
+            background: #00000044;
+            display: flex;
+            height: 2.4em;
+            align-items: center;
+            .bar-title{
               position: absolute;
-              right: 0;
-              top: 50%;
-              transform: translateY(-50%);
-              padding: 10px;
-              font-weight: bolder;
-              color: white;
-            }
-            .bar-value-meter{
-              position: absolute;
+              left: -20%;
               height: 100%;
-              width: 0%;
-              background: #4ecdc5;
+              color: white;
+              background: #09615b;
+              width: 20%;
+              @include center();
+
             }
-            .html-bar-value-animate{
-              animation: sevenFive 1.4s 0s forwards ease-out;
-              @keyframes sevenFive{
-                100%{
-                  width: 75%;
+            .bar-value{
+              background: rgb(245, 245, 157);
+              left: 0;
+              text-align: right;
+              position: relative;
+              height: 100%;
+              width: 0;
+              overflow: hidden;
+              span{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 10px;
+                font-weight: bolder;
+              }
+              .bar-value-meter{
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #4ecdc5;
+                position: relative;
+                overflow: hidden;
+                &:before{
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  bottom: 0;
+                  transform: translate(-100%);
+                  width: 100px;
+                  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.414), transparent);
                 }
               }
             }
-            .css-bar-value-animate{
-              animation: seventy 1.4s 0.5s forwards ease-out;
-              @keyframes seventy{
-                100%{
-                  width: 70%;
+          }
+          
+          @keyframes intoView {
+            60%{
+              left: 50%;
+            }
+            100%{
+              left: 0;
+            }
+          }
+          @keyframes giveMeWidth{
+            60%{
+              width: 0;
+              left: 70%;
+            }
+            100%{
+              width: 80%;
+              left: 20%;
+            }
+          }
+          @keyframes shine{
+            100%{
+              left: 100%;
+              transform: translate(100%);
+            }
+          }
+          //fade in out animation
+          .html-value-wrapper-animate{
+            .bar-title{
+              animation: intoView 2s forwards;
+            }
+            .bar-value{
+              animation: giveMeWidth 2s forwards;
+              .bar-value-meter{
+                &:before{
+                  animation: shine 10s 5s infinite;
+                }
+              }
+              .html-bar-value-animate{
+                animation: nineZero 1.4s 3.5s forwards ease-out;
+                @keyframes nineZero{
+                  100%{
+                    width: 90%;
+                  }
+                }
+              } 
+            }
+          }
+          .css-value-wrapper-animate{
+            .bar-title{
+              animation: intoView 2s 0.3s forwards;
+            }
+            .bar-value{
+              animation: giveMeWidth 2s 0.3s forwards;
+              .bar-value-meter{
+                &:before{
+                  animation: shine 10s 5s infinite;
+                }
+              }
+              .css-bar-value-animate{
+                animation: eightZero 1.4s 3.7s forwards ease-out;
+                @keyframes eightZero{
+                  100%{
+                    width: 80%;
+                  }
                 }
               }
             }
-            .js-bar-value-animate{
-              animation: fivefive 1.4s 1s forwards ease-out;
-              @keyframes fivefive{
-                100%{
-                  width: 55%;
+          }
+          .js-value-wrapper-animate{
+            .bar-title{
+              animation: intoView 2s 0.6s forwards;
+            }
+            .bar-value{
+              animation: giveMeWidth 2s 0.6s forwards;
+              .bar-value-meter{
+                &:before{
+                  animation: shine 10s 5s infinite;
+                }
+              }
+              .js-bar-value-animate{
+                animation: sixFive 1.4s 3.9s forwards ease-out;
+                @keyframes sixFive{
+                  100%{
+                    width: 65%;
+                  }
                 }
               }
             }
-            .php-bar-value-animate{
-              animation: twoFive 1.4s 1.5s forwards ease-out;
-              @keyframes twoFive{
-                100%{
-                  width: 25%;
+          }
+          .php-value-wrapper-animate{
+            .bar-title{
+              animation: intoView 2s 0.9s forwards;
+            }
+            .bar-value{
+              animation: giveMeWidth 2s 0.9s forwards;
+              .bar-value-meter{
+                &:before{
+                  animation: shine 10s 5s infinite;
+                }
+              }
+              .php-bar-value-animate{
+                animation: twoFive 1.4s 4.1s forwards ease-out;
+                @keyframes twoFive{
+                  100%{
+                    width: 25%;
+                  }
                 }
               }
             }
-            .bootstrap-bar-value-animate{
-              animation: fourfive 1.4s 2s forwards ease-out;
-              @keyframes fourfive{
-                100%{
-                  width: 45%;
+          }
+          .bootstrap-value-wrapper-animate{
+            .bar-title{
+              animation: intoView 2s 1.2s forwards;
+            }
+            .bar-value{
+              animation: giveMeWidth 2s 1.2s forwards;
+              .bar-value-meter{
+                &:before{
+                  animation: shine 10s 5s infinite;
+                }
+              }
+              .bootstrap-bar-value-animate{
+                animation: fourfive 1.4s 4.3s forwards ease-out;
+                @keyframes fourfive{
+                  100%{
+                    width: 45%;
+                  }
                 }
               }
             }
-            .jquery-bar-value-animate{
-              animation: towZero 1.4s 2s forwards ease-out;
-              @keyframes towZero{
-                100%{
-                  width: 20%;
+          }
+          .jquery-value-wrapper-animate{
+            .bar-title{
+              animation: intoView 2s 1.5s forwards;
+            }
+            .bar-value{
+              animation: giveMeWidth 2s 1.5s forwards;
+              .bar-value-meter{
+                &:before{
+                  animation: shine 10s 5s infinite;
+                }
+              }
+              .jquery-bar-value-animate{
+                animation: towZero 1.4s 4.5s forwards ease-out;
+                @keyframes towZero{
+                  100%{
+                    width: 30%;
+                  }
                 }
               }
             }
@@ -555,15 +685,7 @@ main {
   }
 }
 
+
 .sticky-nav-wrapper {
   padding-top: 5em;
-}
-
-.resume-wrapper{
-  margin: 4em 0 2em 0;
-  @include center();
-  flex-flow: column;
-  h1{
-    font-size: $fontSize;
-  }
 }

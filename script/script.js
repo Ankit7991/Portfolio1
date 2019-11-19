@@ -118,11 +118,11 @@
 })();
 
 (function onscrollAll(){
-  
+  //sticky nav variables
   var navWrapper = document.querySelector('#main');
   var nav = document.querySelector('#nav');
-  
-  function setAnimation(element, updateTo){
+  //language animation function
+  function changeClass(element, updateTo){
     var element = document.querySelector(`.${element}`);
     element.classList.add(updateTo);
   }
@@ -133,14 +133,23 @@
     //languages animation
     let windowHeight = window.innerHeight;
     let parentDistance = parent.getBoundingClientRect().top;
-    if(parentDistance <= (windowHeight/1.3)){
-      setAnimation('html-bar-value', 'html-bar-value-animate');
-      setAnimation('css-bar-value', 'css-bar-value-animate');
-      setAnimation('js-bar-value', 'js-bar-value-animate');
-      setAnimation('php-bar-value', 'php-bar-value-animate');
-      setAnimation('bootstrap-bar-value', 'bootstrap-bar-value-animate');
-      setAnimation('jquery-bar-value', 'jquery-bar-value-animate');
-
+    if(parentDistance <= (windowHeight/2)){
+      changeClass('html-bar-value', 'html-bar-value-animate');
+      changeClass('css-bar-value', 'css-bar-value-animate');
+      changeClass('js-bar-value', 'js-bar-value-animate');
+      changeClass('php-bar-value', 'php-bar-value-animate');
+      changeClass('bootstrap-bar-value', 'bootstrap-bar-value-animate');
+      changeClass('jquery-bar-value', 'jquery-bar-value-animate');
+      // changeClass('title-value-wrapper', 'title-value-wrapper-animate');
+      //title value wrappers -> tvWrappers
+      var languages = ['html', 'css', 'js', 'php', 'bootstrap', 'jquery' ];
+      var tvWrappers = document.querySelectorAll('.title-value-wrapper');
+      // for(let i = 0; i < tvWrappers.length; i++){
+      //   tvWrappers[i].classList.add('title-value-wrapper-animate');
+      // }
+      for(let i in languages){
+        tvWrappers[i].classList.add(`${languages[i]}-value-wrapper-animate`)
+      }
     }
 
     //sticky nav
@@ -159,20 +168,20 @@
 (function linkScroll(){
 
   //using jquery 
-  function scroll(nowId, toId, duration = 500){
-    $(`${nowId}`).click(function(){
+  function scroll(nowId, toId, duration = 500, extraMargin){
+    $(`#${nowId}`).click(function(){
       $(document).ready(function(){
         $('html, body').animate({
-          scrollTop: $(`${toId}`).offset().top
+          scrollTop: $(`#${toId}`).offset().top
         }, duration)
       })
     })
   }
 
-  scroll('#home', '#HOME', );
-  scroll('#about', '#ABOUT', );
-  scroll('#resume', '#RESUME',);
-  scroll('#viewWork', '#ABOUT', 1000);
-  scroll('#contact', '#CONTACT', );
+  scroll('home', 'HOME', );
+  scroll('about', 'ABOUT', );
+  // scroll('resume', 'RESUME', 500, -500);
+  scroll('viewWork', 'ABOUT', 1000);
+  scroll('contact', 'CONTACT', );
 
 })();

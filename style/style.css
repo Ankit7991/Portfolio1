@@ -112,11 +112,14 @@ section.intro-wrapper .intro {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  color: white;
+  color: rgba(255, 255, 255, 0.767);
   font-size: calc(30px + (40 - 38)*(40vw - 400px)/30);
-  font-family: "Quicksand", sans-serif;
   letter-spacing: 2px;
   font-weight: lighter;
+}
+
+section.intro-wrapper .intro h1 strong {
+  color: white;
 }
 
 section.intro-wrapper .intro-video-bg {
@@ -138,7 +141,7 @@ section.intro-wrapper .intro-video-bg .black-overlay {
   width: 100vw;
   height: 100vh;
   max-width: 100%;
-  background: #0000007a;
+  background: #000000aa;
   position: absolute;
   top: 0;
   left: 0;
@@ -463,17 +466,18 @@ main section.about .about-me {
 main section.about .about-me h1 {
   margin: 1em;
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #d1d1d1;
   border-top: none;
   border-bottom: none;
   padding: 0 1em 0 1em;
   position: relative;
+  color: #000000bb;
 }
 
 main section.about .about-me h1:after, main section.about .about-me h1:before {
   content: "";
   position: absolute;
-  border: 1px solid black;
+  border: 1px solid #d1d1d1;
   width: 2em;
   height: 0.6em;
 }
@@ -518,7 +522,9 @@ main section.about .languages .bar-wrapper {
   width: 90%;
 }
 
-main section.about .languages .bar-wrapper .bar-main {
+main section.about .languages .bar-wrapper .bar-main .title-value-wrapper {
+  position: relative;
+  overflow: hidden;
   margin: 20px 0 10px 0;
   background: #00000044;
   display: -webkit-box;
@@ -530,11 +536,13 @@ main section.about .languages .bar-wrapper .bar-main {
           align-items: center;
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-title {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-title {
+  position: absolute;
+  left: -20%;
   height: 100%;
+  color: white;
+  background: #09615b;
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,20 +552,19 @@ main section.about .languages .bar-wrapper .bar-main .bar-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
-  background: #09615b;
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
+main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value {
+  background: #f5f59d;
+  left: 0;
   text-align: right;
   position: relative;
   height: 100%;
+  width: 0;
+  overflow: hidden;
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value span {
+main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value span {
   position: absolute;
   right: 0;
   top: 50%;
@@ -565,70 +572,200 @@ main section.about .languages .bar-wrapper .bar-main .bar-value span {
           transform: translateY(-50%);
   padding: 10px;
   font-weight: bolder;
-  color: white;
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .bar-value-meter {
+main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value .bar-value-meter {
   position: absolute;
   height: 100%;
   width: 0%;
   background: #4ecdc5;
+  position: relative;
+  overflow: hidden;
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .html-bar-value-animate {
-  -webkit-animation: sevenFive 1.4s 0s forwards ease-out;
-          animation: sevenFive 1.4s 0s forwards ease-out;
+main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value .bar-value-meter:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  width: 100px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.414)), to(transparent));
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.414), transparent);
 }
 
-@-webkit-keyframes sevenFive {
+@-webkit-keyframes intoView {
+  60% {
+    left: 50%;
+  }
   100% {
-    width: 75%;
+    left: 0;
   }
 }
 
-@keyframes sevenFive {
+@keyframes intoView {
+  60% {
+    left: 50%;
+  }
   100% {
-    width: 75%;
+    left: 0;
   }
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .css-bar-value-animate {
-  -webkit-animation: seventy 1.4s 0.5s forwards ease-out;
-          animation: seventy 1.4s 0.5s forwards ease-out;
-}
-
-@-webkit-keyframes seventy {
+@-webkit-keyframes giveMeWidth {
+  60% {
+    width: 0;
+    left: 70%;
+  }
   100% {
-    width: 70%;
+    width: 80%;
+    left: 20%;
   }
 }
 
-@keyframes seventy {
+@keyframes giveMeWidth {
+  60% {
+    width: 0;
+    left: 70%;
+  }
   100% {
-    width: 70%;
+    width: 80%;
+    left: 20%;
   }
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .js-bar-value-animate {
-  -webkit-animation: fivefive 1.4s 1s forwards ease-out;
-          animation: fivefive 1.4s 1s forwards ease-out;
-}
-
-@-webkit-keyframes fivefive {
+@-webkit-keyframes shine {
   100% {
-    width: 55%;
+    left: 100%;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
   }
 }
 
-@keyframes fivefive {
+@keyframes shine {
   100% {
-    width: 55%;
+    left: 100%;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
   }
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .php-bar-value-animate {
-  -webkit-animation: twoFive 1.4s 1.5s forwards ease-out;
-          animation: twoFive 1.4s 1.5s forwards ease-out;
+main section.about .languages .bar-wrapper .bar-main .html-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s forwards;
+          animation: intoView 2s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .html-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s forwards;
+          animation: giveMeWidth 2s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .html-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+main section.about .languages .bar-wrapper .bar-main .html-value-wrapper-animate .bar-value .html-bar-value-animate {
+  -webkit-animation: nineZero 1.4s 3.5s forwards ease-out;
+          animation: nineZero 1.4s 3.5s forwards ease-out;
+}
+
+@-webkit-keyframes nineZero {
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes nineZero {
+  100% {
+    width: 90%;
+  }
+}
+
+main section.about .languages .bar-wrapper .bar-main .css-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 0.3s forwards;
+          animation: intoView 2s 0.3s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .css-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 0.3s forwards;
+          animation: giveMeWidth 2s 0.3s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .css-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+main section.about .languages .bar-wrapper .bar-main .css-value-wrapper-animate .bar-value .css-bar-value-animate {
+  -webkit-animation: eightZero 1.4s 3.7s forwards ease-out;
+          animation: eightZero 1.4s 3.7s forwards ease-out;
+}
+
+@-webkit-keyframes eightZero {
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes eightZero {
+  100% {
+    width: 80%;
+  }
+}
+
+main section.about .languages .bar-wrapper .bar-main .js-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 0.6s forwards;
+          animation: intoView 2s 0.6s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .js-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 0.6s forwards;
+          animation: giveMeWidth 2s 0.6s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .js-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+main section.about .languages .bar-wrapper .bar-main .js-value-wrapper-animate .bar-value .js-bar-value-animate {
+  -webkit-animation: sixFive 1.4s 3.9s forwards ease-out;
+          animation: sixFive 1.4s 3.9s forwards ease-out;
+}
+
+@-webkit-keyframes sixFive {
+  100% {
+    width: 65%;
+  }
+}
+
+@keyframes sixFive {
+  100% {
+    width: 65%;
+  }
+}
+
+main section.about .languages .bar-wrapper .bar-main .php-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 0.9s forwards;
+          animation: intoView 2s 0.9s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .php-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 0.9s forwards;
+          animation: giveMeWidth 2s 0.9s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .php-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+main section.about .languages .bar-wrapper .bar-main .php-value-wrapper-animate .bar-value .php-bar-value-animate {
+  -webkit-animation: twoFive 1.4s 4.1s forwards ease-out;
+          animation: twoFive 1.4s 4.1s forwards ease-out;
 }
 
 @-webkit-keyframes twoFive {
@@ -643,9 +780,24 @@ main section.about .languages .bar-wrapper .bar-main .bar-value .php-bar-value-a
   }
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .bootstrap-bar-value-animate {
-  -webkit-animation: fourfive 1.4s 2s forwards ease-out;
-          animation: fourfive 1.4s 2s forwards ease-out;
+main section.about .languages .bar-wrapper .bar-main .bootstrap-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 1.2s forwards;
+          animation: intoView 2s 1.2s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .bootstrap-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 1.2s forwards;
+          animation: giveMeWidth 2s 1.2s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .bootstrap-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+main section.about .languages .bar-wrapper .bar-main .bootstrap-value-wrapper-animate .bar-value .bootstrap-bar-value-animate {
+  -webkit-animation: fourfive 1.4s 4.3s forwards ease-out;
+          animation: fourfive 1.4s 4.3s forwards ease-out;
 }
 
 @-webkit-keyframes fourfive {
@@ -660,45 +812,39 @@ main section.about .languages .bar-wrapper .bar-main .bar-value .bootstrap-bar-v
   }
 }
 
-main section.about .languages .bar-wrapper .bar-main .bar-value .jquery-bar-value-animate {
-  -webkit-animation: towZero 1.4s 2s forwards ease-out;
-          animation: towZero 1.4s 2s forwards ease-out;
+main section.about .languages .bar-wrapper .bar-main .jquery-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 1.5s forwards;
+          animation: intoView 2s 1.5s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .jquery-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 1.5s forwards;
+          animation: giveMeWidth 2s 1.5s forwards;
+}
+
+main section.about .languages .bar-wrapper .bar-main .jquery-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+main section.about .languages .bar-wrapper .bar-main .jquery-value-wrapper-animate .bar-value .jquery-bar-value-animate {
+  -webkit-animation: towZero 1.4s 4.5s forwards ease-out;
+          animation: towZero 1.4s 4.5s forwards ease-out;
 }
 
 @-webkit-keyframes towZero {
   100% {
-    width: 20%;
+    width: 30%;
   }
 }
 
 @keyframes towZero {
   100% {
-    width: 20%;
+    width: 30%;
   }
 }
 
 .sticky-nav-wrapper {
   padding-top: 5em;
-}
-
-.resume-wrapper {
-  margin: 4em 0 2em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-}
-
-.resume-wrapper h1 {
-  font-size: calc(30px + (40 - 38)*(40vw - 400px)/30);
 }
 /*# sourceMappingURL=style.css.map */
