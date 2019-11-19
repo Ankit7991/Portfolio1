@@ -23,7 +23,7 @@
   }
   @keyframes shine{
     100%{
-      left: 100%;
+      left: 40px;
       transform: translate(100%);
     }
   }
@@ -43,7 +43,7 @@
       animation: giveMeWidth 2s forwards;
       .bar-value-meter{
         &:before{
-          animation: shine 10s 5s infinite;
+          animation: shine 1s forwards;
         }
       }
       .html-bar-value-animate{
@@ -64,7 +64,7 @@
       animation: giveMeWidth 2s 0.3s forwards;
       .bar-value-meter{
         &:before{
-          animation: shine 10s 5s infinite;
+          animation: shine 1s forwards;
         }
       }
       .css-bar-value-animate{
@@ -85,7 +85,7 @@
       animation: giveMeWidth 2s 0.6s forwards;
       .bar-value-meter{
         &:before{
-          animation: shine 10s 5s infinite;
+          animation: shine 1s forwards;
         }
       }
       .js-bar-value-animate{
@@ -106,7 +106,7 @@
       animation: giveMeWidth 2s 0.9s forwards;
       .bar-value-meter{
         &:before{
-          animation: shine 10s 5s infinite;
+          animation: shine 1s forwards;
         }
       }
       .php-bar-value-animate{
@@ -127,7 +127,7 @@
       animation: giveMeWidth 2s 1.2s forwards;
       .bar-value-meter{
         &:before{
-          animation: shine 10s 5s infinite;
+          animation: shine 1s forwards;
         }
       }
       .bootstrap-bar-value-animate{
@@ -148,7 +148,7 @@
       animation: giveMeWidth 2s 1.5s forwards;
       .bar-value-meter{
         &:before{
-          animation: shine 10s 5s infinite;
+          animation: shine 1s forwards;
         }
       }
       .jquery-bar-value-animate{
@@ -156,6 +156,48 @@
         @keyframes towZero{
           100%{
             width: 30%;
+          }
+        }
+      }
+    }
+  }
+  .ui-value-wrapper-animate{
+    .bar-title{
+      animation: intoView 2s 1.7s forwards;
+    }
+    .bar-value{
+      animation: giveMeWidth 2s 1.7s forwards;
+      .bar-value-meter{
+        &:before{
+          animation: shine 1s forwards;
+        }
+      }
+      .ui-bar-value-animate{
+        animation: fiveZero 1.4s 4.7s forwards ease-out;
+        @keyframes fiveZero{
+          100%{
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+  .photoshop-value-wrapper-animate{
+    .bar-title{
+      animation: intoView 2s 1.9s forwards;
+    }
+    .bar-value{
+      animation: giveMeWidth 2s 1.9s forwards;
+      .bar-value-meter{
+        &:before{
+          animation: shine 1s forwards;
+        }
+      }
+      .photoshop-bar-value-animate{
+        animation: fourZero 1.4s 4.9s forwards ease-out;
+        @keyframes fourZero{
+          100%{
+            width: 40%;
           }
         }
       }

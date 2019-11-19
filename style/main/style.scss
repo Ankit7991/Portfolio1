@@ -1,4 +1,3 @@
-
 /* background colors */
 $background-color: white;
 $bg-color-intro: transparent;
@@ -40,7 +39,8 @@ serif;
   justify-content: center;
   align-items: center;
 }
-@mixin centerAbsolute{
+
+@mixin centerAbsolute {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,12 +53,14 @@ serif;
   margin: 0;
   padding: 0;
   font-family: $font2;
+
   &::selection {
     background: #ffffff27;
   }
 
   outline: none;
-  a{
+
+  a {
     cursor: pointer;
   }
 }
@@ -69,6 +71,7 @@ body {
   background: linear-gradient(#1a857e, #4ecdc4);
   position: relative;
   height: 2700px;
+
   &:after {
     content: "";
     position: absolute;
@@ -86,14 +89,16 @@ body {
       }
     }
   }
-  
-  &::-webkit-scrollbar{
+
+  &::-webkit-scrollbar {
     width: 5px;
   }
-  &::-webkit-scrollbar-track{
+
+  &::-webkit-scrollbar-track {
     background: #c4c4c4;
   }
-  &::-webkit-scrollbar-thumb{
+
+  &::-webkit-scrollbar-thumb {
     background: #494949;
   }
 
@@ -132,9 +137,10 @@ section.intro-wrapper {
     font-size: calc(30px + (40 - 38)*(40vw - 400px)/30);
     letter-spacing: 2px;
     font-weight: lighter;
+
     // font-size: 20px;
-    h1{
-      strong{
+    h1 {
+      strong {
         color: white;
       }
     }
@@ -290,7 +296,6 @@ main {
               border-bottom: 4px solid #db7070;
             }
           }
-
           a.active {
             border-bottom: 4px solid #db7070;
           }
@@ -339,7 +344,8 @@ main {
     letter-spacing: 1px;
     line-height: 1.6em;
     padding-top: 39px;
-    .card-wrapper{
+
+    .card-wrapper {
       // border: 1px solid black;
       display: flex;
       flex-wrap: wrap;
@@ -347,6 +353,7 @@ main {
       align-items: center;
       color: rgba(255, 255, 255, 0.801);
     }
+
     .card {
       // border: 1px solid black;
       width: 250px;
@@ -366,6 +373,7 @@ main {
         background: #00000073;
         border-radius: 100%;
         position: relative;
+        cursor: pointer;
 
         .fa {
           @include centerAbsolute();
@@ -374,8 +382,9 @@ main {
           font-weight: lighter;
           transition: font-size 0.2s, color 0.4s;
         }
-        &:hover{
-          .fa{
+
+        &:hover {
+          .fa {
             font-size: 50px;
             color: #ffffff;
           }
@@ -398,7 +407,8 @@ main {
           position: absolute;
           bottom: 0;
         }
-        &:before{
+
+        &:before {
           left: 0;
           border-right: 1px solid $card-title-bordCol;
           border-bottom: 1px solid $card-title-bordCol;
@@ -407,7 +417,8 @@ main {
           height: 0.6em;
           transform: translate(-100%, 0.6em);
         }
-        &:after{
+
+        &:after {
           right: 0;
           border-left: 1px solid $card-title-bordCol;
           border-bottom: 1px solid $card-title-bordCol;
@@ -418,16 +429,18 @@ main {
         }
       }
     }
-    .card-about{
+
+    .card-about {
       padding-top: 1em;
     }
 
-    .about-me{
+    .about-me {
       text-align: center;
       margin-top: 5em;
       margin-bottom: 5em;
       line-height: 2em;
-      h1{
+
+      h1 {
         margin: 1em;
         // border: 1px solid $card-title-bordCol;
         $card-title-bordCol: #d1d1d1;
@@ -439,14 +452,16 @@ main {
         position: relative;
         color: #000000bb;
 
-        &:after, &:before{
+        &:after,
+        &:before {
           content: "";
           position: absolute;
           border: 1px solid $card-title-bordCol;
           width: 2em;
           height: 0.6em;
         }
-        &:before{
+
+        &:before {
           left: 0;
           top: 0;
           border-bottom: none;
@@ -454,7 +469,8 @@ main {
           border-radius: 10px 0 0 0;
           transform: translate(-1px, -0.5em);
         }
-        &:after{
+
+        &:after {
           bottom: 0;
           right: 0;
           border-top: none;
@@ -465,23 +481,25 @@ main {
       }
     }
 
-    .languages{
+    .languages {
       @include center();
       flex-flow: column;
-      .bar-wrapper{
+
+      .bar-wrapper {
         width: 90%;
 
-        .bar-main{
-          
-          .title-value-wrapper{
+        .bar-main {
+
+          .title-value-wrapper {
             position: relative;
             overflow: hidden;
-            margin: 20px 0 10px 0;
+            margin-bottom: 10px;
             background: #00000044;
             display: flex;
-            height: 2.4em;
+            height: 2em;
             align-items: center;
-            .bar-title{
+
+            .bar-title {
               position: absolute;
               left: -20%;
               height: 100%;
@@ -489,9 +507,22 @@ main {
               background: #09615b;
               width: 20%;
               @include center();
+              z-index: 1000;
+              &:after{
+                content: "";
+                right: 0;
+                top: 0;
+                height: 2em;
+                width: 4em;
+                background: #09615b;
+                position: absolute;
+                z-index: -1;
+                transform: translate(40%) rotate(60deg);
 
+              }
             }
-            .bar-value{
+
+            .bar-value {
               background: #0202024f;
               left: 0;
               text-align: right;
@@ -499,7 +530,9 @@ main {
               height: 100%;
               width: 0;
               overflow: hidden;
-              span{
+              // border: 1px solid red;
+
+              span {
                 position: absolute;
                 right: 0;
                 top: 50%;
@@ -507,27 +540,34 @@ main {
                 padding: 10px;
                 font-weight: bolder;
               }
-              .bar-value-meter{
+              .bar-value-meter {
                 position: absolute;
-                height: 100%;
+                height: 80%;
                 width: 0%;
                 background: #4ecdc5;
                 position: relative;
                 overflow: hidden;
-                &:before{
-                  content: "";
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                  bottom: 0;
-                  transform: translate(-100%);
-                  width: 100px;
-                  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.414), transparent);
-                }
+                top: 50%;
+                transform: translate(0, -50%);
+
+                // &:before {
+                //   content: "";
+                //   position: absolute;
+                //   left: 0;
+                //   top: 50%;
+                //   transform: translate(0, -50%);
+                //   bottom: 0;
+                //   // visibility: hidden;
+                //   transform: translate(-100%);
+                //   // width: 100px;
+                //   // background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.414), transparent);
+                //   width: 10px;
+                //   background: #44B6AE;
+                // }
               }
             }
           }
-          
+
         }
       }
     }

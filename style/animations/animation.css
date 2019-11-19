@@ -54,7 +54,7 @@
 
 @-webkit-keyframes shine {
   100% {
-    left: 100%;
+    left: 40px;
     -webkit-transform: translate(100%);
             transform: translate(100%);
   }
@@ -62,7 +62,7 @@
 
 @keyframes shine {
   100% {
-    left: 100%;
+    left: 40px;
     -webkit-transform: translate(100%);
             transform: translate(100%);
   }
@@ -79,8 +79,8 @@
 }
 
 .bar-main .html-value-wrapper-animate .bar-value .bar-value-meter:before {
-  -webkit-animation: shine 10s 5s infinite;
-          animation: shine 10s 5s infinite;
+  -webkit-animation: shine 1s forwards;
+          animation: shine 1s forwards;
 }
 
 .bar-main .html-value-wrapper-animate .bar-value .html-bar-value-animate {
@@ -111,8 +111,8 @@
 }
 
 .bar-main .css-value-wrapper-animate .bar-value .bar-value-meter:before {
-  -webkit-animation: shine 10s 5s infinite;
-          animation: shine 10s 5s infinite;
+  -webkit-animation: shine 1s forwards;
+          animation: shine 1s forwards;
 }
 
 .bar-main .css-value-wrapper-animate .bar-value .css-bar-value-animate {
@@ -143,8 +143,8 @@
 }
 
 .bar-main .js-value-wrapper-animate .bar-value .bar-value-meter:before {
-  -webkit-animation: shine 10s 5s infinite;
-          animation: shine 10s 5s infinite;
+  -webkit-animation: shine 1s forwards;
+          animation: shine 1s forwards;
 }
 
 .bar-main .js-value-wrapper-animate .bar-value .js-bar-value-animate {
@@ -175,8 +175,8 @@
 }
 
 .bar-main .php-value-wrapper-animate .bar-value .bar-value-meter:before {
-  -webkit-animation: shine 10s 5s infinite;
-          animation: shine 10s 5s infinite;
+  -webkit-animation: shine 1s forwards;
+          animation: shine 1s forwards;
 }
 
 .bar-main .php-value-wrapper-animate .bar-value .php-bar-value-animate {
@@ -207,8 +207,8 @@
 }
 
 .bar-main .bootstrap-value-wrapper-animate .bar-value .bar-value-meter:before {
-  -webkit-animation: shine 10s 5s infinite;
-          animation: shine 10s 5s infinite;
+  -webkit-animation: shine 1s forwards;
+          animation: shine 1s forwards;
 }
 
 .bar-main .bootstrap-value-wrapper-animate .bar-value .bootstrap-bar-value-animate {
@@ -239,8 +239,8 @@
 }
 
 .bar-main .jquery-value-wrapper-animate .bar-value .bar-value-meter:before {
-  -webkit-animation: shine 10s 5s infinite;
-          animation: shine 10s 5s infinite;
+  -webkit-animation: shine 1s forwards;
+          animation: shine 1s forwards;
 }
 
 .bar-main .jquery-value-wrapper-animate .bar-value .jquery-bar-value-animate {
@@ -257,6 +257,70 @@
 @keyframes towZero {
   100% {
     width: 30%;
+  }
+}
+
+.bar-main .ui-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 1.7s forwards;
+          animation: intoView 2s 1.7s forwards;
+}
+
+.bar-main .ui-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 1.7s forwards;
+          animation: giveMeWidth 2s 1.7s forwards;
+}
+
+.bar-main .ui-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 1s forwards;
+          animation: shine 1s forwards;
+}
+
+.bar-main .ui-value-wrapper-animate .bar-value .ui-bar-value-animate {
+  -webkit-animation: fiveZero 1.4s 4.7s forwards ease-out;
+          animation: fiveZero 1.4s 4.7s forwards ease-out;
+}
+
+@-webkit-keyframes fiveZero {
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes fiveZero {
+  100% {
+    width: 50%;
+  }
+}
+
+.bar-main .photoshop-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 1.9s forwards;
+          animation: intoView 2s 1.9s forwards;
+}
+
+.bar-main .photoshop-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 1.9s forwards;
+          animation: giveMeWidth 2s 1.9s forwards;
+}
+
+.bar-main .photoshop-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 1s forwards;
+          animation: shine 1s forwards;
+}
+
+.bar-main .photoshop-value-wrapper-animate .bar-value .photoshop-bar-value-animate {
+  -webkit-animation: fourZero 1.4s 4.9s forwards ease-out;
+          animation: fourZero 1.4s 4.9s forwards ease-out;
+}
+
+@-webkit-keyframes fourZero {
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes fourZero {
+  100% {
+    width: 40%;
   }
 }
 /*# sourceMappingURL=animation.css.map */
