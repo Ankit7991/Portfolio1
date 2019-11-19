@@ -1,0 +1,262 @@
+.bar-main {
+  /*
+  
+  
+  animation section
+  
+  
+  */
+}
+
+.bar-main span {
+  color: white !important;
+}
+
+@-webkit-keyframes intoView {
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes intoView {
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes giveMeWidth {
+  60% {
+    width: 0;
+    left: 70%;
+  }
+  100% {
+    width: 80%;
+    left: 20%;
+  }
+}
+
+@keyframes giveMeWidth {
+  60% {
+    width: 0;
+    left: 70%;
+  }
+  100% {
+    width: 80%;
+    left: 20%;
+  }
+}
+
+@-webkit-keyframes shine {
+  100% {
+    left: 100%;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 100%;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+}
+
+.bar-main .html-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s forwards;
+          animation: intoView 2s forwards;
+}
+
+.bar-main .html-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s forwards;
+          animation: giveMeWidth 2s forwards;
+}
+
+.bar-main .html-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+.bar-main .html-value-wrapper-animate .bar-value .html-bar-value-animate {
+  -webkit-animation: nineZero 1.4s 3.5s forwards ease-out;
+          animation: nineZero 1.4s 3.5s forwards ease-out;
+}
+
+@-webkit-keyframes nineZero {
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes nineZero {
+  100% {
+    width: 90%;
+  }
+}
+
+.bar-main .css-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 0.3s forwards;
+          animation: intoView 2s 0.3s forwards;
+}
+
+.bar-main .css-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 0.3s forwards;
+          animation: giveMeWidth 2s 0.3s forwards;
+}
+
+.bar-main .css-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+.bar-main .css-value-wrapper-animate .bar-value .css-bar-value-animate {
+  -webkit-animation: eightZero 1.4s 3.7s forwards ease-out;
+          animation: eightZero 1.4s 3.7s forwards ease-out;
+}
+
+@-webkit-keyframes eightZero {
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes eightZero {
+  100% {
+    width: 80%;
+  }
+}
+
+.bar-main .js-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 0.6s forwards;
+          animation: intoView 2s 0.6s forwards;
+}
+
+.bar-main .js-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 0.6s forwards;
+          animation: giveMeWidth 2s 0.6s forwards;
+}
+
+.bar-main .js-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+.bar-main .js-value-wrapper-animate .bar-value .js-bar-value-animate {
+  -webkit-animation: sixFive 1.4s 3.9s forwards ease-out;
+          animation: sixFive 1.4s 3.9s forwards ease-out;
+}
+
+@-webkit-keyframes sixFive {
+  100% {
+    width: 65%;
+  }
+}
+
+@keyframes sixFive {
+  100% {
+    width: 65%;
+  }
+}
+
+.bar-main .php-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 0.9s forwards;
+          animation: intoView 2s 0.9s forwards;
+}
+
+.bar-main .php-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 0.9s forwards;
+          animation: giveMeWidth 2s 0.9s forwards;
+}
+
+.bar-main .php-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+.bar-main .php-value-wrapper-animate .bar-value .php-bar-value-animate {
+  -webkit-animation: twoFive 1.4s 4.1s forwards ease-out;
+          animation: twoFive 1.4s 4.1s forwards ease-out;
+}
+
+@-webkit-keyframes twoFive {
+  100% {
+    width: 25%;
+  }
+}
+
+@keyframes twoFive {
+  100% {
+    width: 25%;
+  }
+}
+
+.bar-main .bootstrap-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 1.2s forwards;
+          animation: intoView 2s 1.2s forwards;
+}
+
+.bar-main .bootstrap-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 1.2s forwards;
+          animation: giveMeWidth 2s 1.2s forwards;
+}
+
+.bar-main .bootstrap-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+.bar-main .bootstrap-value-wrapper-animate .bar-value .bootstrap-bar-value-animate {
+  -webkit-animation: fourfive 1.4s 4.3s forwards ease-out;
+          animation: fourfive 1.4s 4.3s forwards ease-out;
+}
+
+@-webkit-keyframes fourfive {
+  100% {
+    width: 45%;
+  }
+}
+
+@keyframes fourfive {
+  100% {
+    width: 45%;
+  }
+}
+
+.bar-main .jquery-value-wrapper-animate .bar-title {
+  -webkit-animation: intoView 2s 1.5s forwards;
+          animation: intoView 2s 1.5s forwards;
+}
+
+.bar-main .jquery-value-wrapper-animate .bar-value {
+  -webkit-animation: giveMeWidth 2s 1.5s forwards;
+          animation: giveMeWidth 2s 1.5s forwards;
+}
+
+.bar-main .jquery-value-wrapper-animate .bar-value .bar-value-meter:before {
+  -webkit-animation: shine 10s 5s infinite;
+          animation: shine 10s 5s infinite;
+}
+
+.bar-main .jquery-value-wrapper-animate .bar-value .jquery-bar-value-animate {
+  -webkit-animation: towZero 1.4s 4.5s forwards ease-out;
+          animation: towZero 1.4s 4.5s forwards ease-out;
+}
+
+@-webkit-keyframes towZero {
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes towZero {
+  100% {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=animation.css.map */

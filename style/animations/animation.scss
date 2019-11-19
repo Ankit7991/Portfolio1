@@ -1,0 +1,164 @@
+
+.bar-main{
+  span{
+    color: white !important;
+  }
+  @keyframes intoView {
+    60%{
+      left: 50%;
+    }
+    100%{
+      left: 0;
+    }
+  }
+  @keyframes giveMeWidth{
+    60%{
+      width: 0;
+      left: 70%;
+    }
+    100%{
+      width: 80%;
+      left: 20%;
+    }
+  }
+  @keyframes shine{
+    100%{
+      left: 100%;
+      transform: translate(100%);
+    }
+  }
+  //fade in out animation
+  /*
+  
+  
+  animation section
+  
+  
+  */
+  .html-value-wrapper-animate{
+    .bar-title{
+      animation: intoView 2s forwards;
+    }
+    .bar-value{
+      animation: giveMeWidth 2s forwards;
+      .bar-value-meter{
+        &:before{
+          animation: shine 10s 5s infinite;
+        }
+      }
+      .html-bar-value-animate{
+        animation: nineZero 1.4s 3.5s forwards ease-out;
+        @keyframes nineZero{
+          100%{
+            width: 90%; 
+          }
+        }
+      } 
+    }
+  }
+  .css-value-wrapper-animate{
+    .bar-title{
+      animation: intoView 2s 0.3s forwards;
+    }
+    .bar-value{
+      animation: giveMeWidth 2s 0.3s forwards;
+      .bar-value-meter{
+        &:before{
+          animation: shine 10s 5s infinite;
+        }
+      }
+      .css-bar-value-animate{
+        animation: eightZero 1.4s 3.7s forwards ease-out;
+        @keyframes eightZero{
+          100%{
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+  .js-value-wrapper-animate{
+    .bar-title{
+      animation: intoView 2s 0.6s forwards;
+    }
+    .bar-value{
+      animation: giveMeWidth 2s 0.6s forwards;
+      .bar-value-meter{
+        &:before{
+          animation: shine 10s 5s infinite;
+        }
+      }
+      .js-bar-value-animate{
+        animation: sixFive 1.4s 3.9s forwards ease-out;
+        @keyframes sixFive{
+          100%{
+            width: 65%;
+          }
+        }
+      }
+    }
+  }
+  .php-value-wrapper-animate{
+    .bar-title{
+      animation: intoView 2s 0.9s forwards;
+    }
+    .bar-value{
+      animation: giveMeWidth 2s 0.9s forwards;
+      .bar-value-meter{
+        &:before{
+          animation: shine 10s 5s infinite;
+        }
+      }
+      .php-bar-value-animate{
+        animation: twoFive 1.4s 4.1s forwards ease-out;
+        @keyframes twoFive{
+          100%{
+            width: 25%;
+          }
+        }
+      }
+    }
+  }
+  .bootstrap-value-wrapper-animate{
+    .bar-title{
+      animation: intoView 2s 1.2s forwards;
+    }
+    .bar-value{
+      animation: giveMeWidth 2s 1.2s forwards;
+      .bar-value-meter{
+        &:before{
+          animation: shine 10s 5s infinite;
+        }
+      }
+      .bootstrap-bar-value-animate{
+        animation: fourfive 1.4s 4.3s forwards ease-out;
+        @keyframes fourfive{
+          100%{
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
+  .jquery-value-wrapper-animate{
+    .bar-title{
+      animation: intoView 2s 1.5s forwards;
+    }
+    .bar-value{
+      animation: giveMeWidth 2s 1.5s forwards;
+      .bar-value-meter{
+        &:before{
+          animation: shine 10s 5s infinite;
+        }
+      }
+      .jquery-bar-value-animate{
+        animation: towZero 1.4s 4.5s forwards ease-out;
+        @keyframes towZero{
+          100%{
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
