@@ -139,11 +139,13 @@
       setAnimation('js-bar-value', 'js-bar-value-animate');
       setAnimation('php-bar-value', 'php-bar-value-animate');
       setAnimation('bootstrap-bar-value', 'bootstrap-bar-value-animate');
+      setAnimation('jquery-bar-value', 'jquery-bar-value-animate');
+
     }
 
     //sticky nav
     var height = navWrapper.getBoundingClientRect().top;
-    if(height <= -100){
+    if(height <= -50){
       nav.className = 'sticky';
       navWrapper.classList.add('sticky-nav-wrapper');
     }else{
@@ -167,7 +169,10 @@
     })
   }
 
-  scroll('#home', '#HOME', 1000);
-  scroll('#about', '#ABOUT', 1000);
+  scroll('#home', '#HOME', );
+  scroll('#about', '#ABOUT', );
+  scroll('#resume', '#RESUME',);
+  scroll('#viewWork', '#ABOUT', 1000);
+  scroll('#contact', '#CONTACT', );
 
 })();

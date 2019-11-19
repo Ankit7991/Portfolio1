@@ -56,6 +56,18 @@ body:after {
   }
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #c4c4c4;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #494949;
+}
+
 .container section {
   width: 100vw;
   max-width: 100%;
@@ -333,6 +345,7 @@ main .nonSticky ul li:nth-child(4) a.active {
 main section.about {
   letter-spacing: 1px;
   line-height: 1.6em;
+  padding-top: 39px;
 }
 
 main section.about .card-wrapper {
@@ -378,18 +391,14 @@ main section.about .card .card-icon {
   background: #00000073;
   border-radius: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 main section.about .card .card-icon .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #ffffffbe;
   font-size: 40px;
   font-weight: lighter;
@@ -453,6 +462,40 @@ main section.about .about-me {
 
 main section.about .about-me h1 {
   margin: 1em;
+  display: inline-block;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+  padding: 0 1em 0 1em;
+  position: relative;
+}
+
+main section.about .about-me h1:after, main section.about .about-me h1:before {
+  content: "";
+  position: absolute;
+  border: 1px solid black;
+  width: 2em;
+  height: 0.6em;
+}
+
+main section.about .about-me h1:before {
+  left: 0;
+  top: 0;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 10px 0 0 0;
+  -webkit-transform: translate(-1px, -0.5em);
+          transform: translate(-1px, -0.5em);
+}
+
+main section.about .about-me h1:after {
+  bottom: 0;
+  right: 0;
+  border-top: none;
+  border-left: none;
+  border-radius: 0 0 10px 0;
+  -webkit-transform: translate(1px, 0.5em);
+          transform: translate(1px, 0.5em);
 }
 
 main section.about .languages {
@@ -617,7 +660,45 @@ main section.about .languages .bar-wrapper .bar-main .bar-value .bootstrap-bar-v
   }
 }
 
+main section.about .languages .bar-wrapper .bar-main .bar-value .jquery-bar-value-animate {
+  -webkit-animation: towZero 1.4s 2s forwards ease-out;
+          animation: towZero 1.4s 2s forwards ease-out;
+}
+
+@-webkit-keyframes towZero {
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes towZero {
+  100% {
+    width: 20%;
+  }
+}
+
 .sticky-nav-wrapper {
   padding-top: 5em;
+}
+
+.resume-wrapper {
+  margin: 4em 0 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.resume-wrapper h1 {
+  font-size: calc(30px + (40 - 38)*(40vw - 400px)/30);
 }
 /*# sourceMappingURL=style.css.map */

@@ -13,14 +13,8 @@ $text-color-intro: white;
 $border-color-1: black;
 $button-border-1: white;
 
+$fontSize: calc(30px + (40 - 38)*(40vw - 400px)/30);
 
-/* mixins */
-//center
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 $font1: 'Open Sans Condensed',
 sans-serif;
@@ -36,6 +30,22 @@ $font6: 'Rajdhani',
 sans-serif;
 $font7: 'Cinzel',
 serif;
+
+
+
+/* mixins */
+//center
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin centerAbsolute{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 * {
   box-sizing: border-box;
@@ -76,6 +86,17 @@ body {
       }
     }
   }
+  
+  &::-webkit-scrollbar{
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track{
+    background: #c4c4c4;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: #494949;
+  }
+
 }
 
 //other 
@@ -313,6 +334,7 @@ main {
   section.about {
     letter-spacing: 1px;
     line-height: 1.6em;
+    padding-top: 39px;
     .card-wrapper{
       // border: 1px solid black;
       display: flex;
@@ -340,9 +362,9 @@ main {
         background: #00000073;
         border-radius: 100%;
         position: relative;
-        @include center();
 
         .fa {
+          @include centerAbsolute();
           color: #ffffffbe;
           font-size: 40px;
           font-weight: lighter;
@@ -403,6 +425,37 @@ main {
       line-height: 2em;
       h1{
         margin: 1em;
+        // border: 1px solid $card-title-bordCol;
+        display: inline-block;
+        border: 1px solid black;
+        border-top: none;
+        border-bottom: none;
+        padding: 0 1em 0 1em;
+        position: relative;
+
+        &:after, &:before{
+          content: "";
+          position: absolute;
+          border: 1px solid black;
+          width: 2em;
+          height: 0.6em;
+        }
+        &:before{
+          left: 0;
+          top: 0;
+          border-bottom: none;
+          border-right: none;
+          border-radius: 10px 0 0 0;
+          transform: translate(-1px, -0.5em);
+        }
+        &:after{
+          bottom: 0;
+          right: 0;
+          border-top: none;
+          border-left: none;
+          border-radius: 0 0 10px 0;
+          transform: translate(1px, 0.5em);
+        }
       }
     }
 
@@ -487,6 +540,14 @@ main {
                 }
               }
             }
+            .jquery-bar-value-animate{
+              animation: towZero 1.4s 2s forwards ease-out;
+              @keyframes towZero{
+                100%{
+                  width: 20%;
+                }
+              }
+            }
           }
         }
       }
@@ -498,3 +559,11 @@ main {
   padding-top: 5em;
 }
 
+.resume-wrapper{
+  margin: 4em 0 2em 0;
+  @include center();
+  flex-flow: column;
+  h1{
+    font-size: $fontSize;
+  }
+}

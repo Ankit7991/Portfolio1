@@ -11,8 +11,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
+  <script src="script/jquery.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
         <h1 style="text-align: center;">Hello, I'm <strong>Ankit Maurya.</strong><br>I write</h1>
         <h1 id="intro-typing">My Name is Ankit</h1>
       </div>
-      <a href="#main"><button>View My Work</button></a>
+      <a id="viewWork"><button>View My Work</button></a>
     </section>
 
     <main id="main">
@@ -35,7 +36,7 @@
         <ul>
           <li><a  id="home" class="navLink active">Home</a></li>
           <li><a  id="about" class="navLink">About</a></li>
-          <li><a  id="blog" class="navLink">Blog</a></li>
+          <li><a  id="resume" class="navLink">Resume</a></li>
           <li><a  id="contact" class="navLink">Contact</a></li>
         </ul>
       </nav>
@@ -146,15 +147,40 @@
                 </div>
               </div>
             </div>
+            <div class="bar-main bar-css">
+              <div class="bar-title">JQuery</div>
+              <div class="bar-value">
+                <div class="bar-value-meter jquery-bar-value"></div>
+                <div class="bar-value-percentage ">
+                  <span>20%</span>
+                </div>
+              </div>
+            </div>
 
           </div>
 
         </div>
       </section>
+
+      <section id="RESUME">
+        <div class="resume-wrapper">
+          
+          <h1>Resume</h1>
+          <div class="iframe-wrapper">
+
+            <a href="files/ankitResume-update1.pdf" target="_blank">Download Resume</a>
+            
+          </div>
+        </div>
+      </section>
+
+      <section id="CONTACT">
+        
+      </section>
     </main>
   </div>
 
-  <script src="script/script.js"></script>
+  <script src="script/script.js" ></script>
 </body>
 
 </html>
