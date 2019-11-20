@@ -113,7 +113,7 @@ window.onload = function () {
       })();
 
       //sticky nav
-      (function stickyNav(){
+      (function stickyNav() {
 
         var height = navWrapper.getBoundingClientRect().top;
         if (height <= -50) {

@@ -140,12 +140,13 @@ section.intro-wrapper {
     font-weight: lighter;
     transition: font-size 0.3s;
 
-    .intro-typing-wrapper{
+    .intro-typing-wrapper {
       // border: 1px solid white;
       display: flex;
       position: relative;
       margin-top: 0.2em;
-      span.cursor{
+
+      span.cursor {
         // border: 1px solid red;
         height: 130%;
         position: absolute;
@@ -157,30 +158,36 @@ section.intro-wrapper {
         opacity: 1;
         transform: translate(200%, -50%);
         animation: blink 0.4s infinite;
-        @keyframes blink{
-          70%{
+
+        @keyframes blink {
+          70% {
             opacity: 1;
           }
-          100%{
+
+          100% {
             opacity: 0;
           }
         }
       }
-      span.cursor-fade{
+
+      span.cursor-fade {
         animation: cursorFade 5s 0.2s forwards;
         width: 0;
         border: 1px solid white;
+
         // opacity: 1;
-        @keyframes cursorFade{
-          10%{
+        @keyframes cursorFade {
+          10% {
             transform: translate(0, -50%);
           }
-          50%{
+
+          50% {
             transform: translate(0, -50%);
             background: #ffffff22;
             width: 50%;
           }
-          100%{
+
+          100% {
             transform: translate(3%, -50%);
             background: #ffffff32;
             width: 53%;
@@ -224,10 +231,12 @@ section.intro-wrapper {
     font-weight: lighter;
     color: $text-color-intro;
   }
-  #viewWork{
+
+  #viewWork {
     display: inline-block;
 
   }
+
   span.button {
     margin: 1em;
     // border: 1px solid $card-title-bordCol;
@@ -271,6 +280,19 @@ section.intro-wrapper {
       border-radius: 0 0 10px 0;
       transform: translate(3px, 0.5em);
     }
+
+    &:hover {
+      color: white;
+
+      &:before {
+        width: 80%;
+      }
+
+      &:after {
+        width: 80%;
+      }
+    }
+
   }
 
    
@@ -316,7 +338,8 @@ main {
         text-align: center;
         transition: 0.3s;
 
-        span, a {
+        span,
+        a {
           display: block;
           cursor: pointer;
           padding: 13px;
@@ -329,48 +352,61 @@ main {
         }
 
         &:nth-child(2) {
-          a, span {
+
+          a,
+          span {
             &:hover {
               border-bottom: 4px solid #db7070;
             }
           }
-          a.active, span.active {
+
+          a.active,
+          span.active {
             border-bottom: 4px solid #db7070;
           }
         }
 
         &:nth-child(3) {
-          a, span {
+
+          a,
+          span {
             &:hover {
               border-bottom: 4px solid #43c943;
             }
           }
 
-          a.active , span.active{
+          a.active,
+          span.active {
             border-bottom: 4px solid #43c943;
           }
         }
 
         &:nth-child(4) {
-          a, span {
+
+          a,
+          span {
             &:hover {
               border-bottom: 4px solid #c48e48;
             }
           }
 
-          a.active, span.active {
+          a.active,
+          span.active {
             border-bottom: 4px solid #c48e48;
           }
         }
 
         &:nth-child(5) {
-          a, span {
+
+          a,
+          span {
             &:hover {
               border-bottom: 4px solid #e96de3;
             }
           }
 
-          a.active, span.active {
+          a.active,
+          span.active {
             border-bottom: 4px solid #e96de3;
           }
         }
@@ -548,9 +584,10 @@ main {
               z-index: 1000;
               font-size: 100%;
               transition: font-size 0.4s;
-              &:after{
+
+              &:after {
                 content: "";
-                background: linear-gradient(to right,#37AEA6 25%, #09615b 50%, #37AEA6 25%);
+                background: linear-gradient(to right, #37AEA6 25%, #09615b 50%, #37AEA6 25%);
                 // background: white;
                 position: absolute;
                 right: 0;
@@ -558,7 +595,7 @@ main {
                 height: 90%;
                 width: 1em;
                 z-index: -1;
-                transform: translate(0.6em, -50%) ;
+                transform: translate(0.6em, -50%);
               }
             }
 
@@ -580,6 +617,7 @@ main {
                 padding: 10px;
                 font-weight: bolder;
               }
+
               .bar-value-meter {
                 position: absolute;
                 height: 90%;
