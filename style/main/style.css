@@ -299,6 +299,18 @@ section.intro-wrapper span.button:after {
           transform: translate(3px, 0.5em);
 }
 
+section.intro-wrapper span.button:hover {
+  color: white;
+}
+
+section.intro-wrapper span.button:hover:before {
+  width: 80%;
+}
+
+section.intro-wrapper span.button:hover:after {
+  width: 80%;
+}
+
 main {
   position: relative;
   z-index: 1;
@@ -363,7 +375,8 @@ main .nonSticky ul li {
   transition: 0.3s;
 }
 
-main nav ul li span, main nav ul li a,
+main nav ul li span,
+main nav ul li a,
 main .nonSticky ul li span,
 main .nonSticky ul li a {
   display: block;
@@ -378,49 +391,57 @@ main .nonSticky ul li a {
   transition: 0.4s;
 }
 
-main nav ul li:nth-child(2) a:hover, main nav ul li:nth-child(2) span:hover,
+main nav ul li:nth-child(2) a:hover,
+main nav ul li:nth-child(2) span:hover,
 main .nonSticky ul li:nth-child(2) a:hover,
 main .nonSticky ul li:nth-child(2) span:hover {
   border-bottom: 4px solid #db7070;
 }
 
-main nav ul li:nth-child(2) a.active, main nav ul li:nth-child(2) span.active,
+main nav ul li:nth-child(2) a.active,
+main nav ul li:nth-child(2) span.active,
 main .nonSticky ul li:nth-child(2) a.active,
 main .nonSticky ul li:nth-child(2) span.active {
   border-bottom: 4px solid #db7070;
 }
 
-main nav ul li:nth-child(3) a:hover, main nav ul li:nth-child(3) span:hover,
+main nav ul li:nth-child(3) a:hover,
+main nav ul li:nth-child(3) span:hover,
 main .nonSticky ul li:nth-child(3) a:hover,
 main .nonSticky ul li:nth-child(3) span:hover {
   border-bottom: 4px solid #43c943;
 }
 
-main nav ul li:nth-child(3) a.active, main nav ul li:nth-child(3) span.active,
+main nav ul li:nth-child(3) a.active,
+main nav ul li:nth-child(3) span.active,
 main .nonSticky ul li:nth-child(3) a.active,
 main .nonSticky ul li:nth-child(3) span.active {
   border-bottom: 4px solid #43c943;
 }
 
-main nav ul li:nth-child(4) a:hover, main nav ul li:nth-child(4) span:hover,
+main nav ul li:nth-child(4) a:hover,
+main nav ul li:nth-child(4) span:hover,
 main .nonSticky ul li:nth-child(4) a:hover,
 main .nonSticky ul li:nth-child(4) span:hover {
   border-bottom: 4px solid #c48e48;
 }
 
-main nav ul li:nth-child(4) a.active, main nav ul li:nth-child(4) span.active,
+main nav ul li:nth-child(4) a.active,
+main nav ul li:nth-child(4) span.active,
 main .nonSticky ul li:nth-child(4) a.active,
 main .nonSticky ul li:nth-child(4) span.active {
   border-bottom: 4px solid #c48e48;
 }
 
-main nav ul li:nth-child(5) a:hover, main nav ul li:nth-child(5) span:hover,
+main nav ul li:nth-child(5) a:hover,
+main nav ul li:nth-child(5) span:hover,
 main .nonSticky ul li:nth-child(5) a:hover,
 main .nonSticky ul li:nth-child(5) span:hover {
   border-bottom: 4px solid #e96de3;
 }
 
-main nav ul li:nth-child(5) a.active, main nav ul li:nth-child(5) span.active,
+main nav ul li:nth-child(5) a.active,
+main nav ul li:nth-child(5) span.active,
 main .nonSticky ul li:nth-child(5) a.active,
 main .nonSticky ul li:nth-child(5) span.active {
   border-bottom: 4px solid #e96de3;
