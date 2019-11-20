@@ -708,6 +708,10 @@ main section.contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
 main section.contact .contact-wrapper {
@@ -717,7 +721,7 @@ main section.contact .contact-wrapper {
 main section.contact .contact-wrapper .contact-title {
   position: relative;
   height: 80px;
-  font-size: 0px;
+  opacity: 0;
 }
 
 main section.contact .contact-wrapper .contact-title h1 {
@@ -728,46 +732,72 @@ main section.contact .contact-wrapper .contact-title h1 {
           transform: translate(-50%, -50%);
 }
 
-main section.contact .contact-wrapper .contact-title-animate {
-  -webkit-animation: fontPop 1.4s forwards ease-in;
-          animation: fontPop 1.4s forwards ease-in;
-  position: relative;
+main section.contact .contact-wrapper .contact-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
-@-webkit-keyframes fontPop {
-  0% {
-    color: #888;
-  }
-  90% {
-    color: #333;
-    font-size: 40px;
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-  100% {
-    color: #000;
-    font-size: 24px;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
+main section.contact .contact-wrapper .contact-fields p {
+  margin: 1em 0;
+  color: #ffffffc5;
+  font-size: 1.4em;
 }
 
-@keyframes fontPop {
-  0% {
-    color: #888;
-  }
-  90% {
-    color: #333;
-    font-size: 40px;
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-  100% {
-    color: #000;
-    font-size: 24px;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
+main section.contact .contact-wrapper .contact-fields .form-wrapper {
+  width: 300px;
+}
+
+main section.contact .contact-wrapper .contact-fields .form-wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea {
+  margin: 3px;
+  padding: 5px 10px;
+  font-size: 18px;
+  background: #ffffff43;
+  border: 1px solid #00000057;
+}
+
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input::-webkit-input-placeholder, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input:-ms-input-placeholder, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea:-ms-input-placeholder {
+  color: white;
+}
+
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input::-ms-input-placeholder, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::-ms-input-placeholder {
+  color: white;
+}
+
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input::placeholder, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::placeholder {
+  color: white;
+}
+
+main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea {
+  height: 140px;
+}
+
+main section.contact .social-wrapper {
+  border: px solid black;
 }
 
 .sticky-nav-wrapper {

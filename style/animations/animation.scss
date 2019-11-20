@@ -289,3 +289,29 @@
     }
   }
 }
+
+
+main{
+  section.contact{
+    .contact-wrapper{
+      .contact-title-animate{
+        animation: fontPop 1s forwards ease-in;
+        @keyframes fontPop{
+          0%{
+            opacity: 0;
+            font-size: 40%;
+          }
+          90%{
+            opacity: 0.6;
+            font-size: 200%;
+          }
+
+          100%{
+            opacity: 1;
+            font-size: 130%;
+          }
+        }
+      }
+    }
+  }
+}

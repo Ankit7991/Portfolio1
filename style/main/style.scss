@@ -631,39 +631,57 @@ main {
     // border: 1px solid black;
     margin: 3em 0 0 0;
     @include center();
+    flex-flow: column;
     .contact-wrapper{
       width: 80%;
 
       .contact-title{
-        // border: 1px solid black;
         position: relative;
         height: 80px;
-        font-size: 0px;
-        // transition: font-size 0.4s;
+        // font-size: 0px;
+        opacity: 0;
         h1{
           @include centerAbsolute();
         }
       }
-      .contact-title-animate{
-        animation: fontPop 1.4s forwards ease-in;
-        position: relative;
-        @keyframes fontPop{
-          0%{
-            color: #888;
-          }
-          90%{
-            color: #333;
-            font-size: 40px;
-            transform: rotate(10deg);
-          }
 
-          100%{
-            color: #000;
-            font-size: 24px;
-            transform: rotate(0);
+      .contact-fields{
+        // border: 1px solid black;
+        @include center();
+        flex-flow: column;
+        
+        p{
+          margin: 1em 0;
+          color: #ffffffc5;
+          font-size: 1.4em;
+        }
+        .form-wrapper{
+          // border: 1px solid red;
+          width: 300px;
+          form{
+            // border: 1px solid white;
+            display: flex;
+            flex-flow: column;
+            input, textarea{
+              margin: 3px;
+              padding: 5px 10px;
+              font-size: 18px;
+              background: #ffffff43;
+              border: 1px solid #00000057;
+              &::placeholder{
+                color: white;
+              }
+            }
+            textarea{
+              height: 140px;
+            }
           }
         }
       }
+    }
+
+    .social-wrapper{
+      border: px solid black; 
     }
   }
 }

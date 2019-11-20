@@ -1,6 +1,33 @@
 'use strict';
 window.onload = function () {
 
+  //contact me 
+  // view my work animation
+  (function basicActions(){
+
+    $('#contact-me-button').click(function(){
+      var email = $('.input-email').val();
+      var name = $('.input-name').val();
+      var textarea = $('.input-textarea').val();
+      console.log(email, name, textarea)
+      if(email && name && textarea){
+        alert('Poor internet connection.')
+      }else{
+        alert('Please fill proper Email, Name, and detail. Thank you.')
+      }
+    });
+    
+    
+    //function for intro view my work button(using changeClass())
+    var viewMyWork = document.querySelector('.button');
+    let buttonHoverd = true;
+    $('#viewWork').mouseover(function(){
+      if(buttonHoverd){
+        viewMyWork.classList.add('button-hovered')
+      }
+    })
+  })();
+    
   //auto type container
   (function autoTypeContainer() {
 
@@ -71,17 +98,21 @@ window.onload = function () {
   })();
 
 
-  //onscroll event
+  //onscroll event 
+  //sticky nav 
+  // popup titles of section 
+  //language graph animation
   (function onscrollAll() {
     //sticky nav variables
     var navWrapper = document.querySelector('#main');
     var nav = document.querySelector('#nav');
+
+
     //language animation function
     function changeClass(element, updateTo) {
       var element = document.querySelector(`.${element}`);
       element.classList.add(updateTo);
     }
-    var parent = document.querySelector('.bar-wrapper');
 
     window.onscroll = function () {
 
@@ -89,8 +120,11 @@ window.onload = function () {
       (function languageAnimation() {
 
         let windowHeight = window.innerHeight;
-        let parentDistance = parent.getBoundingClientRect().top;
-        if (parentDistance <= (windowHeight / 1.4)) {
+        function getCondition(classname, heightDivider){
+          var myParentDistance = document.querySelector(`.${classname}`).getBoundingClientRect().top;
+          return (myParentDistance <= (windowHeight / heightDivider));
+        }
+        if (getCondition('bar-wrapper', 1.4)) {
           changeClass('html-bar-value', 'html-bar-value-animate');
           changeClass('css-bar-value', 'css-bar-value-animate');
           changeClass('js-bar-value', 'js-bar-value-animate');
@@ -99,22 +133,16 @@ window.onload = function () {
           changeClass('jquery-bar-value', 'jquery-bar-value-animate');
           changeClass('ui-bar-value', 'ui-bar-value-animate');
           changeClass('photoshop-bar-value', 'photoshop-bar-value-animate');
-
-
-          // here animating titles
-          changeClass('contact-title', 'contact-title-animate')
-
-
-          // changeClass('title-value-wrapper', 'title-value-wrapper-animate');
           //title value wrappers -> tvWrappers
           var languages = ['html', 'css', 'js', 'php', 'bootstrap', 'jquery', 'ui', 'photoshop'];
           var tvWrappers = document.querySelectorAll('.title-value-wrapper');
-          // for(let i = 0; i < tvWrappers.length; i++){
-          //   tvWrappers[i].classList.add('title-value-wrapper-animate');
-          // }
           for (let i in languages) {
             tvWrappers[i].classList.add(`${languages[i]}-value-wrapper-animate`)
           }
+        }
+        if (getCondition('contact-title', 2)){
+          // here animating titles
+          changeClass('contact-title', 'contact-title-animate')
         }
       })();
 
@@ -134,19 +162,11 @@ window.onload = function () {
 
     }
 
-    //function for intro view my work button(using changeClass())
-    var viewMyWork = document.querySelector('.button');
-    let buttonHoverd = true;
-    $('#viewWork').mouseover(function(){
-      if(buttonHoverd){
-        viewMyWork.classList.add('button-hovered')
-      }
-    })
 
  
   })();
 
-
+  //smoothe scroll
   (function linkScroll() {
 
     //using jquery 
@@ -168,7 +188,8 @@ window.onload = function () {
 
   })();
 
-
+  //animations for mobile view 
+  //like hide nav or expand
   (function mobile() {
     //menu button
     //click menuButton to expand menu

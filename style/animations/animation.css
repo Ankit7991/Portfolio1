@@ -389,4 +389,39 @@
     width: 40%;
   }
 }
+
+main section.contact .contact-wrapper .contact-title-animate {
+  -webkit-animation: fontPop 1s forwards ease-in;
+          animation: fontPop 1s forwards ease-in;
+}
+
+@-webkit-keyframes fontPop {
+  0% {
+    opacity: 0;
+    font-size: 40%;
+  }
+  90% {
+    opacity: 0.6;
+    font-size: 200%;
+  }
+  100% {
+    opacity: 1;
+    font-size: 130%;
+  }
+}
+
+@keyframes fontPop {
+  0% {
+    opacity: 0;
+    font-size: 40%;
+  }
+  90% {
+    opacity: 0.6;
+    font-size: 200%;
+  }
+  100% {
+    opacity: 1;
+    font-size: 130%;
+  }
+}
 /*# sourceMappingURL=animation.css.map */
