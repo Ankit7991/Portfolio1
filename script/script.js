@@ -1,11 +1,5 @@
 'use strict';
 window.onload = function () {
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
 
   //auto type container
   (function autoTypeContainer() {
@@ -33,23 +27,22 @@ window.onload = function () {
       typedWord += currLetter;
       myInterval = setInterval(() => {
         output.innerHTML = typedWord;
-        
+
         letterIndex++;
-        if(letterIndex >= currWordLen){
+        if (letterIndex >= currWordLen) {
           typingComplete = true;
           clearInterval(myInterval);
           return;
-        }
-        else {
+        } else {
           typing();
         }
         // typing();
       }, 200);
     })();
-    
+
     var cursorClass = document.querySelector('.cursor')
     var cursor = setInterval(() => {
-      if(typingComplete){
+      if (typingComplete) {
         cursorClass.classList.add('cursor-fade');
       }
     }, 1000);
@@ -77,6 +70,8 @@ window.onload = function () {
 
   })();
 
+
+  //onscroll event
   (function onscrollAll() {
     //sticky nav variables
     var navWrapper = document.querySelector('#main');
@@ -91,38 +86,46 @@ window.onload = function () {
     window.onscroll = function () {
 
       //languages animation
-      let windowHeight = window.innerHeight;
-      let parentDistance = parent.getBoundingClientRect().top;
-      if (parentDistance <= (windowHeight / 2)) {
-        changeClass('html-bar-value', 'html-bar-value-animate');
-        changeClass('css-bar-value', 'css-bar-value-animate');
-        changeClass('js-bar-value', 'js-bar-value-animate');
-        changeClass('php-bar-value', 'php-bar-value-animate');
-        changeClass('bootstrap-bar-value', 'bootstrap-bar-value-animate');
-        changeClass('jquery-bar-value', 'jquery-bar-value-animate');
-        changeClass('ui-bar-value', 'ui-bar-value-animate');
-        changeClass('photoshop-bar-value', 'photoshop-bar-value-animate');
-        // changeClass('title-value-wrapper', 'title-value-wrapper-animate');
-        //title value wrappers -> tvWrappers
-        var languages = ['html', 'css', 'js', 'php', 'bootstrap', 'jquery', 'ui', 'photoshop'];
-        var tvWrappers = document.querySelectorAll('.title-value-wrapper');
-        // for(let i = 0; i < tvWrappers.length; i++){
-        //   tvWrappers[i].classList.add('title-value-wrapper-animate');
-        // }
-        for (let i in languages) {
-          tvWrappers[i].classList.add(`${languages[i]}-value-wrapper-animate`)
+      (function languageAnimation() {
+
+        let windowHeight = window.innerHeight;
+        let parentDistance = parent.getBoundingClientRect().top;
+        if (parentDistance <= (windowHeight / 1.4)) {
+          changeClass('html-bar-value', 'html-bar-value-animate');
+          changeClass('css-bar-value', 'css-bar-value-animate');
+          changeClass('js-bar-value', 'js-bar-value-animate');
+          changeClass('php-bar-value', 'php-bar-value-animate');
+          changeClass('bootstrap-bar-value', 'bootstrap-bar-value-animate');
+          changeClass('jquery-bar-value', 'jquery-bar-value-animate');
+          changeClass('ui-bar-value', 'ui-bar-value-animate');
+          changeClass('photoshop-bar-value', 'photoshop-bar-value-animate');
+          // changeClass('title-value-wrapper', 'title-value-wrapper-animate');
+          //title value wrappers -> tvWrappers
+          var languages = ['html', 'css', 'js', 'php', 'bootstrap', 'jquery', 'ui', 'photoshop'];
+          var tvWrappers = document.querySelectorAll('.title-value-wrapper');
+          // for(let i = 0; i < tvWrappers.length; i++){
+          //   tvWrappers[i].classList.add('title-value-wrapper-animate');
+          // }
+          for (let i in languages) {
+            tvWrappers[i].classList.add(`${languages[i]}-value-wrapper-animate`)
+          }
         }
-      }
+      })();
 
       //sticky nav
-      var height = navWrapper.getBoundingClientRect().top;
-      if (height <= -50) {
-        nav.className = 'sticky';
-        navWrapper.classList.add('sticky-nav-wrapper');
-      } else {
-        nav.className = 'nonSticky';
-        navWrapper.classList.remove('sticky-nav-wrapper');
-      }
+      (function stickyNav(){
+
+        var height = navWrapper.getBoundingClientRect().top;
+        if (height <= -50) {
+          nav.className = 'sticky';
+          navWrapper.classList.add('sticky-nav-wrapper');
+        } else {
+          nav.className = 'nonSticky';
+          navWrapper.classList.remove('sticky-nav-wrapper');
+        }
+      })();
+
+
     }
   })();
 
@@ -147,18 +150,18 @@ window.onload = function () {
     scroll('contact', 'CONTACT', );
 
   })();
-  
-  
-  (function mobile(){
+
+
+  (function mobile() {
     //menu button
-    var navLinks =  document.querySelectorAll('.navLink-wrapper');
+    var navLinks = document.querySelectorAll('.navLink-wrapper');
     console.log(navLinks);
-    $('#menuButton').click(function(){
-      for( let i = 0; i < navLinks.length; i++){
+    $('#menuButton').click(function () {
+      for (let i = 0; i < navLinks.length; i++) {
         console.log('working');
         navLinks[i].classList.toggle('navLink-wrapper-visible');
       }
     })
-      
-    })();
+
+  })();
 }

@@ -339,7 +339,7 @@ main {
           transition: 0.4s;
         }
 
-        &:nth-child(1) {
+        &:nth-child(2) {
           a, span {
             &:hover {
               border-bottom: 4px solid #db7070;
@@ -350,7 +350,7 @@ main {
           }
         }
 
-        &:nth-child(2) {
+        &:nth-child(3) {
           a, span {
             &:hover {
               border-bottom: 4px solid #43c943;
@@ -362,7 +362,7 @@ main {
           }
         }
 
-        &:nth-child(3) {
+        &:nth-child(4) {
           a, span {
             &:hover {
               border-bottom: 4px solid #c48e48;
@@ -374,7 +374,7 @@ main {
           }
         }
 
-        &:nth-child(4) {
+        &:nth-child(5) {
           a, span {
             &:hover {
               border-bottom: 4px solid #e96de3;
