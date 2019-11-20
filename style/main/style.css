@@ -27,7 +27,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#1a857e), to(#4ecdc4));
   background: linear-gradient(#1a857e, #4ecdc4);
   position: relative;
-  height: 2700px;
+  height: 4000px;
 }
 
 body:after {
@@ -299,18 +299,6 @@ section.intro-wrapper span.button:after {
           transform: translate(3px, 0.5em);
 }
 
-section.intro-wrapper span.button:hover {
-  color: white;
-}
-
-section.intro-wrapper span.button:hover:before {
-  width: 80%;
-}
-
-section.intro-wrapper span.button:hover:after {
-  width: 80%;
-}
-
 main {
   position: relative;
   z-index: 1;
@@ -349,6 +337,7 @@ main .sticky {
 
 main nav,
 main .nonSticky {
+  display: none;
   margin-bottom: 20px;
   border-bottom: 2px solid #db7070;
   background: #0000003f;
@@ -705,6 +694,80 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-v
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+}
+
+main section.contact {
+  text-align: center;
+  margin: 3em 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.contact .contact-wrapper {
+  width: 80%;
+}
+
+main section.contact .contact-wrapper .contact-title {
+  position: relative;
+  height: 80px;
+  font-size: 0px;
+}
+
+main section.contact .contact-wrapper .contact-title h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main section.contact .contact-wrapper .contact-title-animate {
+  -webkit-animation: fontPop 1.4s forwards ease-in;
+          animation: fontPop 1.4s forwards ease-in;
+  position: relative;
+}
+
+@-webkit-keyframes fontPop {
+  0% {
+    color: #888;
+  }
+  90% {
+    color: #333;
+    font-size: 40px;
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    color: #000;
+    font-size: 24px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes fontPop {
+  0% {
+    color: #888;
+  }
+  90% {
+    color: #333;
+    font-size: 40px;
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    color: #000;
+    font-size: 24px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
 }
 
 .sticky-nav-wrapper {

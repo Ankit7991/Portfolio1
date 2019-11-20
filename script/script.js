@@ -99,6 +99,12 @@ window.onload = function () {
           changeClass('jquery-bar-value', 'jquery-bar-value-animate');
           changeClass('ui-bar-value', 'ui-bar-value-animate');
           changeClass('photoshop-bar-value', 'photoshop-bar-value-animate');
+
+
+          // here animating titles
+          changeClass('contact-title', 'contact-title-animate')
+
+
           // changeClass('title-value-wrapper', 'title-value-wrapper-animate');
           //title value wrappers -> tvWrappers
           var languages = ['html', 'css', 'js', 'php', 'bootstrap', 'jquery', 'ui', 'photoshop'];
@@ -137,7 +143,7 @@ window.onload = function () {
       }
     })
 
-
+ 
   })();
 
 

@@ -70,7 +70,7 @@ serif;
 body {
   background: linear-gradient(#1a857e, #4ecdc4);
   position: relative;
-  height: 2700px;
+  height: 4000px;
 
   &:after {
     content: "";
@@ -281,17 +281,6 @@ section.intro-wrapper {
       transform: translate(3px, 0.5em);
     }
 
-    &:hover {
-      color: white;
-
-      &:before {
-        width: 80%;
-      }
-
-      &:after {
-        width: 80%;
-      }
-    }
 
   }
 
@@ -322,6 +311,7 @@ main {
 
   nav,
   .nonSticky {
+    display: none;
     margin-bottom: 20px;
     border-bottom: 2px solid #db7070;
     // border-bottom: 0px solid transparent;
@@ -630,6 +620,47 @@ main {
 
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  section.contact{
+    text-align: center;
+    // border: 1px solid black;
+    margin: 3em 0 0 0;
+    @include center();
+    .contact-wrapper{
+      width: 80%;
+
+      .contact-title{
+        // border: 1px solid black;
+        position: relative;
+        height: 80px;
+        font-size: 0px;
+        // transition: font-size 0.4s;
+        h1{
+          @include centerAbsolute();
+        }
+      }
+      .contact-title-animate{
+        animation: fontPop 1.4s forwards ease-in;
+        position: relative;
+        @keyframes fontPop{
+          0%{
+            color: #888;
+          }
+          90%{
+            color: #333;
+            font-size: 40px;
+            transform: rotate(10deg);
+          }
+
+          100%{
+            color: #000;
+            font-size: 24px;
+            transform: rotate(0);
           }
         }
       }
