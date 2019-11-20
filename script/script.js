@@ -81,8 +81,8 @@ window.onload = function () {
       var element = document.querySelector(`.${element}`);
       element.classList.add(updateTo);
     }
-
     var parent = document.querySelector('.bar-wrapper');
+
     window.onscroll = function () {
 
       //languages animation
@@ -127,6 +127,17 @@ window.onload = function () {
 
 
     }
+
+    //function for intro view my work button(using changeClass())
+    var viewMyWork = document.querySelector('.button');
+    let buttonHoverd = true;
+    $('#viewWork').mouseover(function(){
+      if(buttonHoverd){
+        viewMyWork.classList.add('button-hovered')
+      }
+    })
+
+
   })();
 
 
@@ -154,14 +165,23 @@ window.onload = function () {
 
   (function mobile() {
     //menu button
+    //click menuButton to expand menu
     var navLinks = document.querySelectorAll('.navLink-wrapper');
-    console.log(navLinks);
     $('#menuButton').click(function () {
       for (let i = 0; i < navLinks.length; i++) {
-        console.log('working');
         navLinks[i].classList.toggle('navLink-wrapper-visible');
       }
     })
 
+    //click any menu item it will shut down the menu
+    for(let i = 0; i < navLinks.length; i++){
+      (function executeThis(i){
+        $(navLinks[i]).click(function (){
+          for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.toggle('navLink-wrapper-visible');
+          }
+        })
+      })(i);
+    }
   })();
 }

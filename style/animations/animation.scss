@@ -1,4 +1,44 @@
 
+
+.intro-wrapper{
+  span.button-hovered{
+    $card-title-bordCol: #d1d1d1;
+
+    color: white !important;
+    &:before{
+      animation: borderToRight 1s forwards ease-in;
+      @keyframes borderToRight{
+        99%{
+          width: 100%;
+          border-right: 0px solid transparent;
+          border-radius: 10px 10px 0 0;
+        }
+        100%{
+          width: 100%;
+          border-right: 3px solid $card-title-bordCol;
+          border-radius: 10px 10px 0 0;
+        }
+      }
+    }
+    &:after{
+      animation: borderToLeft 1s forwards;
+      @keyframes borderToLeft{
+        99%{
+          width: 100%;
+          border-left: 0px solid transparent;
+          border-radius: 0 0 10px 10px;
+        }
+        100%{
+          width: 100%;
+          border-left: 3px solid $card-title-bordCol;
+          border-radius: 0 0 10px 10px;
+        }
+      }
+    }
+  }
+}
+
+
 .bar-main{
   span{
     color: white !important;

@@ -1,3 +1,69 @@
+.intro-wrapper span.button-hovered {
+  color: white !important;
+}
+
+.intro-wrapper span.button-hovered:before {
+  -webkit-animation: borderToRight 1s forwards ease-in;
+          animation: borderToRight 1s forwards ease-in;
+}
+
+@-webkit-keyframes borderToRight {
+  99% {
+    width: 100%;
+    border-right: 0px solid transparent;
+    border-radius: 10px 10px 0 0;
+  }
+  100% {
+    width: 100%;
+    border-right: 3px solid #d1d1d1;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+@keyframes borderToRight {
+  99% {
+    width: 100%;
+    border-right: 0px solid transparent;
+    border-radius: 10px 10px 0 0;
+  }
+  100% {
+    width: 100%;
+    border-right: 3px solid #d1d1d1;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+.intro-wrapper span.button-hovered:after {
+  -webkit-animation: borderToLeft 1s forwards;
+          animation: borderToLeft 1s forwards;
+}
+
+@-webkit-keyframes borderToLeft {
+  99% {
+    width: 100%;
+    border-left: 0px solid transparent;
+    border-radius: 0 0 10px 10px;
+  }
+  100% {
+    width: 100%;
+    border-left: 3px solid #d1d1d1;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@keyframes borderToLeft {
+  99% {
+    width: 100%;
+    border-left: 0px solid transparent;
+    border-radius: 0 0 10px 10px;
+  }
+  100% {
+    width: 100%;
+    border-left: 3px solid #d1d1d1;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
 .bar-main {
   /*
   

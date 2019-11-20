@@ -181,11 +181,9 @@ section.intro-wrapper .intro .intro-typing-wrapper span.cursor-fade {
   100% {
     -webkit-transform: translate(3%, -50%);
             transform: translate(3%, -50%);
-    background: #ffffff22;
+    background: #ffffff32;
     width: 53%;
-    border: 1px solid #ffffff9c;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+    border: 1px solid transparent;
   }
 }
 
@@ -203,11 +201,9 @@ section.intro-wrapper .intro .intro-typing-wrapper span.cursor-fade {
   100% {
     -webkit-transform: translate(3%, -50%);
             transform: translate(3%, -50%);
-    background: #ffffff22;
+    background: #ffffff32;
     width: 53%;
-    border: 1px solid #ffffff9c;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+    border: 1px solid transparent;
   }
 }
 
@@ -286,8 +282,8 @@ section.intro-wrapper span.button:after, section.intro-wrapper span.button:befor
 section.intro-wrapper span.button:before {
   left: 0;
   top: 0;
-  border-bottom: none;
-  border-right: none;
+  border-bottom: transparent;
+  border-right: transparent;
   border-radius: 10px 0 0 0;
   -webkit-transform: translate(-3px, -0.5em);
           transform: translate(-3px, -0.5em);
@@ -296,23 +292,11 @@ section.intro-wrapper span.button:before {
 section.intro-wrapper span.button:after {
   bottom: 0;
   right: 0;
-  border-top: none;
-  border-left: none;
+  border-top: transparent;
+  border-left: transparent;
   border-radius: 0 0 10px 0;
   -webkit-transform: translate(3px, 0.5em);
           transform: translate(3px, 0.5em);
-}
-
-section.intro-wrapper span.button:hover {
-  color: white;
-}
-
-section.intro-wrapper span.button:hover:before {
-  width: 80%;
-}
-
-section.intro-wrapper span.button:hover:after {
-  width: 80%;
 }
 
 main {
