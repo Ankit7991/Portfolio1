@@ -1,34 +1,38 @@
-
-
-.intro-wrapper{
-  span.button-hovered{
+.intro-wrapper {
+  span.button-animated {
     $card-title-bordCol: #d1d1d1;
 
     color: white !important;
-    &:before{
-      animation: borderToRight 1s forwards ease-in;
-      @keyframes borderToRight{
-        99%{
+
+    &:before {
+      animation: borderToRight 0.8s forwards ease-in;
+
+      @keyframes borderToRight {
+        99% {
           width: 100%;
           border-right: 0px solid transparent;
           border-radius: 10px 10px 0 0;
         }
-        100%{
+
+        100% {
           width: 100%;
           border-right: 3px solid $card-title-bordCol;
           border-radius: 10px 10px 0 0;
         }
       }
     }
-    &:after{
-      animation: borderToLeft 1s forwards;
-      @keyframes borderToLeft{
-        99%{
+
+    &:after {
+      animation: borderToLeft 0.8s forwards;
+
+      @keyframes borderToLeft {
+        99% {
           width: 100%;
           border-left: 0px solid transparent;
           border-radius: 0 0 10px 10px;
         }
-        100%{
+
+        100% {
           width: 100%;
           border-left: 3px solid $card-title-bordCol;
           border-radius: 0 0 10px 10px;
@@ -39,8 +43,8 @@
 }
 
 
-.bar-main{
-  span{
+.bar-main {
+  span {
     color: white !important;
   }
 
@@ -83,11 +87,11 @@
   */
   .html-value-wrapper-animate {
     .bar-title {
-      animation: intoView 1.4s ease-out forwards;
+      animation: intoView 1s ease-out forwards;
     }
 
     .bar-value {
-      animation: giveMeWidth 1.4s ease-out forwards;
+      animation: giveMeWidth 1s ease-out forwards;
 
       .bar-value-meter {
         &:before {
@@ -95,8 +99,8 @@
         }
       }
 
-      .html-bar-value-animate {
-        animation: nineZero 1.4s 2.5s forwards ease-out;
+      .html-bar-value-animated {
+        animation: nineZero 1.4s 1.4s forwards ease-out;
 
         @keyframes nineZero {
           100% {
@@ -109,11 +113,11 @@
 
   .css-value-wrapper-animate {
     .bar-title {
-      animation: intoView 1.4s ease-out 0.3s forwards;
+      animation: intoView 1s ease-out 0.2s forwards;
     }
 
     .bar-value {
-      animation: giveMeWidth 1.4s ease-out 0.3s forwards;
+      animation: giveMeWidth 1s ease-out 0.2s forwards;
 
       .bar-value-meter {
         &:before {
@@ -121,8 +125,8 @@
         }
       }
 
-      .css-bar-value-animate {
-        animation: eightZero 1.4s 2.7s forwards ease-out;
+      .css-bar-value-animated {
+        animation: eightZero 1.4s 1.6s forwards ease-out;
 
         @keyframes eightZero {
           100% {
@@ -135,11 +139,11 @@
 
   .js-value-wrapper-animate {
     .bar-title {
-      animation: intoView 1.4s ease-out 0.6s forwards;
+      animation: intoView 1s ease-out 0.4s forwards;
     }
 
     .bar-value {
-      animation: giveMeWidth 1.4s ease-out 0.6s forwards;
+      animation: giveMeWidth 1s ease-out 0.4s forwards;
 
       .bar-value-meter {
         &:before {
@@ -147,8 +151,8 @@
         }
       }
 
-      .js-bar-value-animate {
-        animation: sixFive 1.4s 2.9s forwards ease-out;
+      .js-bar-value-animated {
+        animation: sixFive 1.4s 1.8s forwards ease-out;
 
         @keyframes sixFive {
           100% {
@@ -161,11 +165,11 @@
 
   .php-value-wrapper-animate {
     .bar-title {
-      animation: intoView 1.4s ease-out 0.9s forwards;
+      animation: intoView 1s ease-out 0.6s forwards;
     }
 
     .bar-value {
-      animation: giveMeWidth 1.4s ease-out 0.9s forwards;
+      animation: giveMeWidth 1s ease-out 0.6s forwards;
 
       .bar-value-meter {
         &:before {
@@ -173,8 +177,8 @@
         }
       }
 
-      .php-bar-value-animate {
-        animation: twoFive 1.4s 3.1s forwards ease-out;
+      .php-bar-value-animated {
+        animation: twoFive 1.4s 2.0s forwards ease-out;
 
         @keyframes twoFive {
           100% {
@@ -187,11 +191,11 @@
 
   .bootstrap-value-wrapper-animate {
     .bar-title {
-      animation: intoView 1.4s ease-out 1.2s forwards;
+      animation: intoView 1s ease-out 0.8s forwards;
     }
 
     .bar-value {
-      animation: giveMeWidth 1.4s ease-out 1.2s forwards;
+      animation: giveMeWidth 1s ease-out 0.8s forwards;
 
       .bar-value-meter {
         &:before {
@@ -199,8 +203,8 @@
         }
       }
 
-      .bootstrap-bar-value-animate {
-        animation: fourfive 1.4s 3.3s forwards ease-out;
+      .bootstrap-bar-value-animated {
+        animation: fourfive 1.4s 2.2s forwards ease-out;
 
         @keyframes fourfive {
           100% {
@@ -213,11 +217,11 @@
 
   .jquery-value-wrapper-animate {
     .bar-title {
-      animation: intoView 1.4s ease-out 1.5s forwards;
+      animation: intoView 1s ease-out 1.0s forwards;
     }
 
     .bar-value {
-      animation: giveMeWidth 1.4s ease-out 1.5s forwards;
+      animation: giveMeWidth 1s ease-out 1.0s forwards;
 
       .bar-value-meter {
         &:before {
@@ -225,8 +229,8 @@
         }
       }
 
-      .jquery-bar-value-animate {
-        animation: towZero 1.4s 3.5s forwards ease-out;
+      .jquery-bar-value-animated {
+        animation: towZero 1.4s 2.4s forwards ease-out;
 
         @keyframes towZero {
           100% {
@@ -239,11 +243,11 @@
 
   .ui-value-wrapper-animate {
     .bar-title {
-      animation: intoView 1.4s ease-out 1.7s forwards;
+      animation: intoView 1s ease-out 1.2s forwards;
     }
 
     .bar-value {
-      animation: giveMeWidth 1.4s ease-out 1.7s forwards;
+      animation: giveMeWidth 1s ease-out 1.2s forwards;
 
       .bar-value-meter {
         &:before {
@@ -251,8 +255,8 @@
         }
       }
 
-      .ui-bar-value-animate {
-        animation: fiveZero 1.4s 3.7s forwards ease-out;
+      .ui-bar-value-animated {
+        animation: fiveZero 1.4s 2.6s forwards ease-out;
 
         @keyframes fiveZero {
           100% {
@@ -265,11 +269,11 @@
 
   .photoshop-value-wrapper-animate {
     .bar-title {
-      animation: intoView 1.4s ease-out 1.9s forwards;
+      animation: intoView 1s ease-out 1.4s forwards;
     }
 
     .bar-value {
-      animation: giveMeWidth 1.4s ease-out 1.9s forwards;
+      animation: giveMeWidth 1s ease-out 1.4s forwards;
 
       .bar-value-meter {
         &:before {
@@ -277,8 +281,8 @@
         }
       }
 
-      .photoshop-bar-value-animate {
-        animation: fourZero 1.4s 3.9s forwards ease-out;
+      .photoshop-bar-value-animated {
+        animation: fourZero 1.4s 2.8s forwards ease-out;
 
         @keyframes fourZero {
           100% {
@@ -291,26 +295,27 @@
 }
 
 
-main{
-  section.contact{
-    .contact-wrapper{
-      .contact-title-animate{
-        animation: fontPop 1s forwards ease-in;
-        @keyframes fontPop{
-          0%{
-            opacity: 0;
-            font-size: 40%;
-          }
-          90%{
-            opacity: 0.6;
-            font-size: 200%;
-          }
+main {
+  @keyframes fontPop {
+    0% {
+      opacity: 0;
+      font-size: 40%;
+    }
 
-          100%{
-            opacity: 1;
-            font-size: 130%;
-          }
-        }
+    90% {
+      opacity: 0.6;
+      font-size: 200%;
+    }
+
+    100% {
+      opacity: 1;
+      font-size: 130%;
+    }
+  }
+  section.contact {
+    .contact-wrapper {
+      .contact-title-animate {
+        animation: fontPop 1s forwards ease-in;
       }
     }
   }

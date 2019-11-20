@@ -337,7 +337,6 @@ main .sticky {
 
 main nav,
 main .nonSticky {
-  display: none;
   margin-bottom: 20px;
   border-bottom: 2px solid #db7070;
   background: #0000003f;
@@ -440,6 +439,7 @@ main section.about {
   letter-spacing: 1px;
   line-height: 1.6em;
   padding-top: 39px;
+  border: 1px solid transparent;
 }
 
 main section.about .card-wrapper {
@@ -697,6 +697,8 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-v
 }
 
 main section.contact {
+  border: 1px solid transparent;
+  padding-top: 50px;
   text-align: center;
   margin: 3em 0 0 0;
   display: -webkit-box;
@@ -794,6 +796,20 @@ main section.contact .contact-wrapper .contact-fields .form-wrapper form input::
 
 main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea {
   height: 140px;
+}
+
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input[type='button'] {
+  background: #00000080;
+  color: #ffffffe8;
+  border: 1px solid #ffffffa8;
+  -webkit-transition: background 0.4s, color 0.4s;
+  transition: background 0.4s, color 0.4s;
+}
+
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input[type='button']:hover {
+  background: #ffffff43;
+  border: 1px solid #00000057;
+  color: white;
 }
 
 main section.contact .social-wrapper {

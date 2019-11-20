@@ -311,7 +311,7 @@ main {
 
   nav,
   .nonSticky {
-    display: none;
+    // display: none;
     margin-bottom: 20px;
     border-bottom: 2px solid #db7070;
     // border-bottom: 0px solid transparent;
@@ -408,6 +408,7 @@ main {
     letter-spacing: 1px;
     line-height: 1.6em;
     padding-top: 39px;
+    border: 1px solid transparent;
 
     .card-wrapper {
       // border: 1px solid black;
@@ -627,6 +628,8 @@ main {
   }
 
   section.contact{
+    border: 1px solid transparent;
+    padding-top: 50px;
     text-align: center;
     // border: 1px solid black;
     margin: 3em 0 0 0;
@@ -674,6 +677,17 @@ main {
             }
             textarea{
               height: 140px;
+            }
+            input[type = 'button']{
+              background: #00000080;
+              color: #ffffffe8;
+              border: 1px solid #ffffffa8;
+              transition: background 0.4s, color 0.4s;
+              &:hover{
+                background: #ffffff43;
+                border: 1px solid #00000057;
+                color: white;
+              }
             }
           }
         }

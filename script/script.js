@@ -11,21 +11,13 @@ window.onload = function () {
       var textarea = $('.input-textarea').val();
       console.log(email, name, textarea)
       if(email && name && textarea){
-        alert('Poor internet connection.')
+        alert('Something went wrong.')
       }else{
         alert('Please fill proper Email, Name, and detail. Thank you.')
       }
     });
     
     
-    //function for intro view my work button(using changeClass())
-    var viewMyWork = document.querySelector('.button');
-    let buttonHoverd = true;
-    $('#viewWork').mouseover(function(){
-      if(buttonHoverd){
-        viewMyWork.classList.add('button-hovered')
-      }
-    })
   })();
     
   //auto type container
@@ -78,7 +70,7 @@ window.onload = function () {
   //active nav button
   (function activNavButton() {
     var links = document.querySelectorAll('.navLink');
-    var colors = ['#db7070', '#43c943', '#c48e48', '#e96de3']
+    var colors = ['','#db7070', '#43c943', '#c48e48', '#e96de3']
     var nav = document.querySelector('#nav');
     for (let i = 0; i < links.length; i++) {
       (function (i) {
@@ -109,41 +101,83 @@ window.onload = function () {
 
 
     //language animation function
-    function changeClass(element, updateTo) {
+    function adRemClass(element, updateTo, add = true) {
       var element = document.querySelector(`.${element}`);
-      element.classList.add(updateTo);
+      (add)? element.classList.add(updateTo) : element.classList.remove(updateTo);
+    }
+
+    var languages = ['html', 'css', 'js', 'php', 'bootstrap', 'jquery', 'ui', 'photoshop'];
+
+    let windowHeight = window.innerHeight;
+    function getCondition(classname, height){
+      var myParentDistance = document.querySelector(`.${classname}`).getBoundingClientRect().top;
+      (height === 'top') ? height = -99999999 : (height === 'middle') ? height = 2 : (height === 'bottom') ? height = 1 : (height === 'lowerHalf') ? height = 1.3 : false;
+      return (myParentDistance <= (windowHeight / height));
+      
     }
 
     window.onscroll = function () {
-
       //languages animation
       (function languageAnimation() {
 
-        let windowHeight = window.innerHeight;
-        function getCondition(classname, heightDivider){
-          var myParentDistance = document.querySelector(`.${classname}`).getBoundingClientRect().top;
-          return (myParentDistance <= (windowHeight / heightDivider));
-        }
-        if (getCondition('bar-wrapper', 1.4)) {
-          changeClass('html-bar-value', 'html-bar-value-animate');
-          changeClass('css-bar-value', 'css-bar-value-animate');
-          changeClass('js-bar-value', 'js-bar-value-animate');
-          changeClass('php-bar-value', 'php-bar-value-animate');
-          changeClass('bootstrap-bar-value', 'bootstrap-bar-value-animate');
-          changeClass('jquery-bar-value', 'jquery-bar-value-animate');
-          changeClass('ui-bar-value', 'ui-bar-value-animate');
-          changeClass('photoshop-bar-value', 'photoshop-bar-value-animate');
+
+        //positions: top, middle, bottom, lowerHalf
+
+        if (getCondition('bar-wrapper', 'middle') && !getCondition('bar-wrapper', 'top')) {
+          console.log()
+          for(let i = 0; i < languages.length; i++){
+            adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`,);
+          }
           //title value wrappers -> tvWrappers
-          var languages = ['html', 'css', 'js', 'php', 'bootstrap', 'jquery', 'ui', 'photoshop'];
           var tvWrappers = document.querySelectorAll('.title-value-wrapper');
           for (let i in languages) {
             tvWrappers[i].classList.add(`${languages[i]}-value-wrapper-animate`)
           }
+        }else if(getCondition('bar-wrapper-end', 'top')){
+          
+          for(let i = 0; i < languages.length; i++){
+            adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`, false);
+          }
+
+          //title value wrappers -> tvWrappers
+          var tvWrappers = document.querySelectorAll('.title-value-wrapper');
+          for (let i in languages) {
+            tvWrappers[i].classList.remove(`${languages[i]}-value-wrapper-animate`)
+          }
+          // console.log('le');
         }
-        if (getCondition('contact-title', 2)){
-          // here animating titles
-          changeClass('contact-title', 'contact-title-animate')
+        else if(getCondition('bar-wrapper', '')){
+          console.log('lex');
         }
+
+
+
+        //positions: top, middle, bottom, lowerHalf
+
+
+        let titles = ['contact'];
+        //add remove class of title based on their distance from top of window
+        function doNRemoveAnimation(name){
+          if (getCondition(`${name}-title`, 'lowerHalf') && !getCondition(`${name}-title`, 'top')){
+            // here animating titles
+            adRemClass(`${name}-title`, `${name}-title-animate`);
+          }else if(getCondition(`${name}-title`, 'top')){
+            adRemClass(`${name}-title`, `${name}-title-animate`, false);
+          }
+        }
+        for(let i = 0; i < titles.length; i++){
+          doNRemoveAnimation(titles[i]);
+        }
+
+        // if (getCondition('contact-title', 1.4) && !getCondition('contact-title', -999999999)){
+        //   // here animating titles
+        //   adRemClass('contact-title', 'contact-title-animate');
+        // }else if(getCondition('contact-title', -9999999999)){
+        //   adRemClass('contact-title', 'contact-title-animate', false);
+        // }
+
+
+
       })();
 
       //sticky nav
@@ -162,11 +196,10 @@ window.onload = function () {
 
     }
 
-
- 
   })();
 
   //smoothe scroll
+  //removing animation onclick
   (function linkScroll() {
 
     //using jquery 
@@ -183,8 +216,29 @@ window.onload = function () {
     scroll('home', 'HOME', );
     scroll('about', 'ABOUT', );
     // scroll('resume', 'RESUME', 500, -500);
-    scroll('viewWork', 'ABOUT', 1000);
     scroll('contact', 'CONTACT', );
+    
+    //function for intro view my work button(using changeClass())
+    var buttonHoverd = true, myTimeout;
+    $('#viewWork').click(function(){
+      if(buttonHoverd){
+        document.querySelector('.button').classList.add('button-animated')
+        myTimeout = setTimeout(function(){
+          $(document).ready(function () {
+            $('html, body').animate({
+              scrollTop: $(`#ABOUT`).offset().top
+            }, 1500)
+          });
+          clearTimeout(myTimeout);
+
+        }, 1500)
+      }
+    })
+
+    //removing animation onclick
+    $('#home').click(function(){
+      document.querySelector('.button').classList.remove('button-animated');
+    })
 
   })();
 

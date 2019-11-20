@@ -1,10 +1,10 @@
-.intro-wrapper span.button-hovered {
+.intro-wrapper span.button-animated {
   color: white !important;
 }
 
-.intro-wrapper span.button-hovered:before {
-  -webkit-animation: borderToRight 1s forwards ease-in;
-          animation: borderToRight 1s forwards ease-in;
+.intro-wrapper span.button-animated:before {
+  -webkit-animation: borderToRight 0.8s forwards ease-in;
+          animation: borderToRight 0.8s forwards ease-in;
 }
 
 @-webkit-keyframes borderToRight {
@@ -33,9 +33,9 @@
   }
 }
 
-.intro-wrapper span.button-hovered:after {
-  -webkit-animation: borderToLeft 1s forwards;
-          animation: borderToLeft 1s forwards;
+.intro-wrapper span.button-animated:after {
+  -webkit-animation: borderToLeft 0.8s forwards;
+          animation: borderToLeft 0.8s forwards;
 }
 
 @-webkit-keyframes borderToLeft {
@@ -135,13 +135,13 @@
 }
 
 .bar-main .html-value-wrapper-animate .bar-title {
-  -webkit-animation: intoView 1.4s ease-out forwards;
-          animation: intoView 1.4s ease-out forwards;
+  -webkit-animation: intoView 1s ease-out forwards;
+          animation: intoView 1s ease-out forwards;
 }
 
 .bar-main .html-value-wrapper-animate .bar-value {
-  -webkit-animation: giveMeWidth 1.4s ease-out forwards;
-          animation: giveMeWidth 1.4s ease-out forwards;
+  -webkit-animation: giveMeWidth 1s ease-out forwards;
+          animation: giveMeWidth 1s ease-out forwards;
 }
 
 .bar-main .html-value-wrapper-animate .bar-value .bar-value-meter:before {
@@ -149,9 +149,9 @@
           animation: shine 1s forwards;
 }
 
-.bar-main .html-value-wrapper-animate .bar-value .html-bar-value-animate {
-  -webkit-animation: nineZero 1.4s 2.5s forwards ease-out;
-          animation: nineZero 1.4s 2.5s forwards ease-out;
+.bar-main .html-value-wrapper-animate .bar-value .html-bar-value-animated {
+  -webkit-animation: nineZero 1.4s 1.4s forwards ease-out;
+          animation: nineZero 1.4s 1.4s forwards ease-out;
 }
 
 @-webkit-keyframes nineZero {
@@ -167,13 +167,13 @@
 }
 
 .bar-main .css-value-wrapper-animate .bar-title {
-  -webkit-animation: intoView 1.4s ease-out 0.3s forwards;
-          animation: intoView 1.4s ease-out 0.3s forwards;
+  -webkit-animation: intoView 1s ease-out 0.2s forwards;
+          animation: intoView 1s ease-out 0.2s forwards;
 }
 
 .bar-main .css-value-wrapper-animate .bar-value {
-  -webkit-animation: giveMeWidth 1.4s ease-out 0.3s forwards;
-          animation: giveMeWidth 1.4s ease-out 0.3s forwards;
+  -webkit-animation: giveMeWidth 1s ease-out 0.2s forwards;
+          animation: giveMeWidth 1s ease-out 0.2s forwards;
 }
 
 .bar-main .css-value-wrapper-animate .bar-value .bar-value-meter:before {
@@ -181,9 +181,9 @@
           animation: shine 1s forwards;
 }
 
-.bar-main .css-value-wrapper-animate .bar-value .css-bar-value-animate {
-  -webkit-animation: eightZero 1.4s 2.7s forwards ease-out;
-          animation: eightZero 1.4s 2.7s forwards ease-out;
+.bar-main .css-value-wrapper-animate .bar-value .css-bar-value-animated {
+  -webkit-animation: eightZero 1.4s 1.6s forwards ease-out;
+          animation: eightZero 1.4s 1.6s forwards ease-out;
 }
 
 @-webkit-keyframes eightZero {
@@ -199,13 +199,13 @@
 }
 
 .bar-main .js-value-wrapper-animate .bar-title {
-  -webkit-animation: intoView 1.4s ease-out 0.6s forwards;
-          animation: intoView 1.4s ease-out 0.6s forwards;
+  -webkit-animation: intoView 1s ease-out 0.4s forwards;
+          animation: intoView 1s ease-out 0.4s forwards;
 }
 
 .bar-main .js-value-wrapper-animate .bar-value {
-  -webkit-animation: giveMeWidth 1.4s ease-out 0.6s forwards;
-          animation: giveMeWidth 1.4s ease-out 0.6s forwards;
+  -webkit-animation: giveMeWidth 1s ease-out 0.4s forwards;
+          animation: giveMeWidth 1s ease-out 0.4s forwards;
 }
 
 .bar-main .js-value-wrapper-animate .bar-value .bar-value-meter:before {
@@ -213,9 +213,9 @@
           animation: shine 1s forwards;
 }
 
-.bar-main .js-value-wrapper-animate .bar-value .js-bar-value-animate {
-  -webkit-animation: sixFive 1.4s 2.9s forwards ease-out;
-          animation: sixFive 1.4s 2.9s forwards ease-out;
+.bar-main .js-value-wrapper-animate .bar-value .js-bar-value-animated {
+  -webkit-animation: sixFive 1.4s 1.8s forwards ease-out;
+          animation: sixFive 1.4s 1.8s forwards ease-out;
 }
 
 @-webkit-keyframes sixFive {
@@ -231,13 +231,13 @@
 }
 
 .bar-main .php-value-wrapper-animate .bar-title {
-  -webkit-animation: intoView 1.4s ease-out 0.9s forwards;
-          animation: intoView 1.4s ease-out 0.9s forwards;
+  -webkit-animation: intoView 1s ease-out 0.6s forwards;
+          animation: intoView 1s ease-out 0.6s forwards;
 }
 
 .bar-main .php-value-wrapper-animate .bar-value {
-  -webkit-animation: giveMeWidth 1.4s ease-out 0.9s forwards;
-          animation: giveMeWidth 1.4s ease-out 0.9s forwards;
+  -webkit-animation: giveMeWidth 1s ease-out 0.6s forwards;
+          animation: giveMeWidth 1s ease-out 0.6s forwards;
 }
 
 .bar-main .php-value-wrapper-animate .bar-value .bar-value-meter:before {
@@ -245,9 +245,9 @@
           animation: shine 1s forwards;
 }
 
-.bar-main .php-value-wrapper-animate .bar-value .php-bar-value-animate {
-  -webkit-animation: twoFive 1.4s 3.1s forwards ease-out;
-          animation: twoFive 1.4s 3.1s forwards ease-out;
+.bar-main .php-value-wrapper-animate .bar-value .php-bar-value-animated {
+  -webkit-animation: twoFive 1.4s 2.0s forwards ease-out;
+          animation: twoFive 1.4s 2.0s forwards ease-out;
 }
 
 @-webkit-keyframes twoFive {
@@ -263,13 +263,13 @@
 }
 
 .bar-main .bootstrap-value-wrapper-animate .bar-title {
-  -webkit-animation: intoView 1.4s ease-out 1.2s forwards;
-          animation: intoView 1.4s ease-out 1.2s forwards;
+  -webkit-animation: intoView 1s ease-out 0.8s forwards;
+          animation: intoView 1s ease-out 0.8s forwards;
 }
 
 .bar-main .bootstrap-value-wrapper-animate .bar-value {
-  -webkit-animation: giveMeWidth 1.4s ease-out 1.2s forwards;
-          animation: giveMeWidth 1.4s ease-out 1.2s forwards;
+  -webkit-animation: giveMeWidth 1s ease-out 0.8s forwards;
+          animation: giveMeWidth 1s ease-out 0.8s forwards;
 }
 
 .bar-main .bootstrap-value-wrapper-animate .bar-value .bar-value-meter:before {
@@ -277,9 +277,9 @@
           animation: shine 1s forwards;
 }
 
-.bar-main .bootstrap-value-wrapper-animate .bar-value .bootstrap-bar-value-animate {
-  -webkit-animation: fourfive 1.4s 3.3s forwards ease-out;
-          animation: fourfive 1.4s 3.3s forwards ease-out;
+.bar-main .bootstrap-value-wrapper-animate .bar-value .bootstrap-bar-value-animated {
+  -webkit-animation: fourfive 1.4s 2.2s forwards ease-out;
+          animation: fourfive 1.4s 2.2s forwards ease-out;
 }
 
 @-webkit-keyframes fourfive {
@@ -295,13 +295,13 @@
 }
 
 .bar-main .jquery-value-wrapper-animate .bar-title {
-  -webkit-animation: intoView 1.4s ease-out 1.5s forwards;
-          animation: intoView 1.4s ease-out 1.5s forwards;
+  -webkit-animation: intoView 1s ease-out 1.0s forwards;
+          animation: intoView 1s ease-out 1.0s forwards;
 }
 
 .bar-main .jquery-value-wrapper-animate .bar-value {
-  -webkit-animation: giveMeWidth 1.4s ease-out 1.5s forwards;
-          animation: giveMeWidth 1.4s ease-out 1.5s forwards;
+  -webkit-animation: giveMeWidth 1s ease-out 1.0s forwards;
+          animation: giveMeWidth 1s ease-out 1.0s forwards;
 }
 
 .bar-main .jquery-value-wrapper-animate .bar-value .bar-value-meter:before {
@@ -309,9 +309,9 @@
           animation: shine 1s forwards;
 }
 
-.bar-main .jquery-value-wrapper-animate .bar-value .jquery-bar-value-animate {
-  -webkit-animation: towZero 1.4s 3.5s forwards ease-out;
-          animation: towZero 1.4s 3.5s forwards ease-out;
+.bar-main .jquery-value-wrapper-animate .bar-value .jquery-bar-value-animated {
+  -webkit-animation: towZero 1.4s 2.4s forwards ease-out;
+          animation: towZero 1.4s 2.4s forwards ease-out;
 }
 
 @-webkit-keyframes towZero {
@@ -327,13 +327,13 @@
 }
 
 .bar-main .ui-value-wrapper-animate .bar-title {
-  -webkit-animation: intoView 1.4s ease-out 1.7s forwards;
-          animation: intoView 1.4s ease-out 1.7s forwards;
+  -webkit-animation: intoView 1s ease-out 1.2s forwards;
+          animation: intoView 1s ease-out 1.2s forwards;
 }
 
 .bar-main .ui-value-wrapper-animate .bar-value {
-  -webkit-animation: giveMeWidth 1.4s ease-out 1.7s forwards;
-          animation: giveMeWidth 1.4s ease-out 1.7s forwards;
+  -webkit-animation: giveMeWidth 1s ease-out 1.2s forwards;
+          animation: giveMeWidth 1s ease-out 1.2s forwards;
 }
 
 .bar-main .ui-value-wrapper-animate .bar-value .bar-value-meter:before {
@@ -341,9 +341,9 @@
           animation: shine 1s forwards;
 }
 
-.bar-main .ui-value-wrapper-animate .bar-value .ui-bar-value-animate {
-  -webkit-animation: fiveZero 1.4s 3.7s forwards ease-out;
-          animation: fiveZero 1.4s 3.7s forwards ease-out;
+.bar-main .ui-value-wrapper-animate .bar-value .ui-bar-value-animated {
+  -webkit-animation: fiveZero 1.4s 2.6s forwards ease-out;
+          animation: fiveZero 1.4s 2.6s forwards ease-out;
 }
 
 @-webkit-keyframes fiveZero {
@@ -359,13 +359,13 @@
 }
 
 .bar-main .photoshop-value-wrapper-animate .bar-title {
-  -webkit-animation: intoView 1.4s ease-out 1.9s forwards;
-          animation: intoView 1.4s ease-out 1.9s forwards;
+  -webkit-animation: intoView 1s ease-out 1.4s forwards;
+          animation: intoView 1s ease-out 1.4s forwards;
 }
 
 .bar-main .photoshop-value-wrapper-animate .bar-value {
-  -webkit-animation: giveMeWidth 1.4s ease-out 1.9s forwards;
-          animation: giveMeWidth 1.4s ease-out 1.9s forwards;
+  -webkit-animation: giveMeWidth 1s ease-out 1.4s forwards;
+          animation: giveMeWidth 1s ease-out 1.4s forwards;
 }
 
 .bar-main .photoshop-value-wrapper-animate .bar-value .bar-value-meter:before {
@@ -373,9 +373,9 @@
           animation: shine 1s forwards;
 }
 
-.bar-main .photoshop-value-wrapper-animate .bar-value .photoshop-bar-value-animate {
-  -webkit-animation: fourZero 1.4s 3.9s forwards ease-out;
-          animation: fourZero 1.4s 3.9s forwards ease-out;
+.bar-main .photoshop-value-wrapper-animate .bar-value .photoshop-bar-value-animated {
+  -webkit-animation: fourZero 1.4s 2.8s forwards ease-out;
+          animation: fourZero 1.4s 2.8s forwards ease-out;
 }
 
 @-webkit-keyframes fourZero {
@@ -388,11 +388,6 @@
   100% {
     width: 40%;
   }
-}
-
-main section.contact .contact-wrapper .contact-title-animate {
-  -webkit-animation: fontPop 1s forwards ease-in;
-          animation: fontPop 1s forwards ease-in;
 }
 
 @-webkit-keyframes fontPop {
@@ -423,5 +418,10 @@ main section.contact .contact-wrapper .contact-title-animate {
     opacity: 1;
     font-size: 130%;
   }
+}
+
+main section.contact .contact-wrapper .contact-title-animate {
+  -webkit-animation: fontPop 1s forwards ease-in;
+          animation: fontPop 1s forwards ease-in;
 }
 /*# sourceMappingURL=animation.css.map */
