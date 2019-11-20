@@ -1,29 +1,5 @@
 'use strict';
 window.onload = function () {
-  //check if element is in viewport [CLOSURE- JUST EXPERIMENTING]
-  // function inViewport(parentId, elementId, animation = false){
-
-  //   var parent = document.querySelector(`#${parentId}`);
-  //   var element = document.querySelector(`#${elementId}`);
-
-  //   //what classname you want to change
-  //   //padClass necessery if padding true
-  //   if(!animation){
-
-  //     return function(activateDistance, ifClassName, elseClassName, padding = false, padClass){
-
-  //       window.onscroll = function(){
-  //         var height = parent.getBoundingClientRect().top;
-  //         if(height <= activateDistance){
-  //           element.className = `${ifClassName}`;
-  //           if(padding){
-  //             parent.classList.add(`${padClass}`);
-  //           }
-  //         }else{
-  //           element.className = `${elseClassName}`;
-  //           if(padding){
-  //             parent.classList.remove(`${padClass}`)
-  //           }
   //         }
   //       }
   //     }
@@ -42,7 +18,7 @@ window.onload = function () {
       // 'HTML (****) ','',
       // 'CSS (***) ','',
       // 'AND JS (***) ','',
-      'Front end Developer'
+      'Front-End Developer'
     ];
     var typingComplete = false;
     var output = document.querySelector('#intro-typing');
@@ -68,7 +44,7 @@ window.onload = function () {
           typing();
         }
         // typing();
-      }, 100);
+      }, 200);
     })();
     
     var cursorClass = document.querySelector('.cursor')
@@ -77,58 +53,7 @@ window.onload = function () {
         cursorClass.classList.add('cursor-fade');
       }
     }, 1000);
-    // var letterCount = 0;
-    // var index = 0;
-    // var totalWords = about.length ;
-    // var output = document.querySelector('#intro-typing');
-    // var myInterval;
-    // var intervalTime = 200;
-
-    // (function autoType(){
-    //   clearInterval(myInterval);
-    //   var currentWord = about[index];
-    //   var slicedCurrent = currentWord.slice(0, letterCount);
-    //   output.innerHTML = slicedCurrent;
-    //   //interval time management
-    //   if(slicedCurrent.length >= about[index].length){
-    //     intervalTime = 1000;
-    //   }else{
-    //     intervalTime = 200;
-    //   }
-    //   myInterval = setInterval(() => {
-    //     if(slicedCurrent.length === about[index].length){
-    //       index++;
-    //       letterCount = 0;
-    //       (index >= totalWords) ? index = 0 : false;
-    //     }
-    //     letterCount++;
-    //     autoType();
-    //   }, intervalTime);
-    // })();
   })();
-
-  //sticky nav
-  // (function stickyNav(){
-
-  //   //viewport closure
-  //   // var stickyNav = inViewport('main', 'nav');
-  //   // stickyNav(-100, 'sticky', 'nonsticky', true, 'sticky-nav-wrapper');
-  //   //upper code is same as below commented code
-
-  //   // var navWrapper = document.querySelector('#main');
-  //   // var nav = document.querySelector('#nav');
-  //   // window.onscroll = function(){
-  //   //   var height = navWrapper.getBoundingClientRect().top;
-  //   //   if(height <= -100){
-  //   //     nav.className = 'sticky';
-  //   //     navWrapper.classList.add('sticky-nav-wrapper');
-  //   //   }else{
-  //   //     nav.className = 'nonSticky';
-  //   //     navWrapper.classList.remove('sticky-nav-wrapper');
-  //   //   }
-  //   // }
-  //   // 
-  // })();
 
   //active nav button
   (function activNavButton() {
@@ -222,7 +147,18 @@ window.onload = function () {
     scroll('contact', 'CONTACT', );
 
   })();
+  
+  
+  (function mobile(){
+    //menu button
+    var navLinks =  document.querySelectorAll('.navLink-wrapper');
+    console.log(navLinks);
+    $('#menuButton').click(function(){
+      for( let i = 0; i < navLinks.length; i++){
+        console.log('working');
+        navLinks[i].classList.toggle('navLink-wrapper-visible');
+      }
+    })
+      
+    })();
 }
-
-let anchor = document.querySelector('#viewWork');
-anchor.style.color = ''
