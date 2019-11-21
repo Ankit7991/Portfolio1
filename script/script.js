@@ -1,5 +1,5 @@
 'use strict'
-$(function () {
+window.onload = (function () {
 
   //contact me form
   (function basicActions(){
@@ -24,12 +24,6 @@ $(function () {
 
     // var about = [
     var words = [
-      // `Hello `,'',
-      // `Ankit here`,'',
-      // `I love (<3)`,'',
-      // 'HTML (****) ','',
-      // 'CSS (***) ','',
-      // 'AND JS (***) ','',
       'Front-End Developer'
     ];
     var typingComplete = false;

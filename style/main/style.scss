@@ -70,7 +70,7 @@ serif;
 body {
   background: linear-gradient(#1a857e, #4ecdc4);
   position: relative;
-  height: 4000px;
+  // height: 4000px;
 
   &:after {
     content: "";
@@ -221,11 +221,6 @@ section.intro-wrapper {
         opacity: 0;
       }
       @include hundered();
-      background: url(../../img/background.jpg);
-      // background: red;
-      background-size: 100% 100%;
-      background-position: 0 0;
-      background-attachment: fixed;
 
     }
 
@@ -305,8 +300,6 @@ section.intro-wrapper {
 main {
   position: relative;
   z-index: 1;
-  background: url(../../img/sea.jpg) fixed no-repeat;
-  background-size: 100% 100%;
   background-position: 0 0;
 
   .sticky {
@@ -329,7 +322,7 @@ main {
 
   nav,
   .nonSticky {
-    // display: none;
+    display: none;
     margin-bottom: 20px;
     border-bottom: 2px solid #db7070;
     // border-bottom: 0px solid transparent;
@@ -338,9 +331,6 @@ main {
     letter-spacing: 2px;
     
     ul {
-      background: url(../../img/nav-bg.jpg) fixed;
-      background-size: 100% 100%;
-      background-position: 0 0;
       display: flex;
       list-style-type: none;
 
@@ -652,9 +642,6 @@ main {
     border: 1px solid transparent;
     padding-top: 50px;
     text-align: center;
-    background: url(../../img/leaf.jpg) fixed ;
-    background-size: 150% 150%;
-    background-position: 50% 50%;
     margin: 3em 0 0 0;
     position: relative;
     z-index: 10000;
@@ -712,9 +699,94 @@ main {
         }
       }
     }
+  }
+
+    
+  footer{
+    height: 150px;
+    text-align: center;
+    background: #09615B;
+    @include center();
+    position: relative;
 
     .social-wrapper{
-      border: px solid black; 
+      .social{
+        text-align: center;
+        @include center();
+        a{
+          text-decoration: none;
+          color: white;
+          position: relative;
+          border: 1px solid #ffffff5b;
+          padding: 20px;
+          border-radius: 100px;
+          z-index: 100000;
+          overflow: hidden;
+
+          margin: 10px;
+          .fa{
+            @include centerAbsolute();
+            font-size: 20px;
+          }
+          &:after{
+            content: "";
+            // border: 1px solid red;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            top: -100%;
+            left: -100%;
+            transition: 0.4s;
+            z-index: -1;
+          }
+          &:hover{
+            &:after{
+
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+        a.linkedin:hover{
+          &:after{
+            background: #0077b5;
+          }
+        }
+        a.github:hover{
+          color: black;
+          &:after{
+            background: #ffffff8f;
+          }
+        }
+      }
+    }
+    .go2top{
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 30px;
+      border: 1px solid black; 
+      border-radius: 100%;
+      padding: 20px;
+      transform: translate(-50%, 50%);
+      transition:border 0.4s, box-shadow 0.4s;
+      box-shadow: 0 0 0 0px #09615B, 0 0 0 0px white;
+      .fa{
+        @include centerAbsolute();
+        color: black;
+        transition: color 0.4s;
+      }
+      &:hover{
+        border-color: white;
+        box-shadow: 0 0 0 3px #09615B, 0 0 0 6px white;
+
+        .fa{
+
+          color: white;
+        }
+        
+      }
     }
   }
 }
@@ -733,4 +805,7 @@ main {
 }
 .sticky-nav-wrapper {
   padding-top: 5em;
+}
+h1{
+  color: white;
 }

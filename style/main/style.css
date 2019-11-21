@@ -27,7 +27,6 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#1a857e), to(#4ecdc4));
   background: linear-gradient(#1a857e, #4ecdc4);
   position: relative;
-  height: 4000px;
 }
 
 body:after {
@@ -218,10 +217,6 @@ section.intro-wrapper .intro-video-bg .myBackground {
   width: 100vw;
   height: 100vh;
   max-width: 100%;
-  background: url(../../img/background.jpg);
-  background-size: 100% 100%;
-  background-position: 0 0;
-  background-attachment: fixed;
 }
 
 section.intro-wrapper .intro-video-bg .myBackground img {
@@ -311,8 +306,6 @@ section.intro-wrapper span.button:after {
 main {
   position: relative;
   z-index: 1;
-  background: url(../../img/sea.jpg) fixed no-repeat;
-  background-size: 100% 100%;
   background-position: 0 0;
 }
 
@@ -349,6 +342,7 @@ main .sticky {
 
 main nav,
 main .nonSticky {
+  display: none;
   margin-bottom: 20px;
   border-bottom: 2px solid #db7070;
   -webkit-transition: border 0.4s, background 0.4s, 0.3s;
@@ -358,9 +352,6 @@ main .nonSticky {
 
 main nav ul,
 main .nonSticky ul {
-  background: url(../../img/nav-bg.jpg) fixed;
-  background-size: 100% 100%;
-  background-position: 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -714,9 +705,6 @@ main section.contact {
   border: 1px solid transparent;
   padding-top: 50px;
   text-align: center;
-  background: url(../../img/leaf.jpg) fixed;
-  background-size: 150% 150%;
-  background-position: 50% 50%;
   margin: 3em 0 0 0;
   position: relative;
   z-index: 10000;
@@ -821,8 +809,123 @@ main section.contact .contact-wrapper .contact-fields .form-wrapper form input[t
   color: white;
 }
 
-main section.contact .social-wrapper {
-  border: px solid black;
+main footer {
+  height: 150px;
+  text-align: center;
+  background: #09615B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+main footer .social-wrapper .social {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main footer .social-wrapper .social a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  border: 1px solid #ffffff5b;
+  padding: 20px;
+  border-radius: 100px;
+  z-index: 100000;
+  overflow: hidden;
+  margin: 10px;
+}
+
+main footer .social-wrapper .social a .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+main footer .social-wrapper .social a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  top: -100%;
+  left: -100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+main footer .social-wrapper .social a:hover:after {
+  top: 0;
+  left: 0;
+}
+
+main footer .social-wrapper .social a.linkedin:hover:after {
+  background: #0077b5;
+}
+
+main footer .social-wrapper .social a.github:hover {
+  color: black;
+}
+
+main footer .social-wrapper .social a.github:hover:after {
+  background: #ffffff8f;
+}
+
+main footer .go2top {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 30px;
+  border: 1px solid black;
+  border-radius: 100%;
+  padding: 20px;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  -webkit-transition: border 0.4s, -webkit-box-shadow 0.4s;
+  transition: border 0.4s, -webkit-box-shadow 0.4s;
+  transition: border 0.4s, box-shadow 0.4s;
+  transition: border 0.4s, box-shadow 0.4s, -webkit-box-shadow 0.4s;
+  -webkit-box-shadow: 0 0 0 0px #09615B, 0 0 0 0px white;
+          box-shadow: 0 0 0 0px #09615B, 0 0 0 0px white;
+}
+
+main footer .go2top .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: black;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+main footer .go2top:hover {
+  border-color: white;
+  -webkit-box-shadow: 0 0 0 3px #09615B, 0 0 0 6px white;
+          box-shadow: 0 0 0 3px #09615B, 0 0 0 6px white;
+}
+
+main footer .go2top:hover .fa {
+  color: white;
 }
 
 .title-wrapper {
@@ -842,5 +945,9 @@ main section.contact .social-wrapper {
 
 .sticky-nav-wrapper {
   padding-top: 5em;
+}
+
+h1 {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
