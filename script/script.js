@@ -119,7 +119,6 @@ $(function () {
       (function languageAnimation() {
 
 
-        //positions: top, middle, bottom, lowerHalf
         
 
         if (getCondition('bar-wrapper', 2) && !getCondition('bar-wrapper', -99999999)) {
@@ -133,33 +132,32 @@ $(function () {
             tvWrappers[i].classList.add(`${languages[i]}-value-wrapper-animate`)
           }
         }
-        else if(getCondition('bar-wrapper-end', -99999999)){
+        // else if(getCondition('bar-wrapper-end', -99999999)){
           
-          for(let i = 0; i < languages.length; i++){
-            adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`, false);
-          }
+        //   for(let i = 0; i < languages.length; i++){
+        //     adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`, false);
+        //   }
 
-          //title value wrappers -> tvWrappers
-          var tvWrappers = document.querySelectorAll('.title-value-wrapper');
-          for (let i in languages) {
-            tvWrappers[i].classList.remove(`${languages[i]}-value-wrapper-animate`)
-          }
-        }
-        else if(!getCondition('bar-wrapper', 1)){
-          for(let i = 0; i < languages.length; i++){
-            adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`, false);
-          }
+        //   //title value wrappers -> tvWrappers
+        //   var tvWrappers = document.querySelectorAll('.title-value-wrapper');
+        //   for (let i in languages) {
+        //     tvWrappers[i].classList.remove(`${languages[i]}-value-wrapper-animate`)
+        //   }
+        // }
+        // else if(!getCondition('bar-wrapper', 1)){
+        //   for(let i = 0; i < languages.length; i++){
+        //     adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`, false);
+        //   }
 
-          //title value wrappers -> tvWrappers
-          var tvWrappers = document.querySelectorAll('.title-value-wrapper');
-          for (let i in languages) {
-            tvWrappers[i].classList.remove(`${languages[i]}-value-wrapper-animate`)
-          }
-        }
+        //   //title value wrappers -> tvWrappers
+        //   var tvWrappers = document.querySelectorAll('.title-value-wrapper');
+        //   for (let i in languages) {
+        //     tvWrappers[i].classList.remove(`${languages[i]}-value-wrapper-animate`)
+        //   }
+        // }
 
         
 
-        //positions: top, middle, bottom, lowerHalf
 
 
         let titles = ['about-title', 'contact-title', 'card-icon1', 'card-icon2', 'card-icon3', 'card-icon4'];
@@ -168,11 +166,13 @@ $(function () {
           if (getCondition(`${name}`, 1.3) && !getCondition(`${name}`, -99999999)){
             // here animating titles
             adRemClass(`${name}`, `${name}${postFix}`);
-          }else if(getCondition(`${name}`, -99999999)){
-            adRemClass(`${name}`, `${name}${postFix}`, false);
-          }else if(!getCondition(`${name}`, 1)){
-            adRemClass(`${name}`, `${name}${postFix}`, false);
           }
+          // else if(getCondition(`${name}`, -99999999)){
+          //   adRemClass(`${name}`, `${name}${postFix}`, false);
+          // }
+          // else if(!getCondition(`${name}`, 1)){
+          // adRemClass(`${name}`, `${name}${postFix}`, false);
+          // }
         }
         for(let i = 0; i < titles.length; i++){
           doNRemoveAnimation(titles[i], '-animate');
