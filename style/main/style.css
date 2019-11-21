@@ -720,20 +720,6 @@ main section.contact .contact-wrapper {
   width: 80%;
 }
 
-main section.contact .contact-wrapper .contact-title {
-  position: relative;
-  height: 80px;
-  opacity: 0;
-}
-
-main section.contact .contact-wrapper .contact-title h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 main section.contact .contact-wrapper .contact-fields {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -814,6 +800,21 @@ main section.contact .contact-wrapper .contact-fields .form-wrapper form input[t
 
 main section.contact .social-wrapper {
   border: px solid black;
+}
+
+.title-wrapper {
+  position: relative;
+  height: 80px;
+  opacity: 1;
+}
+
+.title-wrapper h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 40px;
 }
 
 .sticky-nav-wrapper {

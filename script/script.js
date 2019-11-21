@@ -1,8 +1,7 @@
-'use strict';
-window.onload = function () {
+'use strict'
+$(function () {
 
-  //contact me 
-  // view my work animation
+  //contact me form
   (function basicActions(){
 
     $('#contact-me-button').click(function(){
@@ -111,7 +110,6 @@ window.onload = function () {
     let windowHeight = window.innerHeight;
     function getCondition(classname, height){
       var myParentDistance = document.querySelector(`.${classname}`).getBoundingClientRect().top;
-      (height === 'top') ? height = -99999999 : (height === 'middle') ? height = 2 : (height === 'bottom') ? height = 1 : (height === 'lowerHalf') ? height = 1.3 : false;
       return (myParentDistance <= (windowHeight / height));
       
     }
@@ -122,8 +120,9 @@ window.onload = function () {
 
 
         //positions: top, middle, bottom, lowerHalf
+        
 
-        if (getCondition('bar-wrapper', 'middle') && !getCondition('bar-wrapper', 'top')) {
+        if (getCondition('bar-wrapper', 2) && !getCondition('bar-wrapper', -99999999)) {
           console.log()
           for(let i = 0; i < languages.length; i++){
             adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`,);
@@ -133,7 +132,8 @@ window.onload = function () {
           for (let i in languages) {
             tvWrappers[i].classList.add(`${languages[i]}-value-wrapper-animate`)
           }
-        }else if(getCondition('bar-wrapper-end', 'top')){
+        }
+        else if(getCondition('bar-wrapper-end', -99999999)){
           
           for(let i = 0; i < languages.length; i++){
             adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`, false);
@@ -144,37 +144,40 @@ window.onload = function () {
           for (let i in languages) {
             tvWrappers[i].classList.remove(`${languages[i]}-value-wrapper-animate`)
           }
-          // console.log('le');
         }
-        else if(getCondition('bar-wrapper', '')){
-          console.log('lex');
+        else if(!getCondition('bar-wrapper', 1)){
+          for(let i = 0; i < languages.length; i++){
+            adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`, false);
+          }
+
+          //title value wrappers -> tvWrappers
+          var tvWrappers = document.querySelectorAll('.title-value-wrapper');
+          for (let i in languages) {
+            tvWrappers[i].classList.remove(`${languages[i]}-value-wrapper-animate`)
+          }
         }
 
-
+        
 
         //positions: top, middle, bottom, lowerHalf
 
 
-        let titles = ['contact'];
+        let titles = ['about-title', 'contact-title', 'card-icon1', 'card-icon2', 'card-icon3', 'card-icon4'];
         //add remove class of title based on their distance from top of window
-        function doNRemoveAnimation(name){
-          if (getCondition(`${name}-title`, 'lowerHalf') && !getCondition(`${name}-title`, 'top')){
+        function doNRemoveAnimation(name, postFix){
+          if (getCondition(`${name}`, 1.3) && !getCondition(`${name}`, -99999999)){
             // here animating titles
-            adRemClass(`${name}-title`, `${name}-title-animate`);
-          }else if(getCondition(`${name}-title`, 'top')){
-            adRemClass(`${name}-title`, `${name}-title-animate`, false);
+            adRemClass(`${name}`, `${name}${postFix}`);
+          }else if(getCondition(`${name}`, -99999999)){
+            adRemClass(`${name}`, `${name}${postFix}`, false);
+          }else if(!getCondition(`${name}`, 1)){
+            adRemClass(`${name}`, `${name}${postFix}`, false);
           }
         }
         for(let i = 0; i < titles.length; i++){
-          doNRemoveAnimation(titles[i]);
+          doNRemoveAnimation(titles[i], '-animate');
         }
 
-        // if (getCondition('contact-title', 1.4) && !getCondition('contact-title', -999999999)){
-        //   // here animating titles
-        //   adRemClass('contact-title', 'contact-title-animate');
-        // }else if(getCondition('contact-title', -9999999999)){
-        //   adRemClass('contact-title', 'contact-title-animate', false);
-        // }
 
 
 
@@ -265,4 +268,5 @@ window.onload = function () {
       })(i);
     }
   })();
-}
+
+});

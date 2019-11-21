@@ -392,36 +392,78 @@
 
 @-webkit-keyframes fontPop {
   0% {
-    opacity: 0;
-    font-size: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
-  90% {
-    opacity: 0.6;
-    font-size: 200%;
+  50% {
+    left: 55%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   100% {
+    left: 50%;
     opacity: 1;
-    font-size: 130%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
 @keyframes fontPop {
   0% {
-    opacity: 0;
-    font-size: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
-  90% {
-    opacity: 0.6;
-    font-size: 200%;
+  50% {
+    left: 55%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   100% {
+    left: 50%;
     opacity: 1;
-    font-size: 130%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
-main section.contact .contact-wrapper .contact-title-animate {
+main .contact-title-animate h1,
+main .about-title-animate h1 {
   -webkit-animation: fontPop 1s forwards ease-in;
           animation: fontPop 1s forwards ease-in;
+}
+
+@-webkit-keyframes intoViewPop {
+  30% {
+    -webkit-transform: scale(0.8, 1);
+            transform: scale(0.8, 1);
+  }
+  60% {
+    -webkit-transform: scale(1.4, 0);
+            transform: scale(1.4, 0);
+  }
+}
+
+@keyframes intoViewPop {
+  30% {
+    -webkit-transform: scale(0.8, 1);
+            transform: scale(0.8, 1);
+  }
+  60% {
+    -webkit-transform: scale(1.4, 0);
+            transform: scale(1.4, 0);
+  }
+}
+
+main .card-icon1-animate,
+main .card-icon2-animate,
+main .card-icon3-animate,
+main .card-icon4-animate,
+main .card-icon-animate {
+  -webkit-animation: intoViewPop 0.9s forwards;
+          animation: intoViewPop 0.9s forwards;
 }
 /*# sourceMappingURL=animation.css.map */

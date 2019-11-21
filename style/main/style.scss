@@ -638,15 +638,6 @@ main {
     .contact-wrapper{
       width: 80%;
 
-      .contact-title{
-        position: relative;
-        height: 80px;
-        // font-size: 0px;
-        opacity: 0;
-        h1{
-          @include centerAbsolute();
-        }
-      }
 
       .contact-fields{
         // border: 1px solid black;
@@ -701,6 +692,17 @@ main {
 }
 
 
+
+
+.title-wrapper{
+  position: relative;
+  height: 80px;
+  opacity: 1;
+  h1{
+    @include centerAbsolute();
+    font-size: 40px;
+  }
+}
 .sticky-nav-wrapper {
   padding-top: 5em;
 }

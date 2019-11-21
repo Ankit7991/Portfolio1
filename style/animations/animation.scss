@@ -295,28 +295,54 @@
 }
 
 
+
+
 main {
   @keyframes fontPop {
-    0% {
+    0%{
+      left: 50%;
+      // opacity: 0;
+      transform: translate(-50%, -50%);
+
+    }
+    50%{
+      left: 55%;
       opacity: 0;
-      font-size: 40%;
-    }
+      transform: translate(-50%, -50%);
 
-    90% {
-      opacity: 0.6;
-      font-size: 200%;
     }
-
-    100% {
+    100%{
+      left: 50%;
       opacity: 1;
-      font-size: 130%;
+      transform: translate(-50%, -50%);
+
+    }
+
+
+  }
+  .contact-title-animate,
+  .about-title-animate
+  {
+    h1{
+      animation: fontPop 1s forwards ease-in;
     }
   }
-  section.contact {
-    .contact-wrapper {
-      .contact-title-animate {
-        animation: fontPop 1s forwards ease-in;
-      }
+  
+
+  @keyframes intoViewPop{
+    30%{
+      transform: scale(0.8, 1);
     }
+    60%{
+      transform: scale(1.4, 0);
+    }
+  }
+  .card-icon1-animate,
+  .card-icon2-animate,
+  .card-icon3-animate,
+  .card-icon4-animate, 
+  .card-icon-animate
+  {
+    animation: intoViewPop 0.9s forwards;
   }
 }
