@@ -3,31 +3,37 @@
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    margin: 0 10px;
   }
   .about-me-and-languages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 3em 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .about-me-and-languages .about-me {
-    -webkit-box-flex: 6;
-        -ms-flex: 6;
-            flex: 6;
     padding: 0 20px;
     -webkit-transition: padding 0.3s;
     transition: padding 0.3s;
   }
   .about-me-and-languages .languages {
-    -webkit-box-flex: 6;
-        -ms-flex: 6;
-            flex: 6;
+    width: 50%;
     -webkit-transition: -webkit-box-flex 0.4s;
     transition: -webkit-box-flex 0.4s;
     transition: flex 0.4s;
     transition: flex 0.4s, -webkit-box-flex 0.4s, -ms-flex 0.4s;
   }
-  .about-me-and-languages .languages .bar-title {
+  .about-me-and-languages .languages .bar-main {
+    border: 1px solid transparent;
+    margin: 10px 0;
+  }
+  .about-me-and-languages .languages .bar-main .title-value-wrapper .bar-title {
     font-size: 80% !important;
   }
   .menuButton-wrapper {
@@ -126,6 +132,9 @@
 @media only screen and (max-width: 319px) {
   .intro {
     font-size: 10px !important;
+  }
+  .intro #viewWork {
+    color: red;
   }
   .bar-title {
     font-size: 50% !important;

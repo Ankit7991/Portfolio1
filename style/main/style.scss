@@ -209,17 +209,20 @@ section.intro-wrapper {
     @include hundered();
     position: absolute;
 
-    video, .myBackground {
+    video,
+    .myBackground {
       // @include hundered();
       // object-fit: fill;
     }
-    .myBackground{
-      img{
+
+    .myBackground {
+      img {
         width: 100vw;
         height: 100vh;
         max-width: 100%;
         opacity: 0;
       }
+
       @include hundered();
 
     }
@@ -294,7 +297,7 @@ section.intro-wrapper {
 
   }
 
-   
+
 }
 
 main {
@@ -322,14 +325,14 @@ main {
 
   nav,
   .nonSticky {
-    display: none;
+    // display: none;
     margin-bottom: 20px;
     border-bottom: 2px solid #db7070;
     // border-bottom: 0px solid transparent;
     // background: #0000003f;
     transition: border 0.4s, background 0.4s, 0.3s;
     letter-spacing: 2px;
-    
+
     ul {
       display: flex;
       list-style-type: none;
@@ -418,278 +421,323 @@ main {
   section.about {
     letter-spacing: 1px;
     line-height: 1.6em;
-    padding-top: 39px;
+    // padding-top: 39px;
     border: 1px solid transparent;
 
-    .card-wrapper {
-      // border: 1px solid black;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      color: rgba(255, 255, 255, 0.801);
-    }
-
-    .card {
-      // border: 1px solid black;
-      width: 250px;
-      height: 250px;
+    #about-me {
+      border: 1px solid white;
       @include center();
-      flex-flow: column;
-      // justify-content: space-evenly;
-      text-align: center;
 
-      div {
-        margin: 5px;
+      .about-title{
+        height: 30vh;
+
+      }
+      .card-wrapper {
+        // border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+        color: rgba(255, 255, 255, 0.801);
       }
 
-      .card-icon {
-        width: 100px;
-        height: 100px;
-        background: #00000073;
-        border-radius: 100%;
-        position: relative;
-        cursor: pointer;
+      .card {
+        // border: 1px solid black;
+        width: 250px;
+        height: 250px;
+        @include center();
+        flex-flow: column;
+        // justify-content: space-evenly;
+        text-align: center;
 
-        .fa {
-          @include centerAbsolute();
-          color: #ffffffbe;
-          font-size: 40px;
-          font-weight: lighter;
-          transition: font-size 0.2s, color 0.4s;
+        div {
+          margin: 5px;
         }
 
-        &:hover {
+        .card-icon {
+          width: 100px;
+          height: 100px;
+          background: #00000073;
+          border-radius: 100%;
+          position: relative;
+          cursor: pointer;
+
           .fa {
-            font-size: 50px;
-            color: #ffffff;
+            @include centerAbsolute();
+            color: #ffffffbe;
+            font-size: 40px;
+            font-weight: lighter;
+            transition: font-size 0.2s, color 0.4s;
+          }
+
+          &:hover {
+            .fa {
+              font-size: 50px;
+              color: #ffffff;
+            }
           }
         }
-      }
 
-      .card-title {
-        $card-title-bordCol: #d1d1d1;
-        border: 1px solid $card-title-bordCol;
-        padding: 5px 10px 0 10px;
-        border-bottom: 0px;
-        position: relative;
-        color: #00000094;
-        border-radius: 10px 10px 0 0;
-        cursor: pointer;
-
-        &:after,
-        &:before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-        }
-
-        &:before {
-          left: 0;
-          border-right: 1px solid $card-title-bordCol;
-          border-bottom: 1px solid $card-title-bordCol;
-          border-radius: 0 0 10px 0;
-          width: 3em;
-          height: 0.6em;
-          transform: translate(-100%, 0.6em);
-        }
-
-        &:after {
-          right: 0;
-          border-left: 1px solid $card-title-bordCol;
-          border-bottom: 1px solid $card-title-bordCol;
-          border-radius: 0 0 0 10px;
-          width: 3em;
-          height: 0.6em;
-          transform: translate(100%, 0.6em);
-        }
-      }
-    }
-
-    .card-about {
-      padding-top: 1em;
-    }
-
-    .about-me {
-      text-align: center;
-      margin-top: 5em;
-      margin-bottom: 5em;
-      line-height: 2em;
-
-      h1 {
-        margin: 1em;
-        // border: 1px solid $card-title-bordCol;
-        $card-title-bordCol: #d1d1d1;
-        display: inline-block;
-        border: 1px solid $card-title-bordCol;
-        border-top: none;
-        border-bottom: none;
-        padding: 0 1em 0 1em;
-        position: relative;
-        color: #000000bb;
-
-        &:after,
-        &:before {
-          content: "";
-          position: absolute;
+        .card-title {
+          $card-title-bordCol: #d1d1d1;
           border: 1px solid $card-title-bordCol;
-          width: 2em;
-          height: 0.6em;
-        }
+          padding: 5px 10px 0 10px;
+          border-bottom: 0px;
+          position: relative;
+          color: #00000094;
+          border-radius: 10px 10px 0 0;
+          cursor: pointer;
 
-        &:before {
-          left: 0;
-          top: 0;
-          border-bottom: none;
-          border-right: none;
-          border-radius: 10px 0 0 0;
-          transform: translate(-1px, -0.5em);
-        }
+          &:after,
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+          }
 
-        &:after {
-          bottom: 0;
-          right: 0;
-          border-top: none;
-          border-left: none;
-          border-radius: 0 0 10px 0;
-          transform: translate(1px, 0.5em);
+          &:before {
+            left: 0;
+            border-right: 1px solid $card-title-bordCol;
+            border-bottom: 1px solid $card-title-bordCol;
+            border-radius: 0 0 10px 0;
+            width: 3em;
+            height: 0.6em;
+            transform: translate(-100%, 0.6em);
+          }
+
+          &:after {
+            right: 0;
+            border-left: 1px solid $card-title-bordCol;
+            border-bottom: 1px solid $card-title-bordCol;
+            border-radius: 0 0 0 10px;
+            width: 3em;
+            height: 0.6em;
+            transform: translate(100%, 0.6em);
+          }
         }
+      }
+
+      .card-about {
+        padding-top: 1em;
       }
     }
 
-    .languages {
-      @include center();
-      flex-flow: column;
+    #languages {
+      height: 100vh;
+      .about-me-and-languages{
+        border: 1px solid red;
+        height: 100vh;
+      display: flex;
+      // justify-content: space-evenly;
+      align-items: center;
+      // flex-flow: row;
+      // flex-flow: column;
+      height: 100%;
+      
+      .about-me {
+        @include center();
+        flex-flow: column;
+        text-align: center;
+        line-height: 2em;
 
-      .bar-wrapper {
-        width: 90%;
+        h1 {
+          margin: 1em;
+          // border: 1px solid $card-title-bordCol;
+          $card-title-bordCol: #d1d1d1;
+          display: inline-block;
+          border: 1px solid $card-title-bordCol;
+          border-top: none;
+          border-bottom: none;
+          padding: 0 1em 0 1em;
+          position: relative;
+          color: #000000bb;
 
-        .bar-main {
+          &:after,
+          &:before {
+            content: "";
+            position: absolute;
+            border: 1px solid $card-title-bordCol;
+            width: 2em;
+            height: 0.6em;
+          }
 
-          .title-value-wrapper {
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 10px;
-            background: #00000044;
-            display: flex;
-            height: 2em;
-            align-items: center;
+          &:before {
+            left: 0;
+            top: 0;
+            border-bottom: none;
+            border-right: none;
+            border-radius: 10px 0 0 0;
+            transform: translate(-1px, -0.5em);
+          }
 
-            .bar-title {
-              position: absolute;
-              left: -20%;
-              height: 100%;
-              color: white;
-              background: #09615b;
-              width: 20%;
-              @include center();
-              z-index: 1000;
-              font-size: 100%;
-              transition: font-size 0.4s;
+          &:after {
+            bottom: 0;
+            right: 0;
+            border-top: none;
+            border-left: none;
+            border-radius: 0 0 10px 0;
+            transform: translate(1px, 0.5em);
+          }
+        }
+      }
 
-              &:after {
-                content: "";
-                background: linear-gradient(to right, #37AEA6 25%, #09615b 50%, #37AEA6 25%);
-                // background: white;
-                position: absolute;
-                right: 0;
-                top: 50%;
-                height: 90%;
-                width: 1em;
-                z-index: -1;
-                transform: translate(0.6em, -50%);
-              }
-            }
+      .languages {
+        @include center();
+        flex-flow: column;
 
-            .bar-value {
-              background: #0202024f;
-              left: 0;
-              text-align: right;
+        .bar-wrapper {
+          width: 90%;
+          
+          .bar-main {
+            
+            .title-value-wrapper {
+              // border: 3px solid red;
               position: relative;
-              height: 100%;
-              width: 0;
               overflow: hidden;
-              // border: 1px solid red;
+              margin-bottom: 10px;
+              background: #00000044;
+              display: flex;
+              height: 2em;
+              align-items: center;
 
-              span {
+              .bar-title {
                 position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                padding: 10px;
-                font-weight: bolder;
+                left: -20%;
+                height: 100%;
+                color: white;
+                background: #09615b;
+                width: 20%;
+                @include center();
+                z-index: 1000;
+                font-size: 100%;
+                transition: font-size 0.4s;
+
+                &:after {
+                  content: "";
+                  background: linear-gradient(to right, #37AEA6 25%, #09615b 50%, #37AEA6 25%);
+                  // background: white;
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  height: 90%;
+                  width: 1em;
+                  z-index: -1;
+                  transform: translate(0.6em, -50%);
+                }
               }
 
-              .bar-value-meter {
-                position: absolute;
-                height: 90%;
-                width: 0%;
-                background: #4ecdc5;
+              .bar-value {
+                background: #0202024f;
+                left: 0;
+                text-align: right;
                 position: relative;
+                height: 100%;
+                width: 0;
                 overflow: hidden;
-                top: 50%;
-                transform: translate(0, -50%);
+                // border: 1px solid red;
 
+                span {
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  padding: 10px;
+                  font-weight: bolder;
+                }
+
+                .bar-value-meter {
+                  position: absolute;
+                  height: 90%;
+                  width: 0%;
+                  background: #4ecdc5;
+                  position: relative;
+                  overflow: hidden;
+                  top: 50%;
+                  transform: translate(0, -50%);
+
+                }
               }
             }
           }
         }
       }
+    }
     }
   }
 
-  section.contact{
-    border: 1px solid transparent;
-    padding-top: 50px;
+  section.contact {
+    height: 100vh;
+    // padding-top: 50px;
     text-align: center;
     margin: 3em 0 0 0;
     position: relative;
     z-index: 10000;
     @include center();
     flex-flow: column;
-    .contact-wrapper{
+    
+    .contact-wrapper {
       width: 80%;
+      height: 100vh;
+      @include center();
+      flex-flow: column;
+      justify-content: space-evenly;
 
 
-      .contact-fields{
-        // border: 1px solid black;
+
+      .contact-fields {
         @include center();
         flex-flow: column;
-        
-        p{
+        height: 50vh;
+        justify-content: space-evenly;
+
+        p {
           margin: 1em 0;
           color: #ffffffc5;
           font-size: 1.4em;
         }
-        h1{
+
+        h1 {
           color: white !important;
         }
-        .form-wrapper{
+
+        .form-wrapper {
           // border: 1px solid red;
           width: 300px;
-          form{
+
+          form {
             // border: 1px solid white;
             display: flex;
             flex-flow: column;
-            input, textarea{
+            align-items: center;
+            justify-content: space-evenly;
+
+            input,
+            textarea {
               margin: 3px;
               padding: 5px 10px;
+              width: 100%;
               font-size: 18px;
               background: #ffffff43;
               border: 1px solid #00000057;
-              &::placeholder{
+
+              &::placeholder {
                 color: white;
               }
             }
-            textarea{
+
+            textarea {
               height: 140px;
             }
-            input[type = 'button']{
+
+            input[type='button'] {
+              width: 50%;
+
               background: #00000080;
               color: #ffffffe8;
               border: 1px solid #ffffffa8;
               transition: background 0.4s, color 0.4s;
-              &:hover{
+
+              &:hover {
                 background: #ffffff43;
                 border: 1px solid #00000057;
                 color: white;
@@ -701,19 +749,20 @@ main {
     }
   }
 
-    
-  footer{
+
+  footer {
     height: 150px;
     text-align: center;
     background: #09615B;
     @include center();
     position: relative;
 
-    .social-wrapper{
-      .social{
+    .social-wrapper {
+      .social {
         text-align: center;
         @include center();
-        a{
+
+        a {
           text-decoration: none;
           color: white;
           position: relative;
@@ -724,11 +773,13 @@ main {
           overflow: hidden;
 
           margin: 10px;
-          .fa{
+
+          .fa {
             @include centerAbsolute();
             font-size: 20px;
           }
-          &:after{
+
+          &:after {
             content: "";
             // border: 1px solid red;
             position: absolute;
@@ -740,52 +791,60 @@ main {
             transition: 0.4s;
             z-index: -1;
           }
-          &:hover{
-            &:after{
+
+          &:hover {
+            &:after {
 
               top: 0;
               left: 0;
             }
           }
         }
-        a.linkedin:hover{
-          &:after{
+
+        a.linkedin:hover {
+          &:after {
             background: #0077b5;
           }
         }
-        a.github:hover{
+
+        a.github:hover {
           color: black;
-          &:after{
+
+          &:after {
             background: #ffffff8f;
           }
         }
       }
     }
-    .go2top{
+
+    .go2top {
       position: absolute;
+      cursor: pointer;
       right: 0;
       top: 0;
       font-size: 30px;
-      border: 1px solid black; 
+      border: 1px solid black;
       border-radius: 100%;
       padding: 20px;
       transform: translate(-50%, 50%);
-      transition:border 0.4s, box-shadow 0.4s;
+      transition: border 0.4s, box-shadow 0.4s;
       box-shadow: 0 0 0 0px #09615B, 0 0 0 0px white;
-      .fa{
+
+      .fa {
         @include centerAbsolute();
         color: black;
         transition: color 0.4s;
       }
-      &:hover{
+
+      &:hover {
         border-color: white;
         box-shadow: 0 0 0 3px #09615B, 0 0 0 6px white;
 
-        .fa{
+        .fa {
 
           color: white;
         }
-        
+
       }
     }
   }
@@ -794,18 +853,21 @@ main {
 
 
 
-.title-wrapper{
+.title-wrapper {
   position: relative;
   height: 80px;
   opacity: 1;
-  h1{
+
+  h1 {
     @include centerAbsolute();
     font-size: 40px;
   }
 }
+
 .sticky-nav-wrapper {
-  padding-top: 5em;
+  padding-top: 5.1em;
 }
-h1{
+
+h1 {
   color: white;
 }

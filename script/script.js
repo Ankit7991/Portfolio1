@@ -214,6 +214,8 @@ window.onload = (function () {
     scroll('about', 'ABOUT', );
     // scroll('resume', 'RESUME', 500, -500);
     scroll('contact', 'CONTACT', );
+    scroll('go2top', 'HOME', 2000);
+
     
     //function for intro view my work button(using changeClass())
     var buttonHoverd = true, myTimeout;
@@ -232,7 +234,7 @@ window.onload = (function () {
       }
     })
 
-    //removing animation onclick
+    //removing animation onclick (of view my work button)
     $('#home').click(function(){
       document.querySelector('.button').classList.remove('button-animated');
     })

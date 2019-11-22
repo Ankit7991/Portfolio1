@@ -1,25 +1,43 @@
 
+
+@media only screen and (min-width: 786){
+
+  
+}
+
+
 @media only screen and (min-width: 992px){
 
   .card-wrapper{
     .card{
       flex: 1;
+      margin: 0 10px;
     }
   }
 
   .about-me-and-languages{
     display: flex;
-    margin: 3em 0;
+    // margin: 3em 0;
+    flex-flow: column;
+    justify-content: space-evenly;
     .about-me{
-      flex: 6;
+      // flex: 6;
       padding: 0 20px;
       transition: padding 0.3s;
     }
     .languages{
-      flex: 6;
+      // flex: 6;
+      width: 50%;
       transition: flex 0.4s;
-      .bar-title{
-        font-size: 80% !important;
+      .bar-main{
+        border: 1px solid transparent;
+
+        margin: 10px 0;
+        .title-value-wrapper{
+          .bar-title{
+            font-size: 80% !important;
+          }
+        }
       }
     }
   }
@@ -116,6 +134,9 @@
 @media only screen and (max-width: 319px){
   .intro{
     font-size: 10px !important;
+    #viewWork{
+      color: red;
+    }
   }
   .bar-title{
     font-size: 50% !important;

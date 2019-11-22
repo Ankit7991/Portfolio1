@@ -342,7 +342,6 @@ main .sticky {
 
 main nav,
 main .nonSticky {
-  display: none;
   margin-bottom: 20px;
   border-bottom: 2px solid #db7070;
   -webkit-transition: border 0.4s, background 0.4s, 0.3s;
@@ -443,11 +442,27 @@ main .nonSticky ul li:nth-child(5) span.active {
 main section.about {
   letter-spacing: 1px;
   line-height: 1.6em;
-  padding-top: 39px;
   border: 1px solid transparent;
 }
 
-main section.about .card-wrapper {
+main section.about #about-me {
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.about #about-me .about-title {
+  height: 30vh;
+}
+
+main section.about #about-me .card-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,13 +470,13 @@ main section.about .card-wrapper {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   color: rgba(255, 255, 255, 0.801);
 }
 
-main section.about .card {
+main section.about #about-me .card {
   width: 250px;
   height: 250px;
   display: -webkit-box;
@@ -480,11 +495,11 @@ main section.about .card {
   text-align: center;
 }
 
-main section.about .card div {
+main section.about #about-me .card div {
   margin: 5px;
 }
 
-main section.about .card .card-icon {
+main section.about #about-me .card .card-icon {
   width: 100px;
   height: 100px;
   background: #00000073;
@@ -493,7 +508,7 @@ main section.about .card .card-icon {
   cursor: pointer;
 }
 
-main section.about .card .card-icon .fa {
+main section.about #about-me .card .card-icon .fa {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -506,12 +521,12 @@ main section.about .card .card-icon .fa {
   transition: font-size 0.2s, color 0.4s;
 }
 
-main section.about .card .card-icon:hover .fa {
+main section.about #about-me .card .card-icon:hover .fa {
   font-size: 50px;
   color: #ffffff;
 }
 
-main section.about .card .card-title {
+main section.about #about-me .card .card-title {
   border: 1px solid #d1d1d1;
   padding: 5px 10px 0 10px;
   border-bottom: 0px;
@@ -521,13 +536,13 @@ main section.about .card .card-title {
   cursor: pointer;
 }
 
-main section.about .card .card-title:after, main section.about .card .card-title:before {
+main section.about #about-me .card .card-title:after, main section.about #about-me .card .card-title:before {
   content: "";
   position: absolute;
   bottom: 0;
 }
 
-main section.about .card .card-title:before {
+main section.about #about-me .card .card-title:before {
   left: 0;
   border-right: 1px solid #d1d1d1;
   border-bottom: 1px solid #d1d1d1;
@@ -538,7 +553,7 @@ main section.about .card .card-title:before {
           transform: translate(-100%, 0.6em);
 }
 
-main section.about .card .card-title:after {
+main section.about #about-me .card .card-title:after {
   right: 0;
   border-left: 1px solid #d1d1d1;
   border-bottom: 1px solid #d1d1d1;
@@ -549,18 +564,45 @@ main section.about .card .card-title:after {
           transform: translate(100%, 0.6em);
 }
 
-main section.about .card-about {
+main section.about #about-me .card-about {
   padding-top: 1em;
 }
 
-main section.about .about-me {
+main section.about #languages {
+  height: 100vh;
+}
+
+main section.about #languages .about-me-and-languages {
+  border: 1px solid red;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+main section.about #languages .about-me-and-languages .about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   text-align: center;
-  margin-top: 5em;
-  margin-bottom: 5em;
   line-height: 2em;
 }
 
-main section.about .about-me h1 {
+main section.about #languages .about-me-and-languages .about-me h1 {
   margin: 1em;
   display: inline-block;
   border: 1px solid #d1d1d1;
@@ -571,7 +613,7 @@ main section.about .about-me h1 {
   color: #000000bb;
 }
 
-main section.about .about-me h1:after, main section.about .about-me h1:before {
+main section.about #languages .about-me-and-languages .about-me h1:after, main section.about #languages .about-me-and-languages .about-me h1:before {
   content: "";
   position: absolute;
   border: 1px solid #d1d1d1;
@@ -579,7 +621,7 @@ main section.about .about-me h1:after, main section.about .about-me h1:before {
   height: 0.6em;
 }
 
-main section.about .about-me h1:before {
+main section.about #languages .about-me-and-languages .about-me h1:before {
   left: 0;
   top: 0;
   border-bottom: none;
@@ -589,7 +631,7 @@ main section.about .about-me h1:before {
           transform: translate(-1px, -0.5em);
 }
 
-main section.about .about-me h1:after {
+main section.about #languages .about-me-and-languages .about-me h1:after {
   bottom: 0;
   right: 0;
   border-top: none;
@@ -599,7 +641,7 @@ main section.about .about-me h1:after {
           transform: translate(1px, 0.5em);
 }
 
-main section.about .languages {
+main section.about #languages .about-me-and-languages .languages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,11 +657,11 @@ main section.about .languages {
           flex-flow: column;
 }
 
-main section.about .languages .bar-wrapper {
+main section.about #languages .about-me-and-languages .languages .bar-wrapper {
   width: 90%;
 }
 
-main section.about .languages .bar-wrapper .bar-main .title-value-wrapper {
+main section.about #languages .about-me-and-languages .languages .bar-wrapper .bar-main .title-value-wrapper {
   position: relative;
   overflow: hidden;
   margin-bottom: 10px;
@@ -633,7 +675,7 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper {
           align-items: center;
 }
 
-main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-title {
+main section.about #languages .about-me-and-languages .languages .bar-wrapper .bar-main .title-value-wrapper .bar-title {
   position: absolute;
   left: -20%;
   height: 100%;
@@ -655,7 +697,7 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-t
   transition: font-size 0.4s;
 }
 
-main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-title:after {
+main section.about #languages .about-me-and-languages .languages .bar-wrapper .bar-main .title-value-wrapper .bar-title:after {
   content: "";
   background: -webkit-gradient(linear, left top, right top, color-stop(25%, #37AEA6), color-stop(50%, #09615b), color-stop(25%, #37AEA6));
   background: linear-gradient(to right, #37AEA6 25%, #09615b 50%, #37AEA6 25%);
@@ -669,7 +711,7 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-t
           transform: translate(0.6em, -50%);
 }
 
-main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value {
+main section.about #languages .about-me-and-languages .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value {
   background: #0202024f;
   left: 0;
   text-align: right;
@@ -679,7 +721,7 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-v
   overflow: hidden;
 }
 
-main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value span {
+main section.about #languages .about-me-and-languages .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value span {
   position: absolute;
   right: 0;
   top: 50%;
@@ -689,7 +731,7 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-v
   font-weight: bolder;
 }
 
-main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value .bar-value-meter {
+main section.about #languages .about-me-and-languages .languages .bar-wrapper .bar-main .title-value-wrapper .bar-value .bar-value-meter {
   position: absolute;
   height: 90%;
   width: 0%;
@@ -702,8 +744,7 @@ main section.about .languages .bar-wrapper .bar-main .title-value-wrapper .bar-v
 }
 
 main section.contact {
-  border: 1px solid transparent;
-  padding-top: 50px;
+  height: 100vh;
   text-align: center;
   margin: 3em 0 0 0;
   position: relative;
@@ -725,6 +766,23 @@ main section.contact {
 
 main section.contact .contact-wrapper {
   width: 80%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 main section.contact .contact-wrapper .contact-fields {
@@ -741,6 +799,10 @@ main section.contact .contact-wrapper .contact-fields {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  height: 50vh;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 main section.contact .contact-wrapper .contact-fields p {
@@ -765,29 +827,41 @@ main section.contact .contact-wrapper .contact-fields .form-wrapper form {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-main section.contact .contact-wrapper .contact-fields .form-wrapper form input, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea {
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input,
+main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea {
   margin: 3px;
   padding: 5px 10px;
+  width: 100%;
   font-size: 18px;
   background: #ffffff43;
   border: 1px solid #00000057;
 }
 
-main section.contact .contact-wrapper .contact-fields .form-wrapper form input::-webkit-input-placeholder, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::-webkit-input-placeholder {
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input::-webkit-input-placeholder,
+main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::-webkit-input-placeholder {
   color: white;
 }
 
-main section.contact .contact-wrapper .contact-fields .form-wrapper form input:-ms-input-placeholder, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea:-ms-input-placeholder {
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input:-ms-input-placeholder,
+main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea:-ms-input-placeholder {
   color: white;
 }
 
-main section.contact .contact-wrapper .contact-fields .form-wrapper form input::-ms-input-placeholder, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::-ms-input-placeholder {
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input::-ms-input-placeholder,
+main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::-ms-input-placeholder {
   color: white;
 }
 
-main section.contact .contact-wrapper .contact-fields .form-wrapper form input::placeholder, main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::placeholder {
+main section.contact .contact-wrapper .contact-fields .form-wrapper form input::placeholder,
+main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::placeholder {
   color: white;
 }
 
@@ -796,6 +870,7 @@ main section.contact .contact-wrapper .contact-fields .form-wrapper form textare
 }
 
 main section.contact .contact-wrapper .contact-fields .form-wrapper form input[type='button'] {
+  width: 50%;
   background: #00000080;
   color: #ffffffe8;
   border: 1px solid #ffffffa8;
@@ -891,6 +966,7 @@ main footer .social-wrapper .social a.github:hover:after {
 
 main footer .go2top {
   position: absolute;
+  cursor: pointer;
   right: 0;
   top: 0;
   font-size: 30px;
@@ -944,7 +1020,7 @@ main footer .go2top:hover .fa {
 }
 
 .sticky-nav-wrapper {
-  padding-top: 5em;
+  padding-top: 5.1em;
 }
 
 h1 {
