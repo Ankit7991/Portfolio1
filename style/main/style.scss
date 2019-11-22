@@ -224,6 +224,7 @@ section.intro-wrapper {
       }
 
       @include hundered();
+      // background: red;
 
     }
 
@@ -425,7 +426,6 @@ main {
     border: 1px solid transparent;
 
     #about-me {
-      border: 1px solid white;
       @include center();
 
       .about-title{
@@ -525,7 +525,6 @@ main {
     #languages {
       height: 100vh;
       .about-me-and-languages{
-        border: 1px solid red;
         height: 100vh;
       display: flex;
       // justify-content: space-evenly;
@@ -717,11 +716,11 @@ main {
               padding: 5px 10px;
               width: 100%;
               font-size: 18px;
-              background: #ffffff43;
+              background: #ffffff83;
               border: 1px solid #00000057;
 
               &::placeholder {
-                color: white;
+                color: black;
               }
             }
 

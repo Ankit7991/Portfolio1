@@ -1,7 +1,21 @@
 
 
-@media only screen and (min-width: 786){
+@media only screen and (min-width: 786px){
+  .myBackground{
+    background: linear-gradient(to bottom, #00000063, #00000000)  , url('../../img/background.jpg') fixed;
+    background-size: 100% 100%;
+  }
+  nav{
+    ul{
+    background-size: 100% 100%;
+    background: url('../../img/nav-bg.jpg') fixed;
+    }
+  }
+  #CONTACT{
+    background: linear-gradient(to bottom, #00000063, #00000000)  ,url('../../img/sea2.jpg') fixed;
 
+    background-size: 100% 100%;
+  }
   
 }
 
@@ -50,7 +64,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
-
+  
   .card-wrapper{
     justify-content: space-evenly !important;
     .card{
@@ -86,6 +100,9 @@
 
 
 @media only screen and (min-width: 480px) and (max-width: 767px){
+  body{
+    // border: 10px solid red;
+  }
   .bar-title{
     font-size: 70% !important;
   }
@@ -106,6 +123,17 @@
     left: 0;
   }
 
+  .about-me-and-languages{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    
+    overflow: scroll;
+
+    .languages{
+      width: 80%;
+    }
+  }
 
 }
 

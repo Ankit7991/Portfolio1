@@ -446,7 +446,6 @@ main section.about {
 }
 
 main section.about #about-me {
-  border: 1px solid white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,7 +572,6 @@ main section.about #languages {
 }
 
 main section.about #languages .about-me-and-languages {
-  border: 1px solid red;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -841,28 +839,28 @@ main section.contact .contact-wrapper .contact-fields .form-wrapper form textare
   padding: 5px 10px;
   width: 100%;
   font-size: 18px;
-  background: #ffffff43;
+  background: #ffffff83;
   border: 1px solid #00000057;
 }
 
 main section.contact .contact-wrapper .contact-fields .form-wrapper form input::-webkit-input-placeholder,
 main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::-webkit-input-placeholder {
-  color: white;
+  color: black;
 }
 
 main section.contact .contact-wrapper .contact-fields .form-wrapper form input:-ms-input-placeholder,
 main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea:-ms-input-placeholder {
-  color: white;
+  color: black;
 }
 
 main section.contact .contact-wrapper .contact-fields .form-wrapper form input::-ms-input-placeholder,
 main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::-ms-input-placeholder {
-  color: white;
+  color: black;
 }
 
 main section.contact .contact-wrapper .contact-fields .form-wrapper form input::placeholder,
 main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea::placeholder {
-  color: white;
+  color: black;
 }
 
 main section.contact .contact-wrapper .contact-fields .form-wrapper form textarea {
