@@ -1,17 +1,7 @@
 @media only screen and (min-width: 786px) {
-  .myBackground {
-    background: -webkit-gradient(linear, left top, left bottom, from(#00000063), to(#00000000)), url("../../img/background.jpg") fixed;
-    background: linear-gradient(to bottom, #00000063, #00000000), url("../../img/background.jpg") fixed;
-    background-size: 100% 100%;
-  }
   nav ul {
     background-size: 100% 100%;
     background: url("../../img/nav-bg.jpg") fixed;
-  }
-  #CONTACT {
-    background: -webkit-gradient(linear, left top, left bottom, from(#00000063), to(#00000000)), url("../../img/sea2.jpg") fixed;
-    background: linear-gradient(to bottom, #00000063, #00000000), url("../../img/sea2.jpg") fixed;
-    background-size: 100% 100%;
   }
 }
 
