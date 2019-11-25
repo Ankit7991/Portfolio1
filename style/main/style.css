@@ -517,7 +517,9 @@ main section.about #languages {
 }
 
 main section.about #languages .about-me-and-languages {
+  overflow: hidden;
   height: 100vh;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

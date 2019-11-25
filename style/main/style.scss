@@ -306,7 +306,7 @@ main {
   z-index: 1;
   background-position: 0 0;
 
-  
+
 
   nav,
   .nonSticky {
@@ -371,10 +371,11 @@ main {
     #about-me {
       @include center();
 
-      .about-title{
+      .about-title {
         height: 30vh;
 
       }
+
       .card-wrapper {
         // border: 1px solid black;
         display: flex;
@@ -467,143 +468,146 @@ main {
 
     #languages {
       height: 100vh;
-      .about-me-and-languages{
+
+      .about-me-and-languages {
+        overflow: hidden;
         height: 100vh;
-      display: flex;
-      // justify-content: space-evenly;
-      align-items: center;
-      // flex-flow: row;
-      // flex-flow: column;
-      height: 100%;
-      
-      .about-me {
-        @include center();
-        flex-flow: column;
-        text-align: center;
-        line-height: 2em;
+        max-width: 100%;
+        display: flex;
+        // justify-content: space-evenly;
+        align-items: center;
+        // flex-flow: row;
+        // flex-flow: column;
+        height: 100%;
 
-        h1 {
-          margin: 1em;
-          // border: 1px solid $card-title-bordCol;
-          $card-title-bordCol: #d1d1d1;
-          display: inline-block;
-          border: 1px solid $card-title-bordCol;
-          border-top: none;
-          border-bottom: none;
-          padding: 0 1em 0 1em;
-          position: relative;
-          color: #000000bb;
+        .about-me {
+          @include center();
+          flex-flow: column;
+          text-align: center;
+          line-height: 2em;
 
-          &:after,
-          &:before {
-            content: "";
-            position: absolute;
+          h1 {
+            margin: 1em;
+            // border: 1px solid $card-title-bordCol;
+            $card-title-bordCol: #d1d1d1;
+            display: inline-block;
             border: 1px solid $card-title-bordCol;
-            width: 2em;
-            height: 0.6em;
-          }
-
-          &:before {
-            left: 0;
-            top: 0;
-            border-bottom: none;
-            border-right: none;
-            border-radius: 10px 0 0 0;
-            transform: translate(-1px, -0.5em);
-          }
-
-          &:after {
-            bottom: 0;
-            right: 0;
             border-top: none;
-            border-left: none;
-            border-radius: 0 0 10px 0;
-            transform: translate(1px, 0.5em);
+            border-bottom: none;
+            padding: 0 1em 0 1em;
+            position: relative;
+            color: #000000bb;
+
+            &:after,
+            &:before {
+              content: "";
+              position: absolute;
+              border: 1px solid $card-title-bordCol;
+              width: 2em;
+              height: 0.6em;
+            }
+
+            &:before {
+              left: 0;
+              top: 0;
+              border-bottom: none;
+              border-right: none;
+              border-radius: 10px 0 0 0;
+              transform: translate(-1px, -0.5em);
+            }
+
+            &:after {
+              bottom: 0;
+              right: 0;
+              border-top: none;
+              border-left: none;
+              border-radius: 0 0 10px 0;
+              transform: translate(1px, 0.5em);
+            }
           }
         }
-      }
 
-      .languages {
-        @include center();
-        flex-flow: column;
+        .languages {
+          @include center();
+          flex-flow: column;
 
-        .bar-wrapper {
-          width: 90%;
-          
-          .bar-main {
-            
-            .title-value-wrapper {
-              // border: 3px solid red;
-              position: relative;
-              overflow: hidden;
-              margin-bottom: 10px;
-              background: #00000044;
-              display: flex;
-              height: 2em;
-              align-items: center;
+          .bar-wrapper {
+            width: 90%;
 
-              .bar-title {
-                position: absolute;
-                left: -20%;
-                height: 100%;
-                color: white;
-                background: #09615b;
-                width: 20%;
-                @include center();
-                z-index: 1000;
-                font-size: 100%;
-                transition: font-size 0.4s;
+            .bar-main {
 
-                &:after {
-                  content: "";
-                  background: linear-gradient(to right, #37AEA6 25%, #09615b 50%, #37AEA6 25%);
-                  // background: white;
-                  position: absolute;
-                  right: 0;
-                  top: 50%;
-                  height: 90%;
-                  width: 1em;
-                  z-index: -1;
-                  transform: translate(0.6em, -50%);
-                }
-              }
-
-              .bar-value {
-                background: #0202024f;
-                left: 0;
-                text-align: right;
+              .title-value-wrapper {
+                // border: 3px solid red;
                 position: relative;
-                height: 100%;
-                width: 0;
                 overflow: hidden;
-                // border: 1px solid red;
+                margin-bottom: 10px;
+                background: #00000044;
+                display: flex;
+                height: 2em;
+                align-items: center;
 
-                span {
+                .bar-title {
                   position: absolute;
-                  right: 0;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  padding: 10px;
-                  font-weight: bolder;
+                  left: -20%;
+                  height: 100%;
+                  color: white;
+                  background: #09615b;
+                  width: 20%;
+                  @include center();
+                  z-index: 1000;
+                  font-size: 100%;
+                  transition: font-size 0.4s;
+
+                  &:after {
+                    content: "";
+                    background: linear-gradient(to right, #37AEA6 25%, #09615b 50%, #37AEA6 25%);
+                    // background: white;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    height: 90%;
+                    width: 1em;
+                    z-index: -1;
+                    transform: translate(0.6em, -50%);
+                  }
                 }
 
-                .bar-value-meter {
-                  position: absolute;
-                  height: 90%;
-                  width: 0%;
-                  background: #4ecdc5;
+                .bar-value {
+                  background: #0202024f;
+                  left: 0;
+                  text-align: right;
                   position: relative;
+                  height: 100%;
+                  width: 0;
                   overflow: hidden;
-                  top: 50%;
-                  transform: translate(0, -50%);
+                  // border: 1px solid red;
 
+                  span {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: 10px;
+                    font-weight: bolder;
+                  }
+
+                  .bar-value-meter {
+                    position: absolute;
+                    height: 90%;
+                    width: 0%;
+                    background: #4ecdc5;
+                    position: relative;
+                    overflow: hidden;
+                    top: 50%;
+                    transform: translate(0, -50%);
+
+                  }
                 }
               }
             }
           }
         }
       }
-    }
     }
   }
 
@@ -616,18 +620,19 @@ main {
     z-index: 10000;
     @include center();
     flex-flow: column;
-    
+
     .contact-wrapper {
       width: 80%;
       height: 100vh;
       @include center();
       flex-flow: column;
       justify-content: space-evenly;
-      .contact-title{
+
+      .contact-title {
         width: 100%;
-        
+
         h1 {
-          color: white ;
+          color: white;
           position: absolute;
           @include centerAbsolute();
         }
