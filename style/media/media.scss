@@ -220,3 +220,22 @@
 
 
 }
+
+//media query for height
+@media only screen and (orientation: landscape){
+  section.intro-wrapper{
+    height: auto !important;
+  }
+  #languages{
+    height: auto !important;
+    .about-me-and-languages{
+      height: auto !important;
+    }
+  }
+  section.contact{
+    height: auto !important;
+    .contact-wrapper{
+    height: auto !important;
+    }
+  }
+}

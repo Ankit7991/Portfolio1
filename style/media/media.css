@@ -212,4 +212,22 @@
     width: 100%;
   }
 }
+
+@media only screen and (orientation: landscape) {
+  section.intro-wrapper {
+    height: auto !important;
+  }
+  #languages {
+    height: auto !important;
+  }
+  #languages .about-me-and-languages {
+    height: auto !important;
+  }
+  section.contact {
+    height: auto !important;
+  }
+  section.contact .contact-wrapper {
+    height: auto !important;
+  }
+}
 /*# sourceMappingURL=media.css.map */
