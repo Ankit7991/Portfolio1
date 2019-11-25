@@ -306,29 +306,12 @@ main {
   z-index: 1;
   background-position: 0 0;
 
-  .sticky {
-    position: fixed;
-    z-index: 100000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: translate(0, -100%);
-    transition: border 0.4s, background 0.4s, transform 0.3s;
-    background: #00000091;
-    animation: visible 0.5s forwards;
-
-    @keyframes visible {
-      100% {
-        transform: translate(0, 0);
-      }
-    }
-  }
+  
 
   nav,
   .nonSticky {
     // display: none;
     margin-bottom: 20px;
-    border-bottom: 2px solid #db7070;
     // border-bottom: 0px solid transparent;
     // background: #0000003f;
     transition: border 0.4s, background 0.4s, 0.3s;
@@ -337,6 +320,8 @@ main {
     ul {
       display: flex;
       list-style-type: none;
+      background-size: 100% 100%;
+      background: url('/img/sky-lines.jpg') fixed;
 
       li {
         flex: 1;
@@ -355,66 +340,24 @@ main {
           border-bottom: 4px solid transparent;
           transition: 0.4s;
         }
+      }
+    }
+  }
 
-        &:nth-child(2) {
+  .sticky {
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -100%);
+    transition: border 0.4s, background 0.4s, transform 0.3s;
+    background: #00000091;
+    animation: visible 1s forwards;
 
-          a,
-          span {
-            &:hover {
-              border-bottom: 4px solid #db7070;
-            }
-          }
-
-          a.active,
-          span.active {
-            border-bottom: 4px solid #db7070;
-          }
-        }
-
-        &:nth-child(3) {
-
-          a,
-          span {
-            &:hover {
-              border-bottom: 4px solid #43c943;
-            }
-          }
-
-          a.active,
-          span.active {
-            border-bottom: 4px solid #43c943;
-          }
-        }
-
-        &:nth-child(4) {
-
-          a,
-          span {
-            &:hover {
-              border-bottom: 4px solid #c48e48;
-            }
-          }
-
-          a.active,
-          span.active {
-            border-bottom: 4px solid #c48e48;
-          }
-        }
-
-        &:nth-child(5) {
-
-          a,
-          span {
-            &:hover {
-              border-bottom: 4px solid #e96de3;
-            }
-          }
-
-          a.active,
-          span.active {
-            border-bottom: 4px solid #e96de3;
-          }
-        }
+    @keyframes visible {
+      100% {
+        transform: translate(0, 0);
       }
     }
   }
@@ -680,6 +623,15 @@ main {
       @include center();
       flex-flow: column;
       justify-content: space-evenly;
+      .contact-title{
+        width: 100%;
+        
+        h1 {
+          color: white ;
+          position: absolute;
+          @include centerAbsolute();
+        }
+      }
 
 
 
@@ -695,9 +647,6 @@ main {
           font-size: 1.4em;
         }
 
-        h1 {
-          color: white !important;
-        }
 
         .form-wrapper {
           // border: 1px solid red;

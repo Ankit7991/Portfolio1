@@ -108,15 +108,18 @@ window.onload = (function () {
       
     }
 
-    window.onscroll = function () {
+    // window.onscroll = function () {
+    window.addEventListener('scroll', $.debounce(200, false, function(){
+
+
+      console.log('xxx');
       //languages animation
       (function languageAnimation() {
 
 
         
 
-        if (getCondition('bar-wrapper', 2) && !getCondition('bar-wrapper', -99999999)) {
-          console.log()
+        if (getCondition('bar-wrapper', 1) && !getCondition('bar-wrapper', -99999999)) {
           for(let i = 0; i < languages.length; i++){
             adRemClass(`${languages[i]}-bar-value`, `${languages[i]}-bar-value-animated`,);
           }
@@ -191,7 +194,9 @@ window.onload = (function () {
       })();
 
 
-    }
+    // }
+    }))
+
 
   })();
 

@@ -309,41 +309,9 @@ main {
   background-position: 0 0;
 }
 
-main .sticky {
-  position: fixed;
-  z-index: 100000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
-  -webkit-transition: border 0.4s, background 0.4s, -webkit-transform 0.3s;
-  transition: border 0.4s, background 0.4s, -webkit-transform 0.3s;
-  transition: border 0.4s, background 0.4s, transform 0.3s;
-  transition: border 0.4s, background 0.4s, transform 0.3s, -webkit-transform 0.3s;
-  background: #00000091;
-  -webkit-animation: visible 0.5s forwards;
-          animation: visible 0.5s forwards;
-}
-
-@-webkit-keyframes visible {
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
-@keyframes visible {
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
 main nav,
 main .nonSticky {
   margin-bottom: 20px;
-  border-bottom: 2px solid #db7070;
   -webkit-transition: border 0.4s, background 0.4s, 0.3s;
   transition: border 0.4s, background 0.4s, 0.3s;
   letter-spacing: 2px;
@@ -355,6 +323,8 @@ main .nonSticky ul {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  background-size: 100% 100%;
+  background: url("/img/sky-lines.jpg") fixed;
 }
 
 main nav ul li,
@@ -383,60 +353,35 @@ main .nonSticky ul li a {
   transition: 0.4s;
 }
 
-main nav ul li:nth-child(2) a:hover,
-main nav ul li:nth-child(2) span:hover,
-main .nonSticky ul li:nth-child(2) a:hover,
-main .nonSticky ul li:nth-child(2) span:hover {
-  border-bottom: 4px solid #db7070;
+main .sticky {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  -webkit-transition: border 0.4s, background 0.4s, -webkit-transform 0.3s;
+  transition: border 0.4s, background 0.4s, -webkit-transform 0.3s;
+  transition: border 0.4s, background 0.4s, transform 0.3s;
+  transition: border 0.4s, background 0.4s, transform 0.3s, -webkit-transform 0.3s;
+  background: #00000091;
+  -webkit-animation: visible 1s forwards;
+          animation: visible 1s forwards;
 }
 
-main nav ul li:nth-child(2) a.active,
-main nav ul li:nth-child(2) span.active,
-main .nonSticky ul li:nth-child(2) a.active,
-main .nonSticky ul li:nth-child(2) span.active {
-  border-bottom: 4px solid #db7070;
+@-webkit-keyframes visible {
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
 }
 
-main nav ul li:nth-child(3) a:hover,
-main nav ul li:nth-child(3) span:hover,
-main .nonSticky ul li:nth-child(3) a:hover,
-main .nonSticky ul li:nth-child(3) span:hover {
-  border-bottom: 4px solid #43c943;
-}
-
-main nav ul li:nth-child(3) a.active,
-main nav ul li:nth-child(3) span.active,
-main .nonSticky ul li:nth-child(3) a.active,
-main .nonSticky ul li:nth-child(3) span.active {
-  border-bottom: 4px solid #43c943;
-}
-
-main nav ul li:nth-child(4) a:hover,
-main nav ul li:nth-child(4) span:hover,
-main .nonSticky ul li:nth-child(4) a:hover,
-main .nonSticky ul li:nth-child(4) span:hover {
-  border-bottom: 4px solid #c48e48;
-}
-
-main nav ul li:nth-child(4) a.active,
-main nav ul li:nth-child(4) span.active,
-main .nonSticky ul li:nth-child(4) a.active,
-main .nonSticky ul li:nth-child(4) span.active {
-  border-bottom: 4px solid #c48e48;
-}
-
-main nav ul li:nth-child(5) a:hover,
-main nav ul li:nth-child(5) span:hover,
-main .nonSticky ul li:nth-child(5) a:hover,
-main .nonSticky ul li:nth-child(5) span:hover {
-  border-bottom: 4px solid #e96de3;
-}
-
-main nav ul li:nth-child(5) a.active,
-main nav ul li:nth-child(5) span.active,
-main .nonSticky ul li:nth-child(5) a.active,
-main .nonSticky ul li:nth-child(5) span.active {
-  border-bottom: 4px solid #e96de3;
+@keyframes visible {
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
 }
 
 main section.about {
@@ -783,6 +728,20 @@ main section.contact .contact-wrapper {
           justify-content: space-evenly;
 }
 
+main section.contact .contact-wrapper .contact-title {
+  width: 100%;
+}
+
+main section.contact .contact-wrapper .contact-title h1 {
+  color: white;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 main section.contact .contact-wrapper .contact-fields {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -807,10 +766,6 @@ main section.contact .contact-wrapper .contact-fields p {
   margin: 1em 0;
   color: #ffffffc5;
   font-size: 1.4em;
-}
-
-main section.contact .contact-wrapper .contact-fields h1 {
-  color: white !important;
 }
 
 main section.contact .contact-wrapper .contact-fields .form-wrapper {

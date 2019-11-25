@@ -1,7 +1,13 @@
 @media only screen and (min-width: 786px) {
-  nav ul {
+  .myBackground {
+    background: -webkit-gradient(linear, left top, left bottom, from(#00000063), to(#00000000)), url("/img/laptop-coffee.jpg") fixed;
+    background: linear-gradient(to bottom, #00000063, #00000000), url("/img/laptop-coffee.jpg") fixed;
     background-size: 100% 100%;
-    background: url("../../img/nav-bg.jpg") fixed;
+  }
+  #CONTACT {
+    background: -webkit-gradient(linear, left top, left bottom, from(#00000063), to(#00000000)), url("/img/sea-1boat.jpg") fixed;
+    background: linear-gradient(to bottom, #00000063, #00000000), url("/img/sea-1boat.jpg") fixed;
+    background-size: 100% 100%;
   }
 }
 
@@ -152,19 +158,16 @@
   }
 }
 
-@media only screen and (max-width: 319px) {
-  .intro {
+@media only screen and (max-width: 479px) {
+  section.intro-wrapper .intro {
     font-size: 10px !important;
   }
-  .intro #viewWork {
-    color: red;
+  section.intro-wrapper span.button {
+    font-size: 100% !important;
   }
   .bar-title {
     font-size: 50% !important;
   }
-}
-
-@media only screen and (max-width: 479px) {
   #nav {
     width: 100 !important;
   }
@@ -193,6 +196,20 @@
     height: auto;
     padding: 13px;
     margin: auto;
+  }
+  section.about #languages .about-me-and-languages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  section.about #languages .about-me-and-languages .languages {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=media.css.map */
