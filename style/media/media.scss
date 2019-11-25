@@ -223,6 +223,12 @@
 
 //media query for height
 @media only screen and (orientation: landscape){
+<<<<<<< HEAD
+=======
+  section.intro-wrapper{
+    height: auto !important;
+  }
+>>>>>>> 801185dfa0881d737d7b2b2ed706cf5317bb2a72
   #languages{
     height: auto !important;
     .about-me-and-languages{
@@ -231,5 +237,11 @@
   }
   section.contact{
     height: auto !important;
+<<<<<<< HEAD
+=======
+    .contact-wrapper{
+    height: auto !important;
+    }
+>>>>>>> 801185dfa0881d737d7b2b2ed706cf5317bb2a72
   }
 }
