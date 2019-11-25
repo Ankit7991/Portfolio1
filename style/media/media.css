@@ -214,9 +214,6 @@
 }
 
 @media only screen and (orientation: landscape) {
-  section.intro-wrapper {
-    height: auto !important;
-  }
   #languages {
     height: auto !important;
   }
@@ -224,9 +221,6 @@
     height: auto !important;
   }
   section.contact {
-    height: auto !important;
-  }
-  section.contact .contact-wrapper {
     height: auto !important;
   }
 }
