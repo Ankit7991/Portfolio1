@@ -211,9 +211,19 @@
   section.about #languages .about-me-and-languages .languages {
     width: 100%;
   }
+  section.contact .contact-wrapper {
+    width: 100% !important;
+  }
+  section.contact .contact-wrapper .contact-fields {
+    padding: 10px;
+    width: 100% !important;
+  }
+  section.contact .contact-wrapper .contact-fields .form-wrapper {
+    width: 100% !important;
+  }
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape), screen and (max-height: 700px) {
   #languages {
     height: auto !important;
   }
@@ -221,6 +231,12 @@
     height: auto !important;
   }
   section.contact {
+    height: auto !important;
+  }
+  section.contact .contact-wrapper {
+    height: auto !important;
+  }
+  section.contact .contact-wrapper .contact-fields {
     height: auto !important;
   }
 }

@@ -217,12 +217,25 @@
       }
     }
   }
+  section.contact{
+    .contact-wrapper{
+      width: 100% !important;
+      .contact-fields{
+        padding: 10px;
+        width: 100% !important;
+        .form-wrapper{
+          width: 100% !important;
+        }
+      }
+    }
+  }
 
 
 }
 
 //media query for height
-@media only screen and (orientation: landscape){
+@media only screen and (orientation: landscape),
+screen and (max-height: 700px){
   #languages{
     height: auto !important;
     .about-me-and-languages{
@@ -230,6 +243,13 @@
     }
   }
   section.contact{
+  
     height: auto !important;
+    .contact-wrapper{
+      height: auto !important;
+      .contact-fields{
+        height: auto !important;
+      }
+    }
   }
 }
