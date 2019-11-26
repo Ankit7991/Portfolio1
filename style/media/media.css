@@ -1,4 +1,4 @@
-@media only screen and (min-width: 786px) {
+@media only screen and (orientation: landscape), only screen and (min-width: 786px) {
   .myBackground {
     background: -webkit-gradient(linear, left top, left bottom, from(#00000063), to(#00000000)), url("/img/laptop-coffee.jpg") fixed;
     background: linear-gradient(to bottom, #00000063, #00000000), url("/img/laptop-coffee.jpg") fixed;
